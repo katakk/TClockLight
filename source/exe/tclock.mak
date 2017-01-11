@@ -24,7 +24,7 @@ TCLOCKH=$(SRCDIR)\tclock.h $(COMMONDIR)\common.h
 COMMONH=$(COMMONDIR)\common.h
 
 OBJS=main2.obj wndproc.obj command.obj menu.obj\
-	langcode.obj utl.obj exec.obj reg.obj autoformat.obj localeinfo.obj\
+	utl.obj exec.obj reg.obj autoformat.obj localeinfo.obj\
 	list.obj \
 	vistavol.obj
 

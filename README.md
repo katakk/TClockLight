@@ -1,10 +1,20 @@
-config ã¯ ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆãƒ¡ãƒ‹ãƒ¥ãƒ¼ã¨ã‹#if 0 ã¨ã‹ã‘ã—ã¾ã—ãŸã€‚
-ãŠã‚ã‚‹ã¨ãã¯å¼·åˆ¶çµ‚äº†ã§ã™
-ã‰ç§’è¡¨ç¤ºã‚’ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆè¿½åŠ ã—ã¾ã—ãŸã€‚æ›´æ–°é–“éš”ã¯5ms ã«ã—ã¦ã¿ã¾ã—ãŸã€‚
+
+config ‚Í ƒRƒ“ƒeƒLƒXƒgƒƒjƒ…[‚Æ‚©#if 0 ‚Æ‚©‚¯‚µ‚Ü‚µ‚½B
+
+‚¨‚í‚é‚Æ‚«‚Í‹­§I—¹‚Å‚·
+
+‡_•b•\¦‚ğƒfƒtƒHƒ‹ƒg’Ç‰Á‚µ‚Ü‚µ‚½B
+
+XVŠÔŠu‚Í5ms ‚É‚µ‚Ä‚İ‚Ü‚µ‚½B
+
+lang ‚¢‚ç‚È‚­‚µ‚Ü‚µ‚½B
+
 https://github.com/katakk/TClockLight/blob/master/source/out/tclock.exe
+
 https://github.com/katakk/TClockLight/blob/master/source/out64/tclock.exe
 
-[![Build status](https://ci.appveyor.com/api/projects/status/kbvfckj64cv5jiq5/branch/master?svg=true)](https://ci.appveyor.com/project/k-takata/tclocklight/branch/master)
+
+
 
 # TClock Light kt
 

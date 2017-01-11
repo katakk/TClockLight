@@ -27,7 +27,6 @@ void RelToAbs(char *dst, const char *src)
 	if(GetPathType(src) == PATH_REL)
 	{
 		strcpy(dst, g_mydir);
-		add_title(dst, src);
 	}
 	else
 		strcpy(dst, src);

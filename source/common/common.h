@@ -195,12 +195,6 @@ HFONT CreateMyFont(const char *fontname, int size,
 	LONG weight, LONG italic, int codepage);
 void GetDefaultFontName(char *fontname, const char *defaultfontname);
 
-/* -- langcode.c ---------------------------------------- */
-
-BOOL LangIDToLangCode(char *dst, int langid, BOOL bCountry);
-BOOL FindFileWithLangCode(char *dst, int langid, const char* fname);
-BOOL DoesLangDirExist(void);
-
 /* -- localeinfo.c ---------------------------------------- */
 
 int GetCodePage(int ilang);
