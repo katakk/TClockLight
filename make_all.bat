@@ -11,5 +11,3 @@ call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd6
 nmake /nologo
 if errorlevel 1 goto error_exit
 cd ..
-
-pause
