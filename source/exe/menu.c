@@ -32,25 +32,6 @@ static int m_numCommands = 0;
 static DWORD m_lasttime = 0;
 
 /*------------------------------------------------
-  open/execute a file with context menu
---------------------------------------------------*/
-void ContextMenuCommand(HWND hwnd, int id)
-{
-	int i;
-	if(!m_pmenuCommands) return;
-	
-	for(i = 0; i < m_numCommands; i++)
-	{
-		if(id == m_pmenuCommands[i].id)
-		{
-			if(m_pmenuCommands[i].command[0])
-				ExecCommandString(hwnd, m_pmenuCommands[i].command);
-			break;
-		}
-	}
-}
-
-/*------------------------------------------------
   clean up
 --------------------------------------------------*/
 void EndContextMenu(void)

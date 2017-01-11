@@ -232,9 +232,6 @@ typedef struct _tagMouseStruct
 } MOUSESTRUCT;
 typedef MOUSESTRUCT* PMOUSESTRUCT;
 
-PMOUSESTRUCT LoadMouseFunc(void);
-void SaveMouseFunc(const PMOUSESTRUCT plist);
-void ImportOldMouseFunc(void);
 
 /* -- nodeflib.c ---------------------------------------- */
 
@@ -310,19 +307,7 @@ DWORDLONG r_M32x32to64(DWORD a, DWORD b);
 
 #endif  // end of #ifdef NODEFAULTLIB
 
-/* -- playfile.c ---------------------------------------- */
 
-BOOL PlayFile(HWND hwnd, const char *fname, int loops);
-BOOL PlayFileCmdLine(HWND hwnd, const char *str);
-void StopFile(void);
-void OnMCINotify(HWND hwnd, WPARAM wFlags, LONG lDevID);
-BOOL IsSoundFile(const char* fname);
-BOOL PauseResume(HWND hwnd);
-BOOL GetPlayingPosition(char *dst);
-BOOL PrevNextTrack(HWND hwnd, BOOL bNext);
-BOOL IsPrevNext(BOOL bNext);
-BOOL PlayMCI(HWND hwnd, const char *fname, int loops);
-void GetSoundFileExts(char* dst);
 
 /* -- reg.c ---------------------------------------- */
 
@@ -340,17 +325,7 @@ int GetRegStr(HKEY rootkey, const char *subkey, const char *entry,
 LONG GetRegLong(HKEY rootkey, const char *subkey, const char *entry,
 	LONG defval);
 
-/* -- selectfile.c ---------------------------------------- */
 
-BOOL SelectMyFile(HINSTANCE hInst, HWND hDlg,
-	const char *filter, DWORD nFilterIndex,
-	const char *deffile, char *retfile);
-BOOL SelectFolder(HWND hDlg, const char *def, char *ret);
-
-/* -- soundselect.c ---------------------------------------- */
-
-BOOL BrowseSoundFile(HINSTANCE hInst, HWND hDlg,
-	const char *deffile, char *fname);
 
 /* -- tclang.c ---------------------------------------- */
 

@@ -49,30 +49,6 @@ struct {
 	
 	{ 0, L"USTR", UStrHandler },
 	// add your functions
-#if TC_ENABLE_ETIME
-	{ 'S', NULL, ElapsedTimeHandler },
-#endif
-#if TC_ENABLE_NETWORK
-	{ 'N', NULL, NetworkHandler },
-#endif
-#if TC_ENABLE_MEMORY
-	{ 'M', NULL, MemoryHandler },
-#endif
-#if TC_ENABLE_HDD
-	{ 'H', NULL, HDDHandler },
-#endif
-#if TC_ENABLE_CPU
-	{ 0, L"CU", CPUHandler },
-#endif
-#if TC_ENABLE_BATTERY
-	{ 0, L"BL", BatteryHandler },
-	{ 0, L"AD", ACStatusHandler },
-#endif
-#if TC_ENABLE_VOLUME
-	{ 0, L"VL", VolumeMuteHandler },
-	{ 0, L"VOL", VolumeHandler },
-	{ 0, L"VMT", MuteHandler },
-#endif
 };
 
 #define NUM_HANDLERS	ARRAYSIZE(format_handers)
@@ -85,7 +61,6 @@ void LoadFormatSetting(HWND hwnd)
 	wchar_t fmt_tmp[BUFSIZE_FORMAT-5];
 	
 	GetMyRegStrW(NULL, "Format", fmt_tmp, BUFSIZE_FORMAT-5, "");
-	if(fmt_tmp[0] == 0) g_bNoClock = TRUE;
 	
 	// add <% - %> to the clock format string
 	wcscpy(m_format, L"<%");

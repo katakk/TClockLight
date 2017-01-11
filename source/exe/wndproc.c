@@ -17,15 +17,11 @@ HWND g_hwndClock = NULL; // clock window
 static void OnCreate(HWND hwnd);
 static void OnDestroy(HWND hwnd);
 static void ClearTClockMain(HWND hwnd);
-static void OnPowerBroadcast(HWND hwnd, WPARAM wParam);
 static void OnTimerStart(HWND hwnd);
 static void OnTimerMain(HWND hwnd);
-static void OnTCMHwndClock(HWND hwnd, LPARAM lParam);
-static void OnTCMClockError(HWND hwnd, LPARAM lParam);
-static void OnTCMExit(HWND hwnd);
-static void OnTCMReloadSetting(HWND hwnd);
+
 static void OnTaskbarRestart(HWND hwnd);
-static void OnCopyData(HWND hwnd, HWND hwndFrom, COPYDATASTRUCT* pcds);
+
 static void InitError(int n);
 
 static UINT m_uTaskbarRestart;     // taskbar recreating message
@@ -49,10 +45,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case WM_ENDSESSION:
 			if(wParam) ClearTClockMain(hwnd);
 			break;
-		
-		case WM_POWERBROADCAST:
-			OnPowerBroadcast(hwnd, wParam);
-			return TRUE;
+
 		
 		case WM_TIMER:
 			switch(wParam)
@@ -61,9 +54,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 					OnTimerStart(hwnd); break;
 				case IDTIMER_MAIN:
 					OnTimerMain(hwnd);  break;
-				case IDTIMER_MOUSE:
-					// mouse.c
-					OnTimerMouse(hwnd); break;
+
 				case IDTIMER_MONOFF:
 					KillTimer(hwnd, wParam);
 					PostMessage(hwnd, WM_SYSCOMMAND, SC_MONITORPOWER, 2);
@@ -74,7 +65,10 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 		// menu and commands
 		case WM_COMMAND:
 			// command.c
+{
+			void OnTClockCommand(HWND hwnd, int id, int code);
 			OnTClockCommand(hwnd, LOWORD(wParam), HIWORD(wParam));
+}
 			return 0;
 		case WM_CONTEXTMENU:
 			// menu.c
@@ -86,63 +80,8 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 			OnExitMenuLoop(hwnd);
 			return 0;
 		
-		// messages sent/posted from other programs
-		
-		case TCM_HWNDCLOCK:
-			OnTCMHwndClock(hwnd, lParam);
-			return 0;
-		case TCM_CLOCKERROR:
-			OnTCMClockError(hwnd, lParam);
-			return 0;
-		case TCM_EXIT:
-			OnTCMExit(hwnd);
-			return 0;
-		case TCM_RELOADSETTING:
-			OnTCMReloadSetting(hwnd);
-			return 0;
-		// case TCM_REQUESTSNTPLOG:
-		//	// sntp.c
-		//	OnTCMRequestSNTPLog(hwnd, (HWND)wParam);
-		//	return 0;
-		
-		case WM_COPYDATA:
-			OnCopyData(hwnd, (HWND)wParam, (COPYDATASTRUCT*)lParam);
-			return 0;
-		
-		case MM_MCINOTIFY:
-			// common/playfile.c
-			OnMCINotify(hwnd, wParam, (LONG)lParam);
-			return 0;
-		case MM_WOM_DONE: // stop playing wave
-		case TCM_STOPSOUND:
-			StopFile();
-			return 0;
-		
-		/* -------- mouse ---------- */
-		
-#if TC_ENABLE_MOUSEDROP
-		case WM_DROPFILES:
-			OnDropFiles(hwnd, (HDROP)wParam); // mouse2.c
-			return 0;
-#endif
-		
-		case WM_MOUSEWHEEL:
-			OnMouseWheel(hwnd, wParam, lParam); // mouse.c
-			return 0;
-		
-		case WM_LBUTTONDOWN:
-		case WM_RBUTTONDOWN:
-		case WM_MBUTTONDOWN:
-		case WM_XBUTTONDOWN:
-			StopFile();
-			OnMouseDown(hwnd, message, wParam, lParam); // mouse.c
-			return 0;
-		case WM_LBUTTONUP:
-		case WM_RBUTTONUP:
-		case WM_MBUTTONUP:
-		case WM_XBUTTONUP:
-			OnMouseUp(hwnd, message, wParam, lParam); // mouse.c
-			return 0;
+
+
 	}
 	
 	if(message == m_uTaskbarRestart)
@@ -158,27 +97,17 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 ---------------------------------------------------------*/
 void OnCreate(HWND hwnd)
 {
-	int nDelay;
+
 	
 	// Message of the taskbar recreating
 	// Special thanks to Mr.Inuya
 	m_uTaskbarRestart = RegisterWindowMessage("TaskbarCreated");
 	
-	InitAlarm();  // alarm.c
-	InitMouseFunction(hwnd); // mouse.c
+
 	// InitSNTP(hwnd); // sntp.c
-#if TC_ENABLE_VOLUME
-	InitMixer(); // mixer.c
-#endif
 	
-	// delay starting
-	nDelay = GetMyRegLong(NULL, "DelayStart", 0);
-	if(nDelay > 0)
-	{
-		SetTimer(hwnd, IDTIMER_START, nDelay * 1000, NULL);
-		m_bStartTimer = TRUE;
-	}
-	else OnTimerStart(hwnd);
+
+OnTimerStart(hwnd);
 	
 	SetTimer(hwnd, IDTIMER_MAIN, 1000, NULL);
 }
@@ -202,18 +131,8 @@ void ClearTClockMain(HWND hwnd)
 	
 	if(bCleared) return;
 	bCleared = TRUE;
-	
-	if(g_hDlgAbout && IsWindow(g_hDlgAbout))
-		DestroyWindow(g_hDlgAbout);
-	
-	// EndSNTP(hwnd);
-	StopFile();
-	EndMouseFunction(hwnd);
-	EndAlarm();
+
 	EndContextMenu();
-#if TC_ENABLE_VOLUME
-	ReleaseMixer();
-#endif
 	
 	KillTimer(hwnd, IDTIMER_MAIN);
 	
@@ -222,22 +141,6 @@ void ClearTClockMain(HWND hwnd)
 	
 	if(m_bHook) HookEnd();  // dll/main.c - uninstall the hook
 	m_bHook = FALSE;
-}
-
-/*-------------------------------------------------------
-  WM_POWERBROADCAST message
----------------------------------------------------------*/
-void OnPowerBroadcast(HWND hwnd, WPARAM wParam)
-{
-	switch(wParam)
-	{
-		case PBT_APMRESUMESUSPEND:
-			OnTimerAlarm(hwnd, NULL, 2);
-			break;
-			
-		default:
-			break;
-	}
 }
 
 /*-------------------------------------------------------
@@ -251,7 +154,7 @@ void OnTimerStart(HWND hwnd)
 	if(!m_bHook)
 		m_bHook = HookStart(hwnd); // dll/main.c - install a hook
 	
-	OnTimerAlarm(hwnd, NULL, 1); // alarm.c
+
 }
 
 /*-------------------------------------------------------
@@ -267,20 +170,14 @@ void OnTimerMain(HWND hwnd)
 	// adjusting milliseconds gap
 	if(st.wMilliseconds > 50)
 	{
-		//KillTimer(hwnd, IDTIMER_MAIN);
 		SetTimer(hwnd, IDTIMER_MAIN, 1001 - st.wMilliseconds, NULL);
 		bTimerAdjusting = TRUE;
 	}
 	else if(bTimerAdjusting)
 	{
-		//KillTimer(hwnd, IDTIMER_MAIN);
 		bTimerAdjusting = FALSE;
 		SetTimer(hwnd, IDTIMER_MAIN, 1000, NULL);
 	}
-	
-	OnTimerAlarm(hwnd, &st, 0); // alarm.c
-	
-	// OnTimerSNTP(hwnd);  // sntp.c
 }
 
 /*-------------------------------------------------------
@@ -318,8 +215,7 @@ void OnTCMExit(HWND hwnd)
 ---------------------------------------------------------*/
 void OnTCMReloadSetting(HWND hwnd)
 {
-	InitAlarm(); // alarm.c
-	InitMouseFunction(hwnd); // mouse.c
+
 }
 
 /*-------------------------------------------------------
@@ -338,23 +234,5 @@ void OnTaskbarRestart(HWND hwnd)
 	}
 	else
 		PostMessage(hwnd, WM_CLOSE, 0, 0);
-}
-
-/*-------------------------------------------------------
-  WM_COPYDATA message
----------------------------------------------------------*/
-void OnCopyData(HWND hwnd, HWND hwndFrom, COPYDATASTRUCT* pcds)
-{
-	const char *p = (char *)pcds->lpData;
-	
-	switch(pcds->dwData)
-	{
-		case COPYDATA_SOUND:
-			PlayFileCmdLine(hwnd, p);  // common/playfile.c
-			break;
-		case COPYDATA_EXEC:
-			ExecCommandString(hwnd, p);  // command.c
-			break;
-	}
 }
 

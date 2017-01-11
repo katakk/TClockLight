@@ -6,13 +6,8 @@
 
 #define DLLFILENAME "tcdll.tclock"
 
-// XButton Messages
-#ifndef WM_XBUTTONDOWN
-#define WM_XBUTTONDOWN                  0x020B
-#endif
-#ifndef WM_XBUTTONUP
-#define WM_XBUTTONUP                    0x020C
-#endif
+
+
 
 // ThemeChanged Message
 #ifndef WM_THEMECHANGED
@@ -21,8 +16,7 @@
 
 // timer id
 #define IDTIMER_MAIN         1001
-#define IDTIMER_SYSINFO      1002
-#define IDTIMER_TOOLTIP      1003
+
 
 /* structure for format handler functions */
 
@@ -51,7 +45,7 @@ extern char    g_inifile[];
 extern char    g_mydir[];
 extern int     g_winver;
 extern BOOL    g_bVisualStyle;
-extern BOOL    g_bNoClock;
+
 extern int     g_OrigClockWidth;
 extern int     g_OrigClockHeight;
 extern BOOL    g_bVertTaskbar;
@@ -105,14 +99,7 @@ void DATEHandler(FORMATHANDLERSTRUCT* pstruc);
 void TIMEHandler(FORMATHANDLERSTRUCT* pstruc);
 void MSecondHandler(FORMATHANDLERSTRUCT* pstruc);
 
-/* ---------- tooltip.c ----------- */
-void InitTooltip(HWND hwndClock);
-void EndTooltip(HWND hwndClock);
-void OnTooltipMouseMsg(HWND hwndClock,
-	UINT message, WPARAM wParam, LPARAM lParam);
-BOOL OnTooltipNotify(HWND hwndClock, LRESULT *pres, const LPNMHDR pnmh);
-void OnTimerTooltip(HWND hwndClock, BOOL forceFlg);
-void PopupTooltip(HWND hwndClock, const wchar_t *p);
+
 
 /* ---------- userstr.c ----------- */
 void InitUserStr(void);
@@ -121,36 +108,8 @@ void UStrHandler(FORMATHANDLERSTRUCT* pstruc);
 extern wchar_t g_userstr[10][BUFSIZE_USTR];
 extern wchar_t g_sdisp1[], g_sdisp2[], g_scat1[], g_scat2[];
 
-/* ---------- startbtn.c ---------- */
-void InitStartButton(HWND hwndClock);
-void ResetStartButton(HWND hwndClock);
-void EndStartButton(void);
-void CheckCursorOnStartButton(void);
-void ClearStartButtonResource(void);
-BOOL StartMenuFromClock(UINT message, WPARAM wParam, LPARAM lParam);
 
-/* ---------- startmenu.c ---------- */
-void InitStartMenu(HWND hwndClock);
-void ResetStartMenu(HWND hwndClock);
-void EndStartMenu(void);
-void ClearStartMenuResource(void);
-void CheckStartMenu(void);
-BOOL OnDrawItemStartMenu(HWND hwnd, DRAWITEMSTRUCT* pdis);
 
-/* ---------- taskbar.c ----------- */
-void InitTaskbar(HWND hwndClock);
-void EndTaskbar(HWND hwndClock);
-void RefreshTaskbar(HWND hwndClock);
-LRESULT CallOldTaskbarWndProc(HWND hwnd, UINT message,
-	WPARAM wParam, LPARAM lParam);
-
-/* ---------- taskswitch.c -------- */
-void InitTaskSwitch(HWND hwndClock);
-void EndTaskSwitch(void);
-
-/* ---------- traynotify.c -------- */
-void InitTrayNotify(HWND hwndClock);
-void EndTrayNotify(void);
 
 /* ---------- newapi.c ------------ */
 void EndNewAPI(void);

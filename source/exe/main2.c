@@ -50,7 +50,7 @@ int TClockExeMain(void)
 	hwnd = GetTClockMainWindow();
 	if(hwnd != NULL)
 	{
-		CheckCommandLine(hwnd, TRUE);
+
 		return 1;
 	}
 	
@@ -104,19 +104,14 @@ int TClockExeMain(void)
 		hwndParent, NULL, g_hInst, NULL);
 	ShowWindow(hwnd, SW_MINIMIZE);
 	ShowWindow(hwnd, SW_HIDE);
-	// ShowWindow(hwnd, SW_SHOW);
-	// UpdateWindow(hwnd);
+
 	
-	CheckCommandLine(hwnd, FALSE);
+
 	
 	while(GetMessage(&msg, NULL, 0, 0))
 	{
-		if(g_hDlgAbout && IsDialogMessage(g_hDlgAbout, &msg)) ;
-		else
-		{
 			TranslateMessage(&msg);
 			DispatchMessage(&msg);
-		}
 	}
 	
 	UnregisterClass(CLASS_TCLOCKMAIN, g_hInst);
