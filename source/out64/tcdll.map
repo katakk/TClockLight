@@ -1,0 +1,515 @@
+ tcdll
+
+ Timestamp is 5876a599 (Thu Jan 12 06:37:29 2017)
+
+ Preferred load address is 0000060066040000
+
+ Start         Length     Name                   Class
+ 0001:00000000 0000044cH .rdata                  CODE
+ 0001:0000044c 00000134H .rdata$zzzdbg           CODE
+ 0001:00000580 00003dd4H .text$mn                CODE
+ 0001:00004354 0000034cH .xdata                  CODE
+ 0001:000046a0 0000005bH .edata                  CODE
+ 0002:00000000 00000300H .data                   DATA
+ 0002:00000300 00001070H .bss                    DATA
+ 0003:00000000 0000030cH .pdata                  DATA
+ 0004:00000000 000002b8H .idata$5                DATA
+ 0004:000002b8 00000078H .idata$2                DATA
+ 0004:00000330 00000018H .idata$3                DATA
+ 0004:00000348 000002b8H .idata$4                DATA
+ 0004:00000600 0000057aH .idata$6                DATA
+ 0005:00000000 00000018H MYDATA                  DATA
+ 0006:00000000 00000060H .rsrc$01                DATA
+ 0006:00000060 000002d8H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base               Lib:Object
+
+ 0000:00000000       __dynamic_value_reloc_table 0000000000000000     <absolute>
+ 0000:00000000       __guard_flags              0000000000000000     <absolute>
+ 0000:00000000       __guard_iat_count          0000000000000000     <absolute>
+ 0000:00000000       __guard_fids_count         0000000000000000     <absolute>
+ 0000:00000000       __guard_iat_table          0000000000000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   0000000000000000     <absolute>
+ 0000:00000000       ___safe_se_handler_count   0000000000000000     <absolute>
+ 0000:00000000       __guard_longjmp_table      0000000000000000     <absolute>
+ 0000:00000000       __guard_longjmp_count      0000000000000000     <absolute>
+ 0000:00000000       __guard_fids_table         0000000000000000     <absolute>
+ 0000:00000000       __ImageBase                0000060066040000     <linker-defined>
+ 0001:00000000       ??_C@_0N@MNCPCBMH@tcdll?4tclock?$AA@ 0000060066041000     dllmain.obj
+ 0001:0000000d       ??_C@_00CNPNBAHC@?$AA@     000006006604100d     dllmain.obj
+ 0001:00000010       ??_C@_0O@PGCDLJDB@TrayNotifyWnd?$AA@ 0000060066041010     dllmain.obj
+ 0001:00000020       ??_C@_0BA@LKLGCFCE@TrayClockWClass?$AA@ 0000060066041020     dllmain.obj
+ 0001:00000030       ??_C@_0L@EFALKGHP@tclock?4ini?$AA@ 0000060066041030     dllmain2.obj
+ 0001:00000040       ??_C@_0BF@PEMEDCLH@LeftMousePassThrough?$AA@ 0000060066041040     dllmain2.obj
+ 0001:00000058       ??_C@_05PEEFLODH@Mouse?$AA@ 0000060066041058     dllmain2.obj
+ 0001:00000060       ??_C@_0N@CNCHOONA@UseBackColor?$AA@ 0000060066041060     draw.obj
+ 0001:00000070       ??_C@_09KHCLCNDI@BackColor?$AA@ 0000060066041070     draw.obj
+ 0001:00000080       ??_C@_0O@GLIOKBEL@UseBackColor2?$AA@ 0000060066041080     draw.obj
+ 0001:00000090       ??_C@_0L@MFNFMHMC@BackColor2?$AA@ 0000060066041090     draw.obj
+ 0001:000000a0       ??_C@_07CDBBADKD@GradDir?$AA@ 00000600660410a0     draw.obj
+ 0001:000000a8       ??_C@_08PDLHKBEI@FillTray?$AA@ 00000600660410a8     draw.obj
+ 0001:000000b8       ??_C@_09IGCMBMDI@ForeColor?$AA@ 00000600660410b8     draw.obj
+ 0001:000000c4       ??_C@_04IEDBBIIG@Font?$AA@ 00000600660410c4     draw.obj
+ 0001:000000cc       ??_C@_06JIODDOFH@System?$AA@ 00000600660410cc     draw.obj
+ 0001:000000d8       ??_C@_08IOPOCEFC@FontSize?$AA@ 00000600660410d8     draw.obj
+ 0001:000000e4       ??_C@_04DIPHHIHJ@Bold?$AA@ 00000600660410e4     draw.obj
+ 0001:000000ec       ??_C@_06PPMHIBHB@Italic?$AA@ 00000600660410ec     draw.obj
+ 0001:000000f4       ??_C@_06BMNFLCFO@Locale?$AA@ 00000600660410f4     draw.obj
+ 0001:00000100       ??_C@_07PFIINOMB@TextPos?$AA@ 0000060066041100     draw.obj
+ 0001:00000108       ??_C@_0M@EBADFPAF@ClockHeight?$AA@ 0000060066041108     draw.obj
+ 0001:00000118       ??_C@_0L@ILDHEIDF@ClockWidth?$AA@ 0000060066041118     draw.obj
+ 0001:00000128       ??_C@_07BGDGPKNK@VertPos?$AA@ 0000060066041128     draw.obj
+ 0001:00000130       ??_C@_0L@HJOLEHHD@LineHeight?$AA@ 0000060066041130     draw.obj
+ 0001:00000140       ??_C@_08BJCOBMLK@FitClock?$AA@ 0000060066041140     draw.obj
+ 0001:0000014c       ??_C@_13HOIJIPNN@?$AA?5?$AA?$AA@ 000006006604114c     draw.obj
+ 0001:00000150       ??_C@_15HKKJMLKA@?$AA_?$AAm?$AA?$AA@ 0000060066041150     format.obj
+ 0001:00000158       ??_C@_15HKBIECK@?$AA_?$AAd?$AA?$AA@ 0000060066041158     format.obj
+ 0001:00000160       ??_C@_17MGKOMMCK@?$AAa?$AAa?$AAa?$AA?$AA@ 0000060066041160     format.obj
+ 0001:00000168       ??_C@_15ENHHDLJC@?$AA_?$AAh?$AA?$AA@ 0000060066041168     format.obj
+ 0001:00000170       ??_C@_15GIBMGEEO@?$AA_?$AAn?$AA?$AA@ 0000060066041170     format.obj
+ 0001:00000178       ??_C@_15DKNDCGEA@?$AAt?$AAt?$AA?$AA@ 0000060066041178     format.obj
+ 0001:00000180       ??_C@_15OOIIBGOA@?$AA?2?$AAn?$AA?$AA@ 0000060066041180     format.obj
+ 0001:00000188       ??_C@_15JLPKBOKD@?$AA?2?$AAx?$AA?$AA@ 0000060066041188     format.obj
+ 0001:00000190       ??_C@_15GKMKHBNP@?$AAt?$AAd?$AA?$AA@ 0000060066041190     format.obj
+ 0001:00000198       ??_C@_1M@PIPAEEKG@?$AAL?$AAD?$AAA?$AAT?$AAE?$AA?$AA@ 0000060066041198     format.obj
+ 0001:000001a8       ??_C@_19FFMGBAMO@?$AAD?$AAA?$AAT?$AAE?$AA?$AA@ 00000600660411a8     format.obj
+ 0001:000001b8       ??_C@_19IFFENJMA@?$AAT?$AAI?$AAM?$AAE?$AA?$AA@ 00000600660411b8     format.obj
+ 0001:000001c8       ??_C@_17BCNGAOKG@?$AAS?$AAS?$AAS?$AA?$AA@ 00000600660411c8     format.obj
+ 0001:000001d0       ??_C@_19GOPKKDGI@?$AAU?$AAS?$AAT?$AAR?$AA?$AA@ 00000600660411d0     format.obj
+ 0001:000001dc       ??_C@_06PEPCFMNJ@Format?$AA@ 00000600660411dc     format.obj
+ 0001:000001e4       ??_C@_15KKGJMGIG@?$AA?$DM?$AA?$CF?$AA?$AA@ 00000600660411e4     format.obj
+ 0001:000001ec       ??_C@_15JKIEFEL@?$AA?$CF?$AA?$DO?$AA?$AA@ 00000600660411ec     format.obj
+ 0001:000001f8       ??_C@_17MBGCMIPB@?$AAS?$AAu?$AAn?$AA?$AA@ 00000600660411f8     formattime.obj
+ 0001:00000200       ??_C@_17KBOMKBF@?$AAM?$AAo?$AAn?$AA?$AA@ 0000060066041200     formattime.obj
+ 0001:00000208       ??_C@_17BMKGEGOJ@?$AAT?$AAu?$AAe?$AA?$AA@ 0000060066041208     formattime.obj
+ 0001:00000210       ??_C@_17CJEDCEPE@?$AAW?$AAe?$AAd?$AA?$AA@ 0000060066041210     formattime.obj
+ 0001:00000218       ??_C@_17PDPHAADD@?$AAT?$AAh?$AAu?$AA?$AA@ 0000060066041218     formattime.obj
+ 0001:00000220       ??_C@_17HFOLPPLP@?$AAF?$AAr?$AAi?$AA?$AA@ 0000060066041220     formattime.obj
+ 0001:00000228       ??_C@_17GGIBDPIH@?$AAS?$AAa?$AAt?$AA?$AA@ 0000060066041228     formattime.obj
+ 0001:00000230       ??_C@_17DKNBKCHM@?$AAJ?$AAa?$AAn?$AA?$AA@ 0000060066041230     formattime.obj
+ 0001:00000238       ??_C@_17LMDJEKJN@?$AAF?$AAe?$AAb?$AA?$AA@ 0000060066041238     formattime.obj
+ 0001:00000240       ??_C@_17CKNLEDEC@?$AAM?$AAa?$AAr?$AA?$AA@ 0000060066041240     formattime.obj
+ 0001:00000248       ??_C@_17LFPOIHDD@?$AAA?$AAp?$AAr?$AA?$AA@ 0000060066041248     formattime.obj
+ 0001:00000250       ??_C@_17PNNKMEED@?$AAM?$AAa?$AAy?$AA?$AA@ 0000060066041250     formattime.obj
+ 0001:00000258       ??_C@_17KCJGOCPB@?$AAJ?$AAu?$AAn?$AA?$AA@ 0000060066041258     formattime.obj
+ 0001:00000260       ??_C@_17IJPCKHK@?$AAJ?$AAu?$AAl?$AA?$AA@ 0000060066041260     formattime.obj
+ 0001:00000268       ??_C@_17ICPELBCN@?$AAA?$AAu?$AAg?$AA?$AA@ 0000060066041268     formattime.obj
+ 0001:00000270       ??_C@_17HCHCOKMG@?$AAS?$AAe?$AAp?$AA?$AA@ 0000060066041270     formattime.obj
+ 0001:00000278       ??_C@_17FNLKOI@?$AAO?$AAc?$AAt?$AA?$AA@ 0000060066041278     formattime.obj
+ 0001:00000280       ??_C@_17BBDMLCIG@?$AAN?$AAo?$AAv?$AA?$AA@ 0000060066041280     formattime.obj
+ 0001:00000288       ??_C@_17EGKACKIF@?$AAD?$AAe?$AAc?$AA?$AA@ 0000060066041288     formattime.obj
+ 0001:00000290       ??_C@_06NEAIHKGO@Hour12?$AA@ 0000060066041290     formattime.obj
+ 0001:00000298       ??_C@_08EGIGLABC@HourZero?$AA@ 0000060066041298     formattime.obj
+ 0001:000002a8       ??_C@_08OJGEJJFE@AMsymbol?$AA@ 00000600660412a8     formattime.obj
+ 0001:000002b4       ??_C@_15ODEHAHHF@?$AAA?$AAM?$AA?$AA@ 00000600660412b4     formattime.obj
+ 0001:000002c0       ??_C@_08FCNPMPGG@PMsymbol?$AA@ 00000600660412c0     formattime.obj
+ 0001:000002cc       ??_C@_15CLMNNGEL@?$AAP?$AAM?$AA?$AA@ 00000600660412cc     formattime.obj
+ 0001:000002d4       ??_C@_15PNDNKOAE@?$AAg?$AAg?$AA?$AA@ 00000600660412d4     formattime.obj
+ 0001:000002e0       ??_C@_19JPCMAAHP@?$AAy?$AAy?$AAy?$AAy?$AA?$AA@ 00000600660412e0     formattime.obj
+ 0001:000002f0       ??_C@_0M@JNOOHONI@msimg32?4dll?$AA@ 00000600660412f0     newapi.obj
+ 0001:00000300       ??_C@_0N@ILLLDONH@GradientFill?$AA@ 0000060066041300     newapi.obj
+ 0001:00000310       ??_C@_0L@MHHLCNNL@AlphaBlend?$AA@ 0000060066041310     newapi.obj
+ 0001:00000320       ??_C@_0P@NNILFBGL@TransparentBlt?$AA@ 0000060066041320     newapi.obj
+ 0001:00000340       ??_C@_0O@CFCCAJBO@Shell_TrayWnd?$AA@ 0000060066041340     utl.obj
+ 0001:00000350       ??_C@_0M@DNDPFODJ@ThemeActive?$AA@ 0000060066041350     utl.obj
+ 0001:00000360       ??_C@_0DH@IKJPNPCF@Software?2Microsoft?2Windows?2Curre@ 0000060066041360     utl.obj
+ 0001:00000398       ??_C@_01GBGANLPD@0?$AA@    0000060066041398     utl.obj
+ 0001:000003a0       ??_C@_0BI@LKGCGGME@Software?2Kazubon?2TClock?$AA@ 00000600660413a0     reg.obj
+ 0001:000003b8       ??_C@_04KGFMLCPK@Main?$AA@ 00000600660413b8     reg.obj
+ 0001:000003c0       ??_C@_05BMGBEOOC@?$CFs?2?$CFs?$AA@ 00000600660413c0     reg.obj
+ 0001:00000580       CallWndProc                0000060066041580 f   dllmain.obj
+ 0001:000005e0       HookEnd                    00000600660415e0 f   dllmain.obj
+ 0001:00000640       HookStart                  0000060066041640 f   dllmain.obj
+ 0001:00000750       _DllMainCRTStartup         0000060066041750 f   dllmain.obj
+ 0001:00000760       EndClock                   0000060066041760 f   dllmain2.obj
+ 0001:00000860       InitClock                  0000060066041860 f   dllmain2.obj
+ 0001:00000a80       LoadSetting                0000060066041a80 f   dllmain2.obj
+ 0001:00000ad0       OnDestroy                  0000060066041ad0 f   dllmain2.obj
+ 0001:00000ae0       IsVertTaskbar              0000060066041ae0 f   dllwndproc.obj
+ 0001:00000ce0       SubclassProc               0000060066041ce0 f   dllwndproc.obj
+ 0001:00000fb0       SubclassTrayProc           0000060066041fb0 f   dllwndproc.obj
+ 0001:000013d0       ClearClockDC               00000600660423d0 f   draw.obj
+ 0001:00001450       ClearDrawing               0000060066042450 f   draw.obj
+ 0001:00001550       CreateClockDC              0000060066042550 f   draw.obj
+ 0001:00001d60       LoadDrawingSetting         0000060066042d60 f   draw.obj
+ 0001:00001fd0       OnCalcRect                 0000060066042fd0 f   draw.obj
+ 0001:00001fe0       OnPaint                    0000060066042fe0 f   draw.obj
+ 0001:00001ff0       LoadFormatSetting          0000060066042ff0 f   format.obj
+ 0001:00002070       MakeFormat                 0000060066043070 f   format.obj
+ 0001:00002090       MakeFormatEx               0000060066043090 f   format.obj
+ 0001:000022d0       AMPMHandler                00000600660432d0 f   formattime.obj
+ 0001:00002320       AltYearHandler             0000060066043320 f   formattime.obj
+ 0001:000023d0       CRLFHandler                00000600660433d0 f   formattime.obj
+ 0001:00002410       CharaHandler               0000060066043410 f   formattime.obj
+ 0001:000024e0       DATEHandler                00000600660434e0 f   formattime.obj
+ 0001:00002580       DateHandler                0000060066043580 f   formattime.obj
+ 0001:00002710       DayOfWeekHandler           0000060066043710 f   formattime.obj
+ 0001:00002780       EraHandler                 0000060066043780 f   formattime.obj
+ 0001:000027e0       HourHandler                00000600660437e0 f   formattime.obj
+ 0001:000028c0       InitFormatTime             00000600660438c0 f   formattime.obj
+ 0001:00002c50       LDATEHandler               0000060066043c50 f   formattime.obj
+ 0001:00002cf0       MSecondHandler             0000060066043cf0 f   formattime.obj
+ 0001:00002dc0       MinuteHandler              0000060066043dc0 f   formattime.obj
+ 0001:00002e80       MonthHandler               0000060066043e80 f   formattime.obj
+ 0001:00003010       SDateHandler               0000060066044010 f   formattime.obj
+ 0001:00003050       STimeHandler               0000060066044050 f   formattime.obj
+ 0001:00003090       SecondHandler              0000060066044090 f   formattime.obj
+ 0001:00003130       TIMEHandler                0000060066044130 f   formattime.obj
+ 0001:000031d0       TimeDifHandler             00000600660441d0 f   formattime.obj
+ 0001:00003300       YearHandler                0000060066044300 f   formattime.obj
+ 0001:00003440       InitUserStr                0000060066044440 f   userstr.obj
+ 0001:000034b0       UStrHandler                00000600660444b0 f   userstr.obj
+ 0001:00003510       EndNewAPI                  0000060066044510 f   newapi.obj
+ 0001:000035d0       MyGradientFill             00000600660445d0 f   newapi.obj
+ 0001:00003650       CopyParentSurface          0000060066044650 f   dllutl.obj
+ 0001:00003790       CreateOffScreenDC          0000060066044790 f   dllutl.obj
+ 0001:00003820       CheckWinVersion            0000060066044820 f   utl.obj
+ 0001:00003910       GetTaskbarWindow           0000060066044910 f   utl.obj
+ 0001:00003930       IsVistaAero                0000060066044930 f   utl.obj
+ 0001:00003950       IsXPVisualStyle            0000060066044950 f   utl.obj
+ 0001:000039c0       add_title                  00000600660449c0 f   utl.obj
+ 0001:00003a60       del_title                  0000060066044a60 f   utl.obj
+ 0001:00003ad0       GetMyRegLong               0000060066044ad0 f   reg.obj
+ 0001:00003b80       GetMyRegStr                0000060066044b80 f   reg.obj
+ 0001:00003c60       GetMyRegStrW               0000060066044c60 f   reg.obj
+ 0001:00003d20       GetRegLong                 0000060066044d20 f   reg.obj
+ 0001:00003db0       GetRegStr                  0000060066044db0 f   reg.obj
+ 0001:00003e60       CreateMyFont               0000060066044e60 f   font.obj
+ 0001:00004040       GetDefaultFontName         0000060066045040 f   font.obj
+ 0001:000040f0       GetCodePage                00000600660450f0 f   localeinfo.obj
+ 0001:00004140       MyGetDateFormatW           0000060066045140 f   localeinfo.obj
+ 0001:00004180       MyGetLocaleInfoW           0000060066045180 f   localeinfo.obj
+ 0001:000041b0       MyGetTimeFormatW           00000600660451b0 f   localeinfo.obj
+ 0001:000041f0       memset                     00000600660451f0 f   nodeflib.obj
+ 0001:00004220       r__wtoi                    0000060066045220 f   nodeflib.obj
+ 0001:00004260       r_wcscat                   0000060066045260 f   nodeflib.obj
+ 0001:000042b0       r_wcscpy                   00000600660452b0 f   nodeflib.obj
+ 0001:000042e0       r_wcslen                   00000600660452e0 f   nodeflib.obj
+ 0001:00004300       r_wcsncmp                  0000060066045300 f   nodeflib.obj
+ 0001:00004342       SetWindowSubclass          0000060066045342 f   comctl32:COMCTL32.dll
+ 0001:00004348       RemoveWindowSubclass       0000060066045348 f   comctl32:COMCTL32.dll
+ 0001:0000434e       DefSubclassProc            000006006604534e f   comctl32:COMCTL32.dll
+ 0002:00000010       format_handers             0000060066046010     format.obj
+ 0002:00000304       g_bInitClock               0000060066046304     dllmain2.obj
+ 0002:00000308       m_nBlinkSec                0000060066046308     dllwndproc.obj
+ 0002:0000030c       m_nBlinkTick               000006006604630c     dllwndproc.obj
+ 0002:00000320       g_bDispSecond              0000060066046320     dllwndproc.obj
+ 0002:00000324       g_nBlink                   0000060066046324     dllwndproc.obj
+ 0002:00000368       g_bFitClock                0000060066046368     draw.obj
+ 0002:00000c40       g_sdisp1                   0000060066046c40     userstr.obj
+ 0002:00000ca0       g_sdisp2                   0000060066046ca0     userstr.obj
+ 0002:00000d00       g_scat1                    0000060066046d00     userstr.obj
+ 0002:00000d60       g_scat2                    0000060066046d60     userstr.obj
+ 0002:00000de0       g_userstr                  0000060066046de0     <common>
+ 0002:00001114       g_bLMousePassThru          0000060066047114     <common>
+ 0002:00001118       g_bTaskbarPosChanging      0000060066047118     <common>
+ 0002:0000111c       g_bVertTaskbar             000006006604711c     <common>
+ 0002:00001120       g_OrigClockHeight          0000060066047120     <common>
+ 0002:00001124       g_OrigClockWidth           0000060066047124     <common>
+ 0002:00001128       g_bVisualStyle             0000060066047128     <common>
+ 0002:0000112c       g_winver                   000006006604712c     <common>
+ 0002:00001140       g_mydir                    0000060066047140     <common>
+ 0002:00001260       g_inifile                  0000060066047260     <common>
+ 0002:00001364       g_bIniSetting              0000060066047364     <common>
+ 0002:00001368       g_hInst                    0000060066047368     <common>
+ 0004:00000000       __imp_RegCloseKey          0000060066049000     advapi32:ADVAPI32.dll
+ 0004:00000008       __imp_RegOpenKeyA          0000060066049008     advapi32:ADVAPI32.dll
+ 0004:00000010       __imp_RegQueryValueExA     0000060066049010     advapi32:ADVAPI32.dll
+ 0004:00000018       \177ADVAPI32_NULL_THUNK_DATA 0000060066049018     advapi32:ADVAPI32.dll
+ 0004:00000020       __imp_SetWindowSubclass    0000060066049020     comctl32:COMCTL32.dll
+ 0004:00000028       __imp_RemoveWindowSubclass 0000060066049028     comctl32:COMCTL32.dll
+ 0004:00000030       __imp_DefSubclassProc      0000060066049030     comctl32:COMCTL32.dll
+ 0004:00000038       \177COMCTL32_NULL_THUNK_DATA 0000060066049038     comctl32:COMCTL32.dll
+ 0004:00000040       __imp_BitBlt               0000060066049040     gdi32:GDI32.dll
+ 0004:00000048       __imp_DeleteDC             0000060066049048     gdi32:GDI32.dll
+ 0004:00000050       __imp_DeleteObject         0000060066049050     gdi32:GDI32.dll
+ 0004:00000058       __imp_GetStockObject       0000060066049058     gdi32:GDI32.dll
+ 0004:00000060       __imp_GetTextExtentPoint32W 0000060066049060     gdi32:GDI32.dll
+ 0004:00000068       __imp_SelectObject         0000060066049068     gdi32:GDI32.dll
+ 0004:00000070       __imp_SetBkMode            0000060066049070     gdi32:GDI32.dll
+ 0004:00000078       __imp_SetTextColor         0000060066049078     gdi32:GDI32.dll
+ 0004:00000080       __imp_SetTextAlign         0000060066049080     gdi32:GDI32.dll
+ 0004:00000088       __imp_GetTextMetricsA      0000060066049088     gdi32:GDI32.dll
+ 0004:00000090       __imp_TextOutW             0000060066049090     gdi32:GDI32.dll
+ 0004:00000098       __imp_CreateCompatibleBitmap 0000060066049098     gdi32:GDI32.dll
+ 0004:000000a0       __imp_CreateCompatibleDC   00000600660490a0     gdi32:GDI32.dll
+ 0004:000000a8       __imp_CreateFontIndirectA  00000600660490a8     gdi32:GDI32.dll
+ 0004:000000b0       __imp_EnumFontFamiliesExA  00000600660490b0     gdi32:GDI32.dll
+ 0004:000000b8       __imp_GetDeviceCaps        00000600660490b8     gdi32:GDI32.dll
+ 0004:000000c0       __imp_GetTextCharset       00000600660490c0     gdi32:GDI32.dll
+ 0004:000000c8       __imp_CreateSolidBrush     00000600660490c8     gdi32:GDI32.dll
+ 0004:000000d0       \177GDI32_NULL_THUNK_DATA  00000600660490d0     gdi32:GDI32.dll
+ 0004:000000d8       __imp_GetProcessHeap       00000600660490d8     kernel32:KERNEL32.dll
+ 0004:000000e0       __imp_HeapFree             00000600660490e0     kernel32:KERNEL32.dll
+ 0004:000000e8       __imp_SystemTimeToFileTime 00000600660490e8     kernel32:KERNEL32.dll
+ 0004:000000f0       __imp_FileTimeToSystemTime 00000600660490f0     kernel32:KERNEL32.dll
+ 0004:000000f8       __imp_GetUserDefaultLangID 00000600660490f8     kernel32:KERNEL32.dll
+ 0004:00000100       __imp_GetLocalTime         0000060066049100     kernel32:KERNEL32.dll
+ 0004:00000108       __imp_GetModuleFileNameA   0000060066049108     kernel32:KERNEL32.dll
+ 0004:00000110       __imp_GetLocaleInfoW       0000060066049110     kernel32:KERNEL32.dll
+ 0004:00000118       __imp_IsValidCodePage      0000060066049118     kernel32:KERNEL32.dll
+ 0004:00000120       __imp_GetTimeFormatW       0000060066049120     kernel32:KERNEL32.dll
+ 0004:00000128       __imp_GetDateFormatW       0000060066049128     kernel32:KERNEL32.dll
+ 0004:00000130       __imp_MulDiv               0000060066049130     kernel32:KERNEL32.dll
+ 0004:00000138       __imp_MultiByteToWideChar  0000060066049138     kernel32:KERNEL32.dll
+ 0004:00000140       __imp_GetPrivateProfileStringA 0000060066049140     kernel32:KERNEL32.dll
+ 0004:00000148       __imp_GetPrivateProfileIntA 0000060066049148     kernel32:KERNEL32.dll
+ 0004:00000150       __imp_GetModuleHandleA     0000060066049150     kernel32:KERNEL32.dll
+ 0004:00000158       __imp_GetVersion           0000060066049158     kernel32:KERNEL32.dll
+ 0004:00000160       __imp_LoadLibraryA         0000060066049160     kernel32:KERNEL32.dll
+ 0004:00000168       __imp_GetProcAddress       0000060066049168     kernel32:KERNEL32.dll
+ 0004:00000170       __imp_FreeLibrary          0000060066049170     kernel32:KERNEL32.dll
+ 0004:00000178       __imp_HeapAlloc            0000060066049178     kernel32:KERNEL32.dll
+ 0004:00000180       \177KERNEL32_NULL_THUNK_DATA 0000060066049180     kernel32:KERNEL32.dll
+ 0004:00000188       __imp_CharNextA            0000060066049188     user32:USER32.dll
+ 0004:00000190       __imp_FindWindowA          0000060066049190     user32:USER32.dll
+ 0004:00000198       __imp_wsprintfA            0000060066049198     user32:USER32.dll
+ 0004:000001a0       __imp_SystemParametersInfoA 00000600660491a0     user32:USER32.dll
+ 0004:000001a8       __imp_GetWindowLongA       00000600660491a8     user32:USER32.dll
+ 0004:000001b0       __imp_FillRect             00000600660491b0     user32:USER32.dll
+ 0004:000001b8       __imp_DrawFocusRect        00000600660491b8     user32:USER32.dll
+ 0004:000001c0       __imp_GetSysColor          00000600660491c0     user32:USER32.dll
+ 0004:000001c8       __imp_ScreenToClient       00000600660491c8     user32:USER32.dll
+ 0004:000001d0       __imp_GetClientRect        00000600660491d0     user32:USER32.dll
+ 0004:000001d8       __imp_GetFocus             00000600660491d8     user32:USER32.dll
+ 0004:000001e0       __imp_EndPaint             00000600660491e0     user32:USER32.dll
+ 0004:000001e8       __imp_BeginPaint           00000600660491e8     user32:USER32.dll
+ 0004:000001f0       __imp_ReleaseDC            00000600660491f0     user32:USER32.dll
+ 0004:000001f8       __imp_GetDC                00000600660491f8     user32:USER32.dll
+ 0004:00000200       __imp_IsWindowVisible      0000060066049200     user32:USER32.dll
+ 0004:00000208       __imp_SetWindowPos         0000060066049208     user32:USER32.dll
+ 0004:00000210       __imp_DefWindowProcA       0000060066049210     user32:USER32.dll
+ 0004:00000218       __imp_GetParent            0000060066049218     user32:USER32.dll
+ 0004:00000220       __imp_SetClassLongA        0000060066049220     user32:USER32.dll
+ 0004:00000228       __imp_GetClassLongA        0000060066049228     user32:USER32.dll
+ 0004:00000230       __imp_GetWindowRect        0000060066049230     user32:USER32.dll
+ 0004:00000238       __imp_InvalidateRect       0000060066049238     user32:USER32.dll
+ 0004:00000240       __imp_KillTimer            0000060066049240     user32:USER32.dll
+ 0004:00000248       __imp_SetTimer             0000060066049248     user32:USER32.dll
+ 0004:00000250       __imp_CallNextHookEx       0000060066049250     user32:USER32.dll
+ 0004:00000258       __imp_UnhookWindowsHookEx  0000060066049258     user32:USER32.dll
+ 0004:00000260       __imp_SetWindowsHookExA    0000060066049260     user32:USER32.dll
+ 0004:00000268       __imp_GetWindowThreadProcessId 0000060066049268     user32:USER32.dll
+ 0004:00000270       __imp_FindWindowExA        0000060066049270     user32:USER32.dll
+ 0004:00000278       __imp_MapWindowPoints      0000060066049278     user32:USER32.dll
+ 0004:00000280       __imp_IsWindow             0000060066049280     user32:USER32.dll
+ 0004:00000288       __imp_PostMessageA         0000060066049288     user32:USER32.dll
+ 0004:00000290       __imp_SendMessageA         0000060066049290     user32:USER32.dll
+ 0004:00000298       __imp_GetWindow            0000060066049298     user32:USER32.dll
+ 0004:000002a0       \177USER32_NULL_THUNK_DATA 00000600660492a0     user32:USER32.dll
+ 0004:000002a8       __imp_DwmIsCompositionEnabled 00000600660492a8     dwmapi:dwmapi.dll
+ 0004:000002b0       \177dwmapi_NULL_THUNK_DATA 00000600660492b0     dwmapi:dwmapi.dll
+ 0004:000002b8       __IMPORT_DESCRIPTOR_KERNEL32 00000600660492b8     kernel32:KERNEL32.dll
+ 0004:000002cc       __IMPORT_DESCRIPTOR_USER32 00000600660492cc     user32:USER32.dll
+ 0004:000002e0       __IMPORT_DESCRIPTOR_GDI32  00000600660492e0     gdi32:GDI32.dll
+ 0004:000002f4       __IMPORT_DESCRIPTOR_ADVAPI32 00000600660492f4     advapi32:ADVAPI32.dll
+ 0004:00000308       __IMPORT_DESCRIPTOR_COMCTL32 0000060066049308     comctl32:COMCTL32.dll
+ 0004:0000031c       __IMPORT_DESCRIPTOR_dwmapi 000006006604931c     dwmapi:dwmapi.dll
+ 0004:00000330       __NULL_IMPORT_DESCRIPTOR   0000060066049330     kernel32:KERNEL32.dll
+ 0005:00000000       g_hwndClock                000006006604a000     dllmain.obj
+ 0005:00000008       g_hhook                    000006006604a008     dllmain.obj
+ 0005:00000010       g_hwndTClockMain           000006006604a010     dllmain.obj
+
+ entry point at        0001:00000750
+
+ Static symbols
+
+ 0004:ffff7000       .idata$6                   0000060066040000     shell32:SHELL32.dll
+ 0001:00000330       c_DwmMaxQueuedBuffers      0000060066041330     utl.obj
+ 0001:00000334       c_DwmMaxMonitors           0000060066041334     utl.obj
+ 0001:00000338       c_DwmMaxAdapters           0000060066041338     utl.obj
+ 0001:000003d0       m_codepage_charset         00000600660413d0     font.obj
+ 0001:00000b10       OnTimerMain                0000060066041b10 f   dllwndproc.obj
+ 0001:00000ba0       RearrangeNotifyArea        0000060066041ba0 f   dllwndproc.obj
+ 0001:00000f04       $LN35                      0000060066041f04     dllwndproc.obj
+ 0001:00000f28       $LN34                      0000060066041f28     dllwndproc.obj
+ 0001:000010e0       CalcRect                   00000600660420e0 f   draw.obj
+ 0001:00001480       CopyClockBack              0000060066042480 f   draw.obj
+ 0001:000016a0       DrawClock                  00000600660426a0 f   draw.obj
+ 0001:00001b20       FillClock                  0000060066042b20 f   draw.obj
+ 0001:00001c60       GradientFillClock          0000060066042c60 f   draw.obj
+ 0001:00003550       InitMsimg32                0000060066044550 f   newapi.obj
+ 0001:00004010       EnumFontFamExProc          0000060066045010 f   font.obj
+ 0001:00004354       $unwind$CallWndProc        0000060066045354     dllmain.obj
+ 0001:00004364       $unwind$HookStart          0000060066045364     dllmain.obj
+ 0001:00004364       $unwind$del_title          0000060066045364     utl.obj
+ 0001:00004370       $unwind$InitClock          0000060066045370     dllmain2.obj
+ 0001:00004378       $chain$0$InitClock         0000060066045378     dllmain2.obj
+ 0001:0000438c       $chain$1$InitClock         000006006604538c     dllmain2.obj
+ 0001:0000439c       $unwind$LoadSetting        000006006604539c     dllmain2.obj
+ 0001:0000439c       $unwind$add_title          000006006604539c     utl.obj
+ 0001:0000439c       $unwind$EndClock           000006006604539c     dllmain2.obj
+ 0001:0000439c       $unwind$ClearClockDC       000006006604539c     draw.obj
+ 0001:000043a4       $unwind$SubclassProc       00000600660453a4     dllwndproc.obj
+ 0001:000043b8       $unwind$SubclassTrayProc   00000600660453b8     dllwndproc.obj
+ 0001:000043b8       $unwind$MyGradientFill     00000600660453b8     newapi.obj
+ 0001:000043cc       $unwind$OnTimerMain        00000600660453cc     dllwndproc.obj
+ 0001:000043d8       $unwind$RearrangeNotifyArea 00000600660453d8     dllwndproc.obj
+ 0001:000043ec       $unwind$GetRegLong         00000600660453ec     reg.obj
+ 0001:000043ec       $unwind$LoadDrawingSetting 00000600660453ec     draw.obj
+ 0001:000043fc       $unwind$CalcRect           00000600660453fc     draw.obj
+ 0001:00004418       $chain$3$CalcRect          0000060066045418     draw.obj
+ 0001:0000442c       $chain$4$CalcRect          000006006604542c     draw.obj
+ 0001:0000443c       $unwind$DrawClock          000006006604543c     draw.obj
+ 0001:0000444c       $chain$1$DrawClock         000006006604544c     draw.obj
+ 0001:00004464       $chain$2$DrawClock         0000060066045464     draw.obj
+ 0001:00004478       $chain$3$DrawClock         0000060066045478     draw.obj
+ 0001:0000448c       $chain$4$DrawClock         000006006604548c     draw.obj
+ 0001:0000449c       $chain$5$DrawClock         000006006604549c     draw.obj
+ 0001:000044ac       $unwind$CopyClockBack      00000600660454ac     draw.obj
+ 0001:000044c0       $chain$0$CopyClockBack     00000600660454c0     draw.obj
+ 0001:000044d4       $chain$1$CopyClockBack     00000600660454d4     draw.obj
+ 0001:000044e4       $unwind$FillClock          00000600660454e4     draw.obj
+ 0001:000044f4       $unwind$GradientFillClock  00000600660454f4     draw.obj
+ 0001:00004500       $unwind$LoadFormatSetting  0000060066045500     format.obj
+ 0001:00004508       $unwind$MakeFormat         0000060066045508     format.obj
+ 0001:00004508       $unwind$IsVertTaskbar      0000060066045508     dllwndproc.obj
+ 0001:00004510       $unwind$MakeFormatEx       0000060066045510     format.obj
+ 0001:00004524       $chain$1$MakeFormatEx      0000060066045524     format.obj
+ 0001:0000453c       $chain$2$MakeFormatEx      000006006604553c     format.obj
+ 0001:0000454c       $unwind$InitFormatTime     000006006604554c     formattime.obj
+ 0001:0000456c       $unwind$AltYearHandler     000006006604556c     formattime.obj
+ 0001:00004574       $unwind$TimeDifHandler     0000060066045574     formattime.obj
+ 0001:00004580       $chain$0$TimeDifHandler    0000060066045580     formattime.obj
+ 0001:00004594       $chain$1$TimeDifHandler    0000060066045594     formattime.obj
+ 0001:000045a4       $unwind$DATEHandler        00000600660455a4     formattime.obj
+ 0001:000045a4       $unwind$LDATEHandler       00000600660455a4     formattime.obj
+ 0001:000045a4       $unwind$TIMEHandler        00000600660455a4     formattime.obj
+ 0001:000045b4       $unwind$IsVistaAero        00000600660455b4     utl.obj
+ 0001:000045b4       $unwind$EndNewAPI          00000600660455b4     newapi.obj
+ 0001:000045b4       $unwind$InitMsimg32        00000600660455b4     newapi.obj
+ 0001:000045b4       $unwind$HookEnd            00000600660455b4     dllmain.obj
+ 0001:000045b4       $unwind$ClearDrawing       00000600660455b4     draw.obj
+ 0001:000045b4       $unwind$CheckWinVersion    00000600660455b4     utl.obj
+ 0001:000045bc       $unwind$CreateOffScreenDC  00000600660455bc     dllutl.obj
+ 0001:000045d0       $unwind$CopyParentSurface  00000600660455d0     dllutl.obj
+ 0001:000045ec       $unwind$IsXPVisualStyle    00000600660455ec     utl.obj
+ 0001:000045f4       $unwind$GetMyRegStr        00000600660455f4     reg.obj
+ 0001:00004604       $unwind$GetMyRegStrW       0000060066045604     reg.obj
+ 0001:0000461c       $unwind$GetMyRegLong       000006006604561c     reg.obj
+ 0001:00004628       $unwind$GetRegStr          0000060066045628     reg.obj
+ 0001:00004638       $unwind$CreateMyFont       0000060066045638     font.obj
+ 0001:00004654       $unwind$GetDefaultFontName 0000060066045654     font.obj
+ 0001:00004664       $unwind$GetCodePage        0000060066045664     localeinfo.obj
+ 0001:00004664       $unwind$CreateClockDC      0000060066045664     draw.obj
+ 0001:00004670       $unwind$memset             0000060066045670     nodeflib.obj
+ 0001:00004678       $chain$0$memset            0000060066045678     nodeflib.obj
+ 0001:0000468c       $chain$1$memset            000006006604568c     nodeflib.obj
+ 0001:000046a0       .edata                     00000600660456a0     tcdll.exp
+ 0001:000046c8       rgpv                       00000600660456c8     tcdll.exp
+ 0001:000046d0       rgszName                   00000600660456d0     tcdll.exp
+ 0001:000046d8       rgwOrd                     00000600660456d8     tcdll.exp
+ 0001:000046dc       szName                     00000600660456dc     tcdll.exp
+ 0001:000046e9       $N00001                    00000600660456e9     tcdll.exp
+ 0001:000046f1       $N00002                    00000600660456f1     tcdll.exp
+ 0002:00000000       m_fillbackcolor            0000060066046000     draw.obj
+ 0002:00000004       m_ClockWidth               0000060066046004     draw.obj
+ 0002:00000250       m_DayOfWeekEng             0000060066046250     formattime.obj
+ 0002:00000290       m_MonthEng                 0000060066046290     formattime.obj
+ 0002:000002f0       m_mykey                    00000600660462f0     reg.obj
+ 0002:00000300       ?bEndClock@?1??EndClock@@9@9 0000060066046300     dllmain2.obj
+ 0002:00000310       ?LastTime@?1??OnTimerMain@@9@9 0000060066046310     dllwndproc.obj
+ 0002:00000328       m_hdcClock                 0000060066046328     draw.obj
+ 0002:00000330       m_hbmpClock                0000060066046330     draw.obj
+ 0002:00000338       m_hdcClockBack             0000060066046338     draw.obj
+ 0002:00000340       m_hbmpClockBack            0000060066046340     draw.obj
+ 0002:00000348       m_hFont                    0000060066046348     draw.obj
+ 0002:00000350       m_grad                     0000060066046350     draw.obj
+ 0002:00000354       m_dwidth                   0000060066046354     draw.obj
+ 0002:00000358       m_dheight                  0000060066046358     draw.obj
+ 0002:0000035c       m_dvpos                    000006006604635c     draw.obj
+ 0002:00000360       m_dlineheight              0000060066046360     draw.obj
+ 0002:00000364       m_nTextPos                 0000060066046364     draw.obj
+ 0002:0000036c       m_colback                  000006006604636c     draw.obj
+ 0002:00000370       m_colback2                 0000060066046370     draw.obj
+ 0002:00000374       m_colfore                  0000060066046374     draw.obj
+ 0002:00000378       m_bFillTray                0000060066046378     draw.obj
+ 0002:00000380       m_format                   0000060066046380     format.obj
+ 0002:00000580       m_bHour12                  0000060066046580     formattime.obj
+ 0002:00000584       m_bHourZero                0000060066046584     formattime.obj
+ 0002:00000588       m_AM                       0000060066046588     formattime.obj
+ 0002:000005a0       m_DayOfWeekShort           00000600660465a0     formattime.obj
+ 0002:00000640       m_DayOfWeekLong            0000060066046640     formattime.obj
+ 0002:000007f8       m_PM                       00000600660467f8     formattime.obj
+ 0002:00000810       m_MonthShort               0000060066046810     formattime.obj
+ 0002:00000918       m_EraStr                   0000060066046918     formattime.obj
+ 0002:00000930       m_MonthLong                0000060066046930     formattime.obj
+ 0002:00000c18       m_SDate                    0000060066046c18     formattime.obj
+ 0002:00000c24       m_AltYear                  0000060066046c24     formattime.obj
+ 0002:00000c28       m_STime                    0000060066046c28     formattime.obj
+ 0002:00000db8       m_hmodMSIMG32              0000060066046db8     newapi.obj
+ 0002:00000dc0       m_pGradientFill            0000060066046dc0     newapi.obj
+ 0002:00000dc8       m_pAlphaBlend              0000060066046dc8     newapi.obj
+ 0002:00000dd0       m_pTransparentBlt          0000060066046dd0     newapi.obj
+ 0003:00000000       $pdata$CallWndProc         0000060066048000     dllmain.obj
+ 0003:0000000c       $pdata$HookEnd             000006006604800c     dllmain.obj
+ 0003:00000018       $pdata$HookStart           0000060066048018     dllmain.obj
+ 0003:00000024       $pdata$EndClock            0000060066048024     dllmain2.obj
+ 0003:00000030       $pdata$InitClock           0000060066048030     dllmain2.obj
+ 0003:0000003c       $pdata$0$InitClock         000006006604803c     dllmain2.obj
+ 0003:00000048       $pdata$1$InitClock         0000060066048048     dllmain2.obj
+ 0003:00000054       $pdata$LoadSetting         0000060066048054     dllmain2.obj
+ 0003:00000060       $pdata$IsVertTaskbar       0000060066048060     dllwndproc.obj
+ 0003:0000006c       $pdata$OnTimerMain         000006006604806c     dllwndproc.obj
+ 0003:00000078       $pdata$RearrangeNotifyArea 0000060066048078     dllwndproc.obj
+ 0003:00000084       $pdata$SubclassProc        0000060066048084     dllwndproc.obj
+ 0003:00000090       $pdata$SubclassTrayProc    0000060066048090     dllwndproc.obj
+ 0003:0000009c       $pdata$CalcRect            000006006604809c     draw.obj
+ 0003:000000a8       $pdata$3$CalcRect          00000600660480a8     draw.obj
+ 0003:000000b4       $pdata$4$CalcRect          00000600660480b4     draw.obj
+ 0003:000000c0       $pdata$ClearClockDC        00000600660480c0     draw.obj
+ 0003:000000cc       $pdata$ClearDrawing        00000600660480cc     draw.obj
+ 0003:000000d8       $pdata$CopyClockBack       00000600660480d8     draw.obj
+ 0003:000000e4       $pdata$0$CopyClockBack     00000600660480e4     draw.obj
+ 0003:000000f0       $pdata$1$CopyClockBack     00000600660480f0     draw.obj
+ 0003:000000fc       $pdata$CreateClockDC       00000600660480fc     draw.obj
+ 0003:00000108       $pdata$DrawClock           0000060066048108     draw.obj
+ 0003:00000114       $pdata$1$DrawClock         0000060066048114     draw.obj
+ 0003:00000120       $pdata$2$DrawClock         0000060066048120     draw.obj
+ 0003:0000012c       $pdata$3$DrawClock         000006006604812c     draw.obj
+ 0003:00000138       $pdata$4$DrawClock         0000060066048138     draw.obj
+ 0003:00000144       $pdata$5$DrawClock         0000060066048144     draw.obj
+ 0003:00000150       $pdata$FillClock           0000060066048150     draw.obj
+ 0003:0000015c       $pdata$GradientFillClock   000006006604815c     draw.obj
+ 0003:00000168       $pdata$LoadDrawingSetting  0000060066048168     draw.obj
+ 0003:00000174       $pdata$LoadFormatSetting   0000060066048174     format.obj
+ 0003:00000180       $pdata$MakeFormat          0000060066048180     format.obj
+ 0003:0000018c       $pdata$MakeFormatEx        000006006604818c     format.obj
+ 0003:00000198       $pdata$1$MakeFormatEx      0000060066048198     format.obj
+ 0003:000001a4       $pdata$2$MakeFormatEx      00000600660481a4     format.obj
+ 0003:000001b0       $pdata$AltYearHandler      00000600660481b0     formattime.obj
+ 0003:000001bc       $pdata$DATEHandler         00000600660481bc     formattime.obj
+ 0003:000001c8       $pdata$InitFormatTime      00000600660481c8     formattime.obj
+ 0003:000001d4       $pdata$LDATEHandler        00000600660481d4     formattime.obj
+ 0003:000001e0       $pdata$TIMEHandler         00000600660481e0     formattime.obj
+ 0003:000001ec       $pdata$TimeDifHandler      00000600660481ec     formattime.obj
+ 0003:000001f8       $pdata$0$TimeDifHandler    00000600660481f8     formattime.obj
+ 0003:00000204       $pdata$1$TimeDifHandler    0000060066048204     formattime.obj
+ 0003:00000210       $pdata$EndNewAPI           0000060066048210     newapi.obj
+ 0003:0000021c       $pdata$InitMsimg32         000006006604821c     newapi.obj
+ 0003:00000228       $pdata$MyGradientFill      0000060066048228     newapi.obj
+ 0003:00000234       $pdata$CopyParentSurface   0000060066048234     dllutl.obj
+ 0003:00000240       $pdata$CreateOffScreenDC   0000060066048240     dllutl.obj
+ 0003:0000024c       $pdata$CheckWinVersion     000006006604824c     utl.obj
+ 0003:00000258       $pdata$IsVistaAero         0000060066048258     utl.obj
+ 0003:00000264       $pdata$IsXPVisualStyle     0000060066048264     utl.obj
+ 0003:00000270       $pdata$add_title           0000060066048270     utl.obj
+ 0003:0000027c       $pdata$del_title           000006006604827c     utl.obj
+ 0003:00000288       $pdata$GetMyRegLong        0000060066048288     reg.obj
+ 0003:00000294       $pdata$GetMyRegStr         0000060066048294     reg.obj
+ 0003:000002a0       $pdata$GetMyRegStrW        00000600660482a0     reg.obj
+ 0003:000002ac       $pdata$GetRegLong          00000600660482ac     reg.obj
+ 0003:000002b8       $pdata$GetRegStr           00000600660482b8     reg.obj
+ 0003:000002c4       $pdata$CreateMyFont        00000600660482c4     font.obj
+ 0003:000002d0       $pdata$GetDefaultFontName  00000600660482d0     font.obj
+ 0003:000002dc       $pdata$GetCodePage         00000600660482dc     localeinfo.obj
+ 0003:000002e8       $pdata$memset              00000600660482e8     nodeflib.obj
+ 0003:000002f4       $pdata$0$memset            00000600660482f4     nodeflib.obj
+ 0003:00000300       $pdata$1$memset            0000060066048300     nodeflib.obj
+ 0004:00000786       .idata$6                   0000060066049786     kernel32:KERNEL32.dll
+ 0004:000009b6       .idata$6                   00000600660499b6     user32:USER32.dll
+ 0004:00000afe       .idata$6                   0000060066049afe     gdi32:GDI32.dll
+ 0004:00000b38       .idata$6                   0000060066049b38     advapi32:ADVAPI32.dll
+ 0004:00000b46       .idata$6                   0000060066049b46     comctl32:COMCTL32.dll
+ 0004:00000b6e       .idata$6                   0000060066049b6e     dwmapi:dwmapi.dll
+ 0006:00000060       $R000000                   000006006604b060     tcdll.res

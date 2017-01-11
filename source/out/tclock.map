@@ -1,0 +1,329 @@
+ tclock
+
+ Timestamp is 5876a5ef (Thu Jan 12 06:38:55 2017)
+
+ Preferred load address is 00400000
+
+ Start         Length     Name                   Class
+ 0001:00000000 0000045cH .rdata                  CODE
+ 0001:0000045c 000000f4H .rdata$zzzdbg           CODE
+ 0001:00000550 00001232H .text$mn                CODE
+ 0001:00001782 00000000H .edata                  CODE
+ 0002:00000000 00000600H .data                   DATA
+ 0002:00000600 00000268H .bss                    DATA
+ 0003:00000000 000000d4H .idata$5                DATA
+ 0003:000000d4 00000064H .idata$2                DATA
+ 0003:00000138 00000014H .idata$3                DATA
+ 0003:0000014c 000000d4H .idata$4                DATA
+ 0003:00000220 00000390H .idata$6                DATA
+ 0004:00000000 000001d0H .rsrc$01                DATA
+ 0004:000001d0 00000d58H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___guard_flags             00000000     <absolute>
+ 0000:00000000       ___guard_longjmp_table     00000000     <absolute>
+ 0000:00000000       ___guard_iat_table         00000000     <absolute>
+ 0000:00000000       ___guard_iat_count         00000000     <absolute>
+ 0000:00000000       ___guard_longjmp_count     00000000     <absolute>
+ 0000:00000000       ___guard_fids_table        00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0000:00000000       ___dynamic_value_reloc_table 00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0000:00000000       ___guard_fids_count        00000000     <absolute>
+ 0001:00000000       ??_C@_06MPNKCPOL@TClock?$AA@ 00401000     main2.obj
+ 0001:00000008       ??_C@_0BI@NKHNEFBI@Please?5use?5x64?5version?4?$AA@ 00401008     main2.obj
+ 0001:00000020       ??_C@_0BC@LEPLIHNJ@ObjectBar?5Toolbar?$AA@ 00401020     main2.obj
+ 0001:00000034       ??_C@_0BF@LCGHGKHE@ObjectBar?5is?5running?$AA@ 00401034     main2.obj
+ 0001:0000004c       ??_C@_0BA@EHHIIEKN@TClockMainClass?$AA@ 0040104c     main2.obj
+ 0001:0000005c       ??_C@_07DJELJCDE@ExePath?$AA@ 0040105c     main2.obj
+ 0001:00000064       ??_C@_0N@GEGLNEHD@TClock?5Light?$AA@ 00401064     main2.obj
+ 0001:00000074       ??_C@_0BI@HPLHACFO@language?5file?5not?5found?$AA@ 00401074     main2.obj
+ 0001:0000008c       ??_C@_0L@EFALKGHP@tclock?4ini?$AA@ 0040108c     main2.obj
+ 0001:00000098       ??_C@_0O@EAGJDNCB@OnContextMenu?$AA@ 00401098     main2.obj
+ 0001:000000a8       ??_C@_0DH@IKJPNPCF@Software?2Microsoft?2Windows?2Curre@ 004010a8     main2.obj
+ 0001:000000df       ??_C@_00CNPNBAHC@?$AA@     004010df     main2.obj
+ 0001:000000e0       ??_C@_09IGCMBMDI@ForeColor?$AA@ 004010e0     main2.obj
+ 0001:000000ec       ??_C@_07DIPGLEOO@DllName?$AA@ 004010ec     main2.obj
+ 0001:000000f4       ??_C@_0P@OOOCDJMK@?2luna?4msstyles?$AA@ 004010f4     main2.obj
+ 0001:00000104       ??_C@_0P@HLBPBMOI@?2Aero?4msstyles?$AA@ 00401104     main2.obj
+ 0001:00000114       ??_C@_09GKKOPBLC@ColorName?$AA@ 00401114     main2.obj
+ 0001:00000120       ??_C@_0M@CMEPMNOO@NormalColor?$AA@ 00401120     main2.obj
+ 0001:0000012c       ??_C@_06PEPCFMNJ@Format?$AA@ 0040112c     main2.obj
+ 0001:00000134       ??_C@_06BMNFLCFO@Locale?$AA@ 00401134     main2.obj
+ 0001:0000013c       ??_C@_0O@PGCDLJDB@TrayNotifyWnd?$AA@ 0040113c     main2.obj
+ 0001:0000014c       ??_C@_05NAOIJFC@Error?$AA@ 0040114c     main2.obj
+ 0001:00000154       ??_C@_0BI@GMONAAJH@Can?8t?5save?5the?5settings?$AA@ 00401154     main2.obj
+ 0001:0000016c       ??_C@_06GMKBCDMM@Kaigyo?$AA@ 0040116c     main2.obj
+ 0001:00000180       __xmm@00000000000000060000000000000000 00401180     main2.obj
+ 0001:00000190       __xmm@00000001000000010000000100000001 00401190     main2.obj
+ 0001:000001a0       ??_C@_0P@HDDEAF@TaskbarCreated?$AA@ 004011a0     wndproc.obj
+ 0001:000001b0       ??_C@_0P@FLPIFOIN@TaskbarRestart?$AA@ 004011b0     wndproc.obj
+ 0001:000001c0       ??_C@_02FEKCJMIO@ar?$AA@   004011c0     langcode.obj
+ 0001:000001c4       ??_C@_02GBFBMEMD@bg?$AA@   004011c4     langcode.obj
+ 0001:000001c8       ??_C@_02DGMJAJHC@ca?$AA@   004011c8     langcode.obj
+ 0001:000001cc       ??_C@_02PEPMCKME@zh?$AA@   004011cc     langcode.obj
+ 0001:000001d0       ??_C@_02EODNHJKB@cs?$AA@   004011d0     langcode.obj
+ 0001:000001d4       ??_C@_02DDIGBPPH@da?$AA@   004011d4     langcode.obj
+ 0001:000001d8       ??_C@_02FHOKNKPD@de?$AA@   004011d8     langcode.obj
+ 0001:000001dc       ??_C@_02IHOKALIN@el?$AA@   004011dc     langcode.obj
+ 0001:000001e0       ??_C@_02LFNMGJAP@en?$AA@   004011e0     langcode.obj
+ 0001:000001e4       ??_C@_02EKLAAFBD@es?$AA@   004011e4     langcode.obj
+ 0001:000001e8       ??_C@_02PINLEBJB@fi?$AA@   004011e8     langcode.obj
+ 0001:000001ec       ??_C@_02FBONIKAL@fr?$AA@   004011ec     langcode.obj
+ 0001:000001f0       ??_C@_02FOPACDJH@he?$AA@   004011f0     langcode.obj
+ 0001:000001f4       ??_C@_02BEDCDBMG@hu?$AA@   004011f4     langcode.obj
+ 0001:000001f8       ??_C@_02EDKKPMHH@is?$AA@   004011f8     langcode.obj
+ 0001:000001fc       ??_C@_02MOLGKLA@it?$AA@    004011fc     langcode.obj
+ 0001:00000200       ??_C@_02DJBIDCPN@ja?$AA@   00401200     langcode.obj
+ 0001:00000204       ??_C@_02KGFJHFEE@ko?$AA@   00401204     langcode.obj
+ 0001:00000208       ??_C@_02ILLPOEGM@nl?$AA@   00401208     langcode.obj
+ 0001:0000020c       ??_C@_02KAJCLHKP@no?$AA@   0040120c     langcode.obj
+ 0001:00000210       ??_C@_02JNAHGKBG@pl?$AA@   00401210     langcode.obj
+ 0001:00000214       ??_C@_02BPBMPCEP@pt?$AA@   00401214     langcode.obj
+ 0001:00000218       ??_C@_02LFKOONLL@ro?$AA@   00401218     langcode.obj
+ 0001:0000021c       ??_C@_02FIDBHGA@ru?$AA@    0040121c     langcode.obj
+ 0001:00000220       ??_C@_02FLHDKHAB@hr?$AA@   00401220     langcode.obj
+ 0001:00000224       ??_C@_02ELAAOLJA@sr?$AA@   00401224     langcode.obj
+ 0001:00000228       ??_C@_02NAAAECII@sk?$AA@   00401228     langcode.obj
+ 0001:0000022c       ??_C@_02GACNLIFD@sq?$AA@   0040122c     langcode.obj
+ 0001:00000230       ??_C@_02CPGMCOJE@sv?$AA@   00401230     langcode.obj
+ 0001:00000234       ??_C@_02POGCAHMO@th?$AA@   00401234     langcode.obj
+ 0001:00000238       ??_C@_02EOEPPNBF@tr?$AA@   00401238     langcode.obj
+ 0001:0000023c       ??_C@_02EPINJHCC@ur?$AA@   0040123c     langcode.obj
+ 0001:00000240       ??_C@_02EGCJHIOB@id?$AA@   00401240     langcode.obj
+ 0001:00000244       ??_C@_02NEINDODK@uk?$AA@   00401244     langcode.obj
+ 0001:00000248       ??_C@_02FDGHKGEB@be?$AA@   00401248     langcode.obj
+ 0001:0000024c       ??_C@_02JPEBNEEP@sl?$AA@   0040124c     langcode.obj
+ 0001:00000250       ??_C@_02FPBJDNE@et?$AA@    00401250     langcode.obj
+ 0001:00000254       ??_C@_02DIBGMKNJ@lv?$AA@   00401254     langcode.obj
+ 0001:00000258       ??_C@_02KCAKIFL@lt?$AA@    00401258     langcode.obj
+ 0001:0000025c       ??_C@_02DAACMLJJ@fa?$AA@   0040125c     langcode.obj
+ 0001:00000260       ??_C@_02OEPNOCOB@vi?$AA@   00401260     langcode.obj
+ 0001:00000264       ??_C@_02LIIHHOMK@hy?$AA@   00401264     langcode.obj
+ 0001:00000268       ??_C@_02JMHLBGIG@az?$AA@   00401268     langcode.obj
+ 0001:0000026c       ??_C@_02BMOKKCJF@eu?$AA@   0040126c     langcode.obj
+ 0001:00000270       ??_C@_02MGLIMMPC@mk?$AA@   00401270     langcode.obj
+ 0001:00000274       ??_C@_02HKAMELNL@af?$AA@   00401274     langcode.obj
+ 0001:00000278       ??_C@_02DINKFIMK@ka?$AA@   00401278     langcode.obj
+ 0001:0000027c       ??_C@_02KOIBOGBH@fo?$AA@   0040127c     langcode.obj
+ 0001:00000280       ??_C@_02PCEFGMJL@hi?$AA@   00401280     langcode.obj
+ 0001:00000284       ??_C@_02EEKDFEKL@ms?$AA@   00401284     langcode.obj
+ 0001:00000288       ??_C@_02MCDFLAEA@kk?$AA@   00401288     langcode.obj
+ 0001:0000028c       ??_C@_02LKMBMAJD@ky?$AA@   0040128c     langcode.obj
+ 0001:00000290       ??_C@_02DGHHBPNF@sw?$AA@   00401290     langcode.obj
+ 0001:00000294       ??_C@_02IHFEBNCK@uz?$AA@   00401294     langcode.obj
+ 0001:00000298       ??_C@_02BIBFFKJD@tt?$AA@   00401298     langcode.obj
+ 0001:0000029c       ??_C@_02LAJDHPIK@bn?$AA@   0040129c     langcode.obj
+ 0001:000002a0       ??_C@_02CIKJBEFL@pa?$AA@   004012a0     langcode.obj
+ 0001:000002a4       ??_C@_02BPGOHGPL@gu?$AA@   004012a4     langcode.obj
+ 0001:000002a8       ??_C@_02FODMLBIE@or?$AA@   004012a8     langcode.obj
+ 0001:000002ac       ??_C@_02CPKALMIH@ta?$AA@   004012ac     langcode.obj
+ 0001:000002b0       ??_C@_02ELMMHJID@te?$AA@   004012b0     langcode.obj
+ 0001:000002b4       ??_C@_02LPECEEAF@kn?$AA@   004012b4     langcode.obj
+ 0001:000002b8       ??_C@_02IJPJFKDF@ml?$AA@   004012b8     langcode.obj
+ 0001:000002bc       ??_C@_02ENLJKNMP@as?$AA@   004012bc     langcode.obj
+ 0001:000002c0       ??_C@_02FNLIGFOK@mr?$AA@   004012c0     langcode.obj
+ 0001:000002c4       ??_C@_02CKOPKKAC@sa?$AA@   004012c4     langcode.obj
+ 0001:000002c8       ??_C@_02LLMPDILH@mn?$AA@   004012c8     langcode.obj
+ 0001:000002cc       ??_C@_02IEGONPOD@gl?$AA@   004012cc     langcode.obj
+ 0001:000002d0       ??_C@_02FHJIFOEH@sd?$AA@   004012d0     langcode.obj
+ 0001:000002d4       ??_C@_02EACOCIBJ@ks?$AA@   004012d4     langcode.obj
+ 0001:000002d8       ??_C@_02FKHNFPCF@ne?$AA@   004012d8     langcode.obj
+ 0001:000002dc       ??_C@_02HBJMJOPF@iq?$AA@   004012dc     langcode.obj
+ 0001:000002e0       ??_C@_02GEBONCEG@eg?$AA@   004012e0     langcode.obj
+ 0001:000002e4       ??_C@_02LPIONGBG@ly?$AA@   004012e4     langcode.obj
+ 0001:000002e8       ??_C@_02JKLANEGN@dz?$AA@   004012e8     langcode.obj
+ 0001:000002ec       ??_C@_02DMFHCEHI@ma?$AA@   004012ec     langcode.obj
+ 0001:000002f0       ??_C@_02KIDIKAEI@tn?$AA@   004012f0     langcode.obj
+ 0001:000002f4       ??_C@_02JDGGLPBK@om?$AA@   004012f4     langcode.obj
+ 0001:000002f8       ??_C@_02EDBEOKNA@ye?$AA@   004012f8     langcode.obj
+ 0001:000002fc       ??_C@_02KIPEDCFL@sy?$AA@   004012fc     langcode.obj
+ 0001:00000300       ??_C@_02KHJLBPHD@jo?$AA@   00401300     langcode.obj
+ 0001:00000304       ??_C@_02BGLIBNIM@lb?$AA@   00401304     langcode.obj
+ 0001:00000308       ??_C@_02CEECONBN@kw?$AA@   00401308     langcode.obj
+ 0001:0000030c       ??_C@_02FBCBBIBI@ae?$AA@   0040130c     langcode.obj
+ 0001:00000310       ??_C@_02OGMJNIAM@bh?$AA@   00401310     langcode.obj
+ 0001:00000314       ??_C@_02CJGLHOGM@qa?$AA@   00401314     langcode.obj
+ 0001:00000318       ??_C@_02DDDIAJFA@tw?$AA@   00401318     langcode.obj
+ 0001:0000031c       ??_C@_02LBFBBFLN@cn?$AA@   0040131c     langcode.obj
+ 0001:00000320       ??_C@_02MAHDAOBJ@hk?$AA@   00401320     langcode.obj
+ 0001:00000324       ??_C@_02HMLFANIE@sg?$AA@   00401324     langcode.obj
+ 0001:00000328       ??_C@_02KCNEAJPG@mo?$AA@   00401328     langcode.obj
+ 0001:0000032c       ??_C@_02FGJGKGGD@us?$AA@   0040132c     langcode.obj
+ 0001:00000330       ??_C@_02BKONPCGN@gb?$AA@   00401330     langcode.obj
+ 0001:00000334       ??_C@_02BLODAKEJ@au?$AA@   00401334     langcode.obj
+ 0001:00000338       ??_C@_02JHCHFBLL@nz?$AA@   00401338     langcode.obj
+ 0001:0000033c       ??_C@_02FPDCEJKA@ie?$AA@   0040133c     langcode.obj
+ 0001:00000340       ??_C@_02CFDOJBIN@za?$AA@   00401340     langcode.obj
+ 0001:00000344       ??_C@_02JFKNHNPB@jm?$AA@   00401344     langcode.obj
+ 0001:00000348       ??_C@_02JODNKINP@bz?$AA@   00401348     langcode.obj
+ 0001:0000034c       ??_C@_02DJKGCEFK@zw?$AA@   0040134c     langcode.obj
+ 0001:00000350       ??_C@_02PJGLKPBC@ph?$AA@   00401350     langcode.obj
+ 0001:00000354       ??_C@_02OHALLCDL@ch?$AA@   00401354     langcode.obj
+ 0001:00000358       ??_C@_02BDDLJJBK@lu?$AA@   00401358     langcode.obj
+ 0001:0000035c       ??_C@_02OGBEGPK@mc?$AA@    0040135c     langcode.obj
+ 0001:00000360       ??_C@_02CPIDLAI@at?$AA@    00401360     langcode.obj
+ 0001:00000364       ??_C@_02PFEMMEEH@li?$AA@   00401364     langcode.obj
+ 0001:00000368       ??_C@_02FJDFBJFI@kr?$AA@   00401368     langcode.obj
+ 0001:0000036c       ??_C@_02LOEMLMCB@my?$AA@   0040136c     langcode.obj
+ 0001:00000370       ??_C@_02FGOECCNH@br?$AA@   00401370     langcode.obj
+ 0001:00000374       ??_C@_02KHFHINGA@mx?$AA@   00401374     langcode.obj
+ 0001:00000378       ??_C@_02GHFEHLK@gt?$AA@    00401378     langcode.obj
+ 0001:0000037c       ??_C@_02FHCGEIOA@cr?$AA@   0040137c     langcode.obj
+ 0001:00000380       ??_C@_02EIEIKNON@ve?$AA@   00401380     langcode.obj
+ 0001:00000384       ??_C@_02KIEKCEPM@co?$AA@   00401384     langcode.obj
+ 0001:00000388       ??_C@_02EMMFNBFP@pe?$AA@   00401388     langcode.obj
+ 0001:0000038c       ??_C@_02HCBHEC@ec?$AA@     0040138c     langcode.obj
+ 0001:00000390       ??_C@_02IDGHHHDP@cl?$AA@   00401390     langcode.obj
+ 0001:00000394       ??_C@_02KMHJEOOJ@uy?$AA@   00401394     langcode.obj
+ 0001:00000398       ??_C@_02KKLCIMAC@py?$AA@   00401398     langcode.obj
+ 0001:0000039c       ??_C@_02KJIIEOML@bo?$AA@   0040139c     langcode.obj
+ 0001:000003a0       ??_C@_02LNAEPKFM@hn?$AA@   004013a0     langcode.obj
+ 0001:000003a4       ??_C@_02PGMIBACJ@ni?$AA@   004013a4     langcode.obj
+ 0001:000003a8       ??_C@_02EJEGFFMJ@pr?$AA@   004013a8     langcode.obj
+ 0001:000003ac       ??_C@_02EOIDGPAG@se?$AA@   004013ac     langcode.obj
+ 0001:000003b0       ??_C@_02NCEGPMNB@pk?$AA@   004013b0     langcode.obj
+ 0001:000003b4       ??_C@_02LMMGJAGL@in?$AA@   004013b4     langcode.obj
+ 0001:000003b8       ??_C@_04IOHABJIC@lang?$AA@ 004013b8     langcode.obj
+ 0001:000003cc       ??_C@_0O@CFCCAJBO@Shell_TrayWnd?$AA@ 004013cc     utl.obj
+ 0001:000003dc       ??_C@_0BI@LKGCGGME@Software?2Kazubon?2TClock?$AA@ 004013dc     reg.obj
+ 0001:000003f4       ??_C@_04KGFMLCPK@Main?$AA@ 004013f4     reg.obj
+ 0001:000003fc       ??_C@_05BMGBEOOC@?$CFs?2?$CFs?$AA@ 004013fc     reg.obj
+ 0001:00000404       ??_C@_01BJJEKLCA@?$CC?$AA@ 00401404     reg.obj
+ 0001:00000408       ??_C@_02DPKJAMEF@?$CFd?$AA@ 00401408     reg.obj
+ 0001:0000040c       ??_C@_0BO@MPGFGJLC@_h?3nn?3ss?4SSS?2nddd?2nyyyy?1mm?1dd?$AA@ 0040140c     autoformat.obj
+ 0001:00000430       __xmm@00000000000000120000001100000004 00401430     autoformat.obj
+ 0001:00000550       _WinMainCRTStartup         00401550 f   main.obj
+ 0001:00000570       _r__wtoi                   00401570 f   nodeflib.obj
+ 0001:000005b0       _r_atoi                    004015b0 f   nodeflib.obj
+ 0001:00000a60       _TClockExeMain             00401a60 f   main2.obj
+ 0001:00000d90       _WndProc@16                00401d90 f   wndproc.obj
+ 0001:00000e30       _DoesLangDirExist          00401e30 f   langcode.obj
+ 0001:00000e70       _CheckWinVersion           00401e70 f   utl.obj
+ 0001:00000f50       _GetTClockMainWindow       00401f50 f   utl.obj
+ 0001:00000f70       _GetTaskbarWindow          00401f70 f   utl.obj
+ 0001:00000f90       _IsDirectory               00401f90 f   utl.obj
+ 0001:00000fb0       _add_title                 00401fb0 f   utl.obj
+ 0001:00001040       _del_title                 00402040 f   utl.obj
+ 0001:00001080       _DelMyRegKey               00402080 f   reg.obj
+ 0001:00001110       _GetMyRegLong              00402110 f   reg.obj
+ 0001:000011a0       _GetMyRegStr               004021a0 f   reg.obj
+ 0001:00001240       _GetRegLong                00402240 f   reg.obj
+ 0001:000012b0       _GetRegStr                 004022b0 f   reg.obj
+ 0001:00001350       _SetMyRegLong              00402350 f   reg.obj
+ 0001:00001430       _SetMyRegStr               00402430 f   reg.obj
+ 0001:000015e0       _AutoFormat                004025e0 f   autoformat.obj
+ 0001:00001610       _InitAutoFormat            00402610 f   autoformat.obj
+ 0001:000016e0       _GetCodePage               004026e0 f   localeinfo.obj
+ 0001:00001730       _MyGetLocaleInfoA          00402730 f   localeinfo.obj
+ 0001:00001750       _MyGetLocaleInfoW          00402750 f   localeinfo.obj
+ 0001:00001770       _HookStart@4               00402770 f   TCDLL:tcdll.tclock
+ 0001:00001776       _HookEnd@0                 00402776 f   TCDLL:tcdll.tclock
+ 0001:0000177c       _ImmDisableIME@4           0040277c f   imm32:IMM32.dll
+ 0002:00000600       _g_bIniSetting             00403600     main2.obj
+ 0002:00000604       _g_hwndClock               00403604     wndproc.obj
+ 0002:0000063c       _g_winver                  0040363c     <common>
+ 0002:00000640       _g_inifile                 00403640     <common>
+ 0002:00000760       _g_mydir                   00403760     <common>
+ 0002:00000864       _g_hInst                   00403864     <common>
+ 0003:00000000       __imp__RegSetValueExA@24   00404000     advapi32:ADVAPI32.dll
+ 0003:00000004       __imp__RegCreateKeyA@12    00404004     advapi32:ADVAPI32.dll
+ 0003:00000008       __imp__RegQueryValueExA@24 00404008     advapi32:ADVAPI32.dll
+ 0003:0000000c       __imp__RegOpenKeyA@12      0040400c     advapi32:ADVAPI32.dll
+ 0003:00000010       __imp__RegDeleteKeyA@8     00404010     advapi32:ADVAPI32.dll
+ 0003:00000014       __imp__RegCloseKey@4       00404014     advapi32:ADVAPI32.dll
+ 0003:00000018       \177ADVAPI32_NULL_THUNK_DATA 00404018     advapi32:ADVAPI32.dll
+ 0003:0000001c       __imp__ImmDisableIME@4     0040401c     imm32:IMM32.dll
+ 0003:00000020       \177IMM32_NULL_THUNK_DATA  00404020     imm32:IMM32.dll
+ 0003:00000024       __imp__GetFileAttributesA@4 00404024     kernel32:KERNEL32.dll
+ 0003:00000028       __imp__GetVersion@0        00404028     kernel32:KERNEL32.dll
+ 0003:0000002c       __imp__HeapAlloc@12        0040402c     kernel32:KERNEL32.dll
+ 0003:00000030       __imp__HeapFree@12         00404030     kernel32:KERNEL32.dll
+ 0003:00000034       __imp__GetProcessHeap@0    00404034     kernel32:KERNEL32.dll
+ 0003:00000038       __imp__GetPrivateProfileIntA@16 00404038     kernel32:KERNEL32.dll
+ 0003:0000003c       __imp__GetPrivateProfileStringA@24 0040403c     kernel32:KERNEL32.dll
+ 0003:00000040       __imp__WritePrivateProfileStringA@16 00404040     kernel32:KERNEL32.dll
+ 0003:00000044       __imp__WritePrivateProfileSectionA@12 00404044     kernel32:KERNEL32.dll
+ 0003:00000048       __imp__IsValidCodePage@4   00404048     kernel32:KERNEL32.dll
+ 0003:0000004c       __imp__GetLocaleInfoW@16   0040404c     kernel32:KERNEL32.dll
+ 0003:00000050       __imp__GetLocaleInfoA@16   00404050     kernel32:KERNEL32.dll
+ 0003:00000054       __imp__ExitProcess@4       00404054     kernel32:KERNEL32.dll
+ 0003:00000058       __imp__GetModuleHandleA@4  00404058     kernel32:KERNEL32.dll
+ 0003:0000005c       __imp__GetCurrentProcess@0 0040405c     kernel32:KERNEL32.dll
+ 0003:00000060       __imp__IsWow64Process@8    00404060     kernel32:KERNEL32.dll
+ 0003:00000064       __imp__GetUserDefaultLangID@0 00404064     kernel32:KERNEL32.dll
+ 0003:00000068       __imp__GetModuleFileNameA@12 00404068     kernel32:KERNEL32.dll
+ 0003:0000006c       __imp__lstrcmpiA@8         0040406c     kernel32:KERNEL32.dll
+ 0003:00000070       \177KERNEL32_NULL_THUNK_DATA 00404070     kernel32:KERNEL32.dll
+ 0003:00000074       __imp__MessageBoxA@16      00404074     user32:USER32.dll
+ 0003:00000078       __imp__FindWindowExA@16    00404078     user32:USER32.dll
+ 0003:0000007c       __imp__ChangeWindowMessageFilter@8 0040407c     user32:USER32.dll
+ 0003:00000080       __imp__RegisterWindowMessageA@4 00404080     user32:USER32.dll
+ 0003:00000084       __imp__PostMessageA@16     00404084     user32:USER32.dll
+ 0003:00000088       __imp__DefWindowProcA@16   00404088     user32:USER32.dll
+ 0003:0000008c       __imp__PostQuitMessage@4   0040408c     user32:USER32.dll
+ 0003:00000090       __imp__SetTimer@16         00404090     user32:USER32.dll
+ 0003:00000094       __imp__KillTimer@8         00404094     user32:USER32.dll
+ 0003:00000098       __imp__CharNextA@4         00404098     user32:USER32.dll
+ 0003:0000009c       __imp__wsprintfA           0040409c     user32:USER32.dll
+ 0003:000000a0       __imp__ShowWindow@8        004040a0     user32:USER32.dll
+ 0003:000000a4       __imp__CreateWindowExA@48  004040a4     user32:USER32.dll
+ 0003:000000a8       __imp__RegisterClassA@4    004040a8     user32:USER32.dll
+ 0003:000000ac       __imp__DispatchMessageA@4  004040ac     user32:USER32.dll
+ 0003:000000b0       __imp__TranslateMessage@4  004040b0     user32:USER32.dll
+ 0003:000000b4       __imp__GetMessageA@16      004040b4     user32:USER32.dll
+ 0003:000000b8       __imp__FindWindowA@8       004040b8     user32:USER32.dll
+ 0003:000000bc       __imp__UnregisterClassA@8  004040bc     user32:USER32.dll
+ 0003:000000c0       __imp__GetClientRect@8     004040c0     user32:USER32.dll
+ 0003:000000c4       \177USER32_NULL_THUNK_DATA 004040c4     user32:USER32.dll
+ 0003:000000c8       __imp__HookEnd@0           004040c8     TCDLL:tcdll.tclock
+ 0003:000000cc       __imp__HookStart@4         004040cc     TCDLL:tcdll.tclock
+ 0003:000000d0       \177tcdll_NULL_THUNK_DATA  004040d0     TCDLL:tcdll.tclock
+ 0003:000000d4       __IMPORT_DESCRIPTOR_tcdll  004040d4     TCDLL:tcdll.tclock
+ 0003:000000e8       __IMPORT_DESCRIPTOR_KERNEL32 004040e8     kernel32:KERNEL32.dll
+ 0003:000000fc       __IMPORT_DESCRIPTOR_USER32 004040fc     user32:USER32.dll
+ 0003:00000110       __IMPORT_DESCRIPTOR_ADVAPI32 00404110     advapi32:ADVAPI32.dll
+ 0003:00000124       __IMPORT_DESCRIPTOR_IMM32  00404124     imm32:IMM32.dll
+ 0003:00000138       __NULL_IMPORT_DESCRIPTOR   00404138     TCDLL:tcdll.tclock
+
+ entry point at        0001:00000550
+
+ Static symbols
+
+ 0003:ffffc000       .idata$6                   00400000     shell32:SHELL32.dll
+ 0003:ffffc000       .idata$6                   00400000     dwmapi:dwmapi.dll
+ 0001:000003c0       _c_DwmMaxQueuedBuffers     004013c0     utl.obj
+ 0001:000003c4       _c_DwmMaxMonitors          004013c4     utl.obj
+ 0001:000003c8       _c_DwmMaxAdapters          004013c8     utl.obj
+ 0001:00000600       _AddMessageFilters         00401600 f   main2.obj
+ 0001:000006e0       _InitFormat                004016e0 f   main2.obj
+ 0001:00000870       _InitTClockMain            00401870 f   main2.obj
+ 0001:00000920       _InitTextColor             00401920 f   main2.obj
+ 0001:00000be0       _ClearTClockMain           00401be0 f   wndproc.obj
+ 0001:00000c30       _OnCreate                  00401c30 f   wndproc.obj
+ 0001:00000c80       _OnDestroy                 00401c80 f   wndproc.obj
+ 0001:00000ce0       _OnTaskbarRestart          00401ce0 f   wndproc.obj
+ 0001:00000d50       _OnTimerStart              00401d50 f   wndproc.obj
+ 0002:00000000       _m_langcode                00403000     langcode.obj
+ 0002:00000250       _m_countrycode             00403250     langcode.obj
+ 0002:000005ec       _m_mykey                   004035ec     reg.obj
+ 0002:00000608       _m_bHook                   00403608     wndproc.obj
+ 0002:0000060c       _m_bStartTimer             0040360c     wndproc.obj
+ 0002:00000610       ?bCleared@?1??ClearTClockMain@@9@9 00403610     wndproc.obj
+ 0002:00000614       _m_uTaskbarRestart         00403614     wndproc.obj
+ 0002:00000618       _m_idate                   00403618     autoformat.obj
+ 0002:0000061c       _m_sMon                    0040361c     autoformat.obj
+ 0002:00000634       _m_bDayOfWeekIsLast        00403634     autoformat.obj
+ 0002:00000638       _m_bTimeMarkerIsFirst      00403638     autoformat.obj
+ 0003:00000236       .idata$6                   00404236     TCDLL:tcdll.tclock
+ 0003:000003ba       .idata$6                   004043ba     kernel32:KERNEL32.dll
+ 0003:0000051a       .idata$6                   0040451a     user32:USER32.dll
+ 0003:00000588       .idata$6                   00404588     advapi32:ADVAPI32.dll
+ 0003:000005a6       .idata$6                   004045a6     imm32:IMM32.dll
+ 0004:000001d0       $R000000                   004051d0     tclock.res
+ 0004:00000488       $R0002B8                   00405488     tclock.res
+ 0004:00000768       $R000598                   00405768     tclock.res
+ 0004:00000a50       $R000880                   00405a50     tclock.res
+ 0004:00000b78       $R0009A8                   00405b78     tclock.res
+ 0004:00000ba0       $R0009D0                   00405ba0     tclock.res
