@@ -16,7 +16,6 @@ environment:
       ARCH: x64
 
 before_build:
-  - prepare_custom.bat
 
 build_script:
   # If VC is 10, build both x86 and x64.
