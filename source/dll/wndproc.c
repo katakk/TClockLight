@@ -95,38 +95,15 @@ LRESULT CALLBACK SubclassProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lPa
 			return 0;
 		
 		/* -------- Mouse messages ------------- */
-		
-		case WM_LBUTTONDOWN:   // mouse button is down
-		case WM_RBUTTONDOWN:
-		case WM_MBUTTONDOWN:
-		case WM_XBUTTONDOWN:
 
-		
-		case WM_LBUTTONUP:    // mouse button is up
-		case WM_RBUTTONUP:
-		case WM_MBUTTONUP:
-		case WM_XBUTTONUP:
 
-		
-		case WM_MOUSEMOVE:
-			return 0;
-		case WM_NCRBUTTONUP:
-			return 0;
-		case WM_CONTEXTMENU:
-			PostMessage(g_hwndTClockMain, WM_CONTEXTMENU, wParam, lParam);
-			return 0;
+
 		case WM_NCHITTEST:     // not to pass to the original wndproc
 			return DefWindowProc(hwnd, message, wParam, lParam);
 		case WM_MOUSEACTIVATE:
 			return MA_ACTIVATE;
 
 		
-		case WM_NOTIFY: // tooltip
-		{
-			LRESULT res;
-
-			break;
-		}
 		
 		/* messages sent from other program */
 		
@@ -140,12 +117,6 @@ LRESULT CALLBACK SubclassProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lPa
 			InitUserStr();
 			return 0;
 
-
-		case CLOCKM_BLINK: // blink the clock
-			g_nBlink = 2;
-			m_nBlinkSec = (int)lParam;
-			if(lParam) m_nBlinkTick = GetTickCount();
-			return 0;
 
 
 
@@ -269,41 +240,16 @@ LRESULT CALLBACK SubclassTrayProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM
 void OnTimerMain(HWND hwnd)
 {
 	static SYSTEMTIME LastTime = { 0, 0, 0, 0, 0, 0, 0, 0 };
-	static BOOL bTimerAdjusting = FALSE;
+
 	SYSTEMTIME t;
 	HDC hdc;
 	BOOL bRedraw;
 	
 	GetLocalTime(&t);
-	
-	// adjusting milliseconds gap
-	if(t.wMilliseconds > 50)
-	{
-		//KillTimer(hwnd, IDTIMER_MAIN);
-		SetTimer(hwnd, IDTIMER_MAIN, 1001 - t.wMilliseconds, NULL);
-		bTimerAdjusting = TRUE;
-	}
-	else if(bTimerAdjusting)
-	{
-		//KillTimer(hwnd, IDTIMER_MAIN);
-		bTimerAdjusting = FALSE;
-		SetTimer(hwnd, IDTIMER_MAIN, 1000, NULL);
-	}
-	
-	bRedraw = FALSE;
-	
-	if(g_nBlink && m_nBlinkSec)
-	{
-		if(GetTickCount() - m_nBlinkTick > (DWORD)m_nBlinkSec*1000)
-		{
-			g_nBlink = 0; bRedraw = TRUE;
-		}
-	}
-	
-	if(g_nBlink > 0) bRedraw = TRUE;
-	else if(g_bDispSecond) bRedraw = TRUE;
-	else if(LastTime.wHour != (int)t.wHour
-		|| LastTime.wMinute != (int)t.wMinute) bRedraw = TRUE;
+
+
+
+bRedraw = TRUE;
 	
 	
 	
@@ -313,6 +259,7 @@ void OnTimerMain(HWND hwnd)
 		LastTime.wYear != t.wYear)
 	{
 		InitFormatTime(); // formattime.c
+
 	}
 	
 	hdc = NULL;
@@ -324,11 +271,8 @@ void OnTimerMain(HWND hwnd)
 		ReleaseDC(hwnd, hdc);
 	}
 	
-	if(g_nBlink)
-	{
-		g_nBlink ^= 3;  // toggle 1 and 2
-	}
-	
+
+
 	memcpy(&LastTime, &t, sizeof(t));
 	
 

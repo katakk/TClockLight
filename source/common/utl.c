@@ -353,17 +353,8 @@ int CheckWinVersion(void)
 	ver = MAKEWORD(HIBYTE(w), LOBYTE(w));
 	build = HIWORD(dw) & 0x7fff;
 	ret = 0;
-#if 0
-	if(dw & 0x80000000)
-	{
-		ret |= WIN95;
-		if(ver >= MAKEWORD(10, 4))	// 4.10
-			ret |= WIN98;
-		if(ver >= MAKEWORD(90, 4))	// 4.90
-			ret |= WINME;
-	}
-	else
-#endif
+
+
 	{
 		ret |= WINNT;
 		if(ver >= MAKEWORD(0, 5))	// 5.0

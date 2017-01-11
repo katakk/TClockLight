@@ -24,11 +24,9 @@ TCDLLH=$(SRCDIR)\tcdll.h $(COMMONDIR)\common.h
 COMMONH=$(COMMONDIR)\common.h
 
 OBJS=dllmain.obj dllmain2.obj dllwndproc.obj draw.obj\
-	format.obj formattime.obj tooltip.obj userstr.obj\
-	startbtn.obj startmenu.obj taskbar.obj taskswitch.obj traynotify.obj\
+	format.obj formattime.obj userstr.obj\
 	bmp.obj newapi.obj dllutl.obj\
-	sysinfo.obj net.obj hdd.obj cpu.obj battery.obj mixer.obj \
-	vistavol.obj desktop.obj \
+	vistavol.obj \
 	exec.obj utl.obj reg.obj font.obj localeinfo.obj
 
 LIBS=kernel32.lib user32.lib gdi32.lib advapi32.lib shell32.lib winmm.lib\
@@ -90,23 +88,12 @@ dllwndproc.obj: $(SRCDIR)\wndproc.c $(TCDLLH) ..\config.h
 	$(CC) $(COPT)$@ $(SRCDIR)\wndproc.c
 format.obj: $(SRCDIR)\format.c $(TCDLLH) ..\config.h
 formattime.obj: $(SRCDIR)\formattime.c $(TCDLLH)
-tooltip.obj: $(SRCDIR)\tooltip.c $(TCDLLH)
+
 userstr.obj: $(SRCDIR)\userstr.c $(TCDLLH)
 draw.obj: $(SRCDIR)\draw.c $(TCDLLH)
-startbtn.obj: $(SRCDIR)\startbtn.c $(TCDLLH) ..\config.h
-startmenu.obj: $(SRCDIR)\startmenu.c $(TCDLLH) ..\config.h
-taskbar.obj: $(SRCDIR)\taskbar.c $(TCDLLH) ..\config.h
-taskswitch.obj: $(SRCDIR)\taskswitch.c $(TCDLLH) ..\config.h
-traynotify.obj: $(SRCDIR)\traynotify.c $(TCDLLH) ..\config.h
 bmp.obj: $(SRCDIR)\bmp.c $(TCDLLH)
 dllutl.obj: $(SRCDIR)\dllutl.c $(TCDLLH)
 newapi.obj: $(SRCDIR)\newapi.c $(TCDLLH)
-sysinfo.obj: $(SRCDIR)\sysinfo.c $(TCDLLH) ..\config.h
-net.obj: $(SRCDIR)\net.c $(TCDLLH) ..\config.h
-hdd.obj: $(SRCDIR)\hdd.c $(TCDLLH) ..\config.h
-cpu.obj: $(SRCDIR)\cpu.c $(TCDLLH) ..\config.h
-battery.obj: $(SRCDIR)\battery.c $(TCDLLH) ..\config.h
-desktop.obj: $(SRCDIR)\desktop.c $(TCDLLH) ..\config.h
 
 # common obj files
 

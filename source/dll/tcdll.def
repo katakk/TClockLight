@@ -6,4 +6,3 @@ MYDATA    SHARED READ WRITE
 EXPORTS
 HookStart
 HookEnd
-GetTClockVersion

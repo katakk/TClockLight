@@ -114,13 +114,6 @@ void WINAPI HookEnd(void)
 	g_hhook = NULL;
 }
 
-/*------------------------------------------------
-  API: return this version
---------------------------------------------------*/
-void WINAPI GetTClockVersion(char* dst)
-{
-	if(dst) strcpy(dst, TCLOCKVERSION);
-}
 
 /*---------------------------------------------------------
   hook procedure

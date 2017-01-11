@@ -18,11 +18,10 @@ int  g_winver;              // windows version
 /* Statics */
 
 static void InitTClockMain(void);
-static BOOL CheckTCDLL(void);
 static void InitTextColor(void);
 static void InitFormat(void);
 static void AddMessageFilters(void);
-
+int CheckWinVersion(void);
 
 /*-------------------------------------------
    main routine
@@ -50,13 +49,10 @@ int TClockExeMain(void)
 	hwnd = GetTClockMainWindow();
 	if(hwnd != NULL)
 	{
-
 		return 1;
 	}
 	
 	ImmDisableIME(0);
-	
-	if(!CheckTCDLL()) { return 1; }
 	
 	if(FindWindow("ObjectBar Toolbar", NULL))
 	{
@@ -76,26 +72,21 @@ int TClockExeMain(void)
 	wndclass.cbClsExtra    = 0;
 	wndclass.cbWndExtra    = 0;
 	wndclass.hInstance     = g_hInst;
-//	wndclass.hIcon         = LoadIcon(g_hInst, "MYICON");
+
 	wndclass.hIcon         = NULL;
-//	wndclass.hCursor       = LoadCursor(NULL, IDC_ARROW);
+
 	wndclass.hCursor       = NULL;
 	wndclass.hbrBackground = (HBRUSH)(COLOR_WINDOW+1);
 	wndclass.lpszMenuName  = NULL;
 	wndclass.lpszClassName = CLASS_TCLOCKMAIN;
 	RegisterClass(&wndclass);
 	
-#if 0
-	// use message-only window to reduce memory consumption
-	if(g_winver&WIN2000)
-		hwndParent = HWND_MESSAGE;	// message-only window
-	else
-		hwndParent = NULL;
-#else
+
+
 	// message-only window can't receive WM_POWERBROADCAST
 	hwndParent = NULL;
-#endif
-	
+
+
 	// create a hidden window
 	hwnd = CreateWindowEx(0,
 		CLASS_TCLOCKMAIN, TITLE_TCLOCKMAIN,
@@ -142,7 +133,6 @@ void InitTClockMain(void)
 	strcpy(g_inifile, g_mydir);
 	add_title(g_inifile, "tclock.ini");
 	g_bIniSetting = TRUE;
-/*  g_bIniSetting = IsFile(g_inifile); */
 	
 	g_winver = CheckWinVersion();
 	
@@ -151,22 +141,6 @@ void InitTClockMain(void)
 	InitTextColor();
 	
 	InitFormat();
-}
-
-/*-------------------------------------------
-  Check version of dll
----------------------------------------------*/
-BOOL CheckTCDLL(void)
-{
-	char str[80];
-	GetTClockVersion(str);
-	if(strcmp(str, TCLOCKVERSION) != 0)
-	{
-		MessageBox(NULL, "Invalid file version: tcdll.tclock",
-			"Error", MB_OK|MB_ICONEXCLAMATION);
-		return FALSE;
-	}
-	return TRUE;
 }
 
 /*------------------------------------------------

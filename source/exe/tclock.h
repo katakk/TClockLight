@@ -6,13 +6,6 @@
 
 // IDs for timer
 #define IDTIMER_START       2
-#define IDTIMER_MAIN        3
-
-
-#define IDTIMER_MONOFF      6
-
-
-
 
 // Windows Vista UIPI definitions
 #ifndef MSGFLT_ADD
@@ -24,7 +17,7 @@
 /* --- API of tcdll.tclock ---------- */
 BOOL WINAPI HookStart(HWND hwnd);
 void WINAPI HookEnd(void);
-void WINAPI GetTClockVersion(char *dst);
+
 
 /* ---------- main.c ---------------- */
 extern HINSTANCE g_hInst;
@@ -45,11 +38,8 @@ extern HWND  g_hwndClock;
 
 
 /* ---------- menu.c ---------------- */
-
-void EndContextMenu(void);
-void OnContextMenu(HWND hwnd, HWND hwndClicked, int xPos, int yPos);
-void OnExitMenuLoop(HWND hwnd);
 void SetFocusTClockMain(HWND hwnd);
+
 
 
 

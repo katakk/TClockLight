@@ -28,7 +28,7 @@ BOOL    g_bLMousePassThru;     // pass through left button messages
 #define SUBCLASS_ID			1
 #define SUBCLASSTRAY_ID		2
 
-
+int CheckWinVersion(void);
 /*------------------------------------------------
   initialize the clock
 --------------------------------------------------*/
@@ -40,12 +40,8 @@ void InitClock(HWND hwnd)
 	g_bInitClock = TRUE;
 	
 	g_hInst = GetModuleHandle(DLLFILENAME);
-	
 	g_winver = CheckWinVersion();       // common/utl.c
 	g_bVisualStyle = IsXPVisualStyle(); // common/utl.c
-	
-
-
 	
 	GetModuleFileName(g_hInst, g_mydir, MAX_PATH);
 	del_title(g_mydir);
@@ -53,8 +49,6 @@ void InitClock(HWND hwnd)
 	strcpy(g_inifile, g_mydir);
 	add_title(g_inifile, "tclock.ini");
 	g_bIniSetting = TRUE;
-/*  g_bIniSetting = FALSE;
-	if(IsFile(g_inifile)) g_bIniSetting = TRUE; */
 	
 	// Save the original window size
 	GetWindowRect(hwnd, &rc);
@@ -69,7 +63,6 @@ void InitClock(HWND hwnd)
 	
 	// read settings
 	LoadSetting(hwnd);
-	
 
 	InitUserStr();     // userstr.c
 	
@@ -84,17 +77,10 @@ void InitClock(HWND hwnd)
 	// don't accept double clicks
 	SetClassLong(hwnd, GCL_STYLE,
 		GetClassLong(hwnd, GCL_STYLE) & ~CS_DBLCLKS);
-	
-
-	
 
 	PostMessage(GetParent(GetParent(hwnd)), WM_SIZE, SIZE_RESTORED, 0);
 	InvalidateRect(GetParent(GetParent(hwnd)), NULL, TRUE);
-
-	
 	SetTimer(hwnd, IDTIMER_MAIN, 1000, NULL);
-	
-
 }
 
 /*------------------------------------------------
@@ -108,10 +94,7 @@ void EndClock(HWND hwnd)
 	bEndClock = TRUE;
 	
 	g_bVisualStyle = IsXPVisualStyle();
-
-
 	ClearDrawing();     // drawing.c
-
 	
 	EndNewAPI();		// newapi.c
 	
@@ -126,12 +109,8 @@ void EndClock(HWND hwnd)
 				SUBCLASSTRAY_ID);
 	}
 	
-
-
 	PostMessage(GetParent(GetParent(hwnd)), WM_SIZE, SIZE_RESTORED, 0);
 	InvalidateRect(GetParent(GetParent(hwnd)), NULL, TRUE);
-
-
 	
 	// close window of tclock.exe
 	PostMessage(g_hwndTClockMain, WM_CLOSE, 0, 0);
@@ -144,7 +123,6 @@ void EndClock(HWND hwnd)
 ---------------------------------------------------------------*/
 void OnDestroy(HWND hwnd)
 {
-
 	ClearDrawing();             // drawing.c
 }
 
@@ -158,8 +136,6 @@ void LoadSetting(HWND hwnd)
 
 	g_bLMousePassThru = GetMyRegLong("Mouse", "LeftMousePassThrough",
 			(g_winver&WIN10RS1) != 0);
-	
-
 	
 	LoadFormatSetting(hwnd);   // format.c
 	LoadDrawingSetting(hwnd);  // drawing.c

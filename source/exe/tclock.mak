@@ -23,10 +23,9 @@ TDSFILE=$(OUTDIR)\tclock.tds
 TCLOCKH=$(SRCDIR)\tclock.h $(COMMONDIR)\common.h
 COMMONH=$(COMMONDIR)\common.h
 
-OBJS=main2.obj wndproc.obj cmdopt.obj command.obj menu.obj\
-	alarm.obj mouse.obj mouse2.obj about.obj\
+OBJS=main2.obj wndproc.obj command.obj menu.obj\
 	langcode.obj utl.obj exec.obj reg.obj autoformat.obj localeinfo.obj\
-	playfile.obj list.obj alarmstruct.obj mousestruct.obj mixer.obj\
+	list.obj \
 	vistavol.obj
 
 LIBS=kernel32.lib user32.lib gdi32.lib advapi32.lib shell32.lib winmm.lib\
@@ -80,29 +79,20 @@ $(EXEFILE): main.obj $(OBJS) $(RESFILE)  TCDLL.lib
 main.obj: $(SRCDIR)\main.c $(TCLOCKH)
 main2.obj: $(SRCDIR)\main2.c $(TCLOCKH) ..\config.h
 wndproc.obj: $(SRCDIR)\wndproc.c $(TCLOCKH) ..\config.h
-cmdopt.obj: $(SRCDIR)\cmdopt.c $(TCLOCKH)
 command.obj: $(SRCDIR)\command.c $(TCLOCKH) $(COMMONDIR)\command.h
 menu.obj: $(SRCDIR)\menu.c $(TCLOCKH) $(COMMONDIR)\command.h
-alarm.obj: $(SRCDIR)\alarm.c $(TCLOCKH)
-mouse.obj: $(SRCDIR)\mouse.c $(TCLOCKH) $(COMMONDIR)\command.h ..\config.h
-mouse2.obj: $(SRCDIR)\mouse2.c $(TCLOCKH) ..\config.h
-sntp.obj: $(SRCDIR)\sntp.c $(TCLOCKH) $(COMMONDIR)\command.h
-about.obj: $(SRCDIR)\about.c $(TCLOCKH)
 
 # common obj files
 
 langcode.obj: $(COMMONDIR)\langcode.c $(COMMONH)
 playfile.obj: $(COMMONDIR)\playfile.c $(COMMONH)
 list.obj: $(COMMONDIR)\list.c $(COMMONH)
-alarmstruct.obj: $(COMMONDIR)\alarmstruct.c $(COMMONH)
-mousestruct.obj: $(COMMONDIR)\mousestruct.c $(COMMONH) $(COMMONDIR)\command.h ..\config.h
 utl.obj: ..\common\utl.c $(COMMONH)
 exec.obj: $(COMMONDIR)\exec.c $(COMMONH)
 reg.obj: $(COMMONDIR)\reg.c $(COMMONH)
 nodeflib.obj: $(COMMONDIR)\nodeflib.c $(COMMONH)
 autoformat.obj: $(COMMONDIR)\autoformat.c $(COMMONH)
 localeinfo.obj: $(COMMONDIR)\localeinfo.c $(COMMONH)
-mixer.obj: $(COMMONDIR)\mixer.c $(COMMONH) ..\config.h
 vistavol.obj: $(COMMONDIR)\vistavol.cpp ..\config.h
 	$(CC) $(COPT)$@ $(COMMONDIR)\vistavol.cpp
 
