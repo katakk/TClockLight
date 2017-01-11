@@ -1,13 +1,14 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/e2rljlqdk6gpql89/branch/master?svg=true)](https://ci.appveyor.com/project/katakk/tclocklight/branch/master)
 
-config ‚Í ƒRƒ“ƒeƒLƒXƒgƒƒjƒ…[‚Æ‚©#if 0 ‚Æ‚©‚¯‚µ‚Ü‚µ‚½B
+config ã¯ ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆãƒ¡ãƒ‹ãƒ¥ãƒ¼ã¨ã‹#if 0 ã¨ã‹ã‘ã—ã¾ã—ãŸã€‚
 
-‚¨‚í‚é‚Æ‚«‚Í‹­§I—¹‚Å‚·
+ãŠã‚ã‚‹ã¨ãã¯å¼·åˆ¶çµ‚äº†ã§ã™
 
-‡_•b•\¦‚ğƒfƒtƒHƒ‹ƒg’Ç‰Á‚µ‚Ü‚µ‚½B
+ã‰ç§’è¡¨ç¤ºã‚’ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆè¿½åŠ ã—ã¾ã—ãŸã€‚
 
-XVŠÔŠu‚Í5ms ‚É‚µ‚Ä‚İ‚Ü‚µ‚½B
+æ›´æ–°é–“éš”ã¯5ms ã«ã—ã¦ã¿ã¾ã—ãŸã€‚
 
-lang ‚¢‚ç‚È‚­‚µ‚Ü‚µ‚½B
+lang ã„ã‚‰ãªãã—ã¾ã—ãŸã€‚
 
 https://github.com/katakk/TClockLight/blob/master/source/out/tclock.exe
 
