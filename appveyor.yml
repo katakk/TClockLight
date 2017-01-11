@@ -40,8 +40,7 @@ after_build:
   - >
     if "%CREATEPKG%"=="yes"
     pack kt%TODAY%-%APPVEYOR_REPO_COMMIT% &&
-    move pkg\tclocklight-*.zip . &&
-    move pkg\tclocklight-*-custom.7z .
+    move pkg\tclocklight-*.zip .
 
 #test_script:
 #  - 
@@ -49,7 +48,5 @@ after_build:
 artifacts:
   - path: tclocklight-*.zip
     name: main package
-  - path: tclocklight-*-custom.7z
-    name: custom package
 
 # vim: ts=2 sw=2 et
