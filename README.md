@@ -1,4 +1,7 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/e2rljlqdk6gpql89/branch/master?svg=true)](https://ci.appveyor.com/project/katakk/tclocklight/branch/master)
+# TClock Light kt [![Build Status](https://travis-ci.org/katakk/tclocklight.svg?branch=master)](https://travis-ci.org/katakk/tclocklight) [![codecov.io](https://codecov.io/github/katakk/tclocklight/coverage.svg?branch=master)](https://codecov.io/github/katakk/tclocklight?branch=master)
+
+
+This is a modified version of TClock Light.
 
 config は コンテキストメニューとか#if 0 とかけしました。
 
@@ -10,16 +13,7 @@ config は コンテキストメニューとか#if 0 とかけしました。
 
 lang いらなくしました。
 
-https://github.com/katakk/TClockLight/blob/master/source/out/tclock.exe
 
-https://github.com/katakk/TClockLight/blob/master/source/out64/tclock.exe
-
-
-
-
-# TClock Light kt
-
-This is a modified version of TClock Light.
 
 
 ## Binary packages
