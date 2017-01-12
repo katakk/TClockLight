@@ -16,20 +16,6 @@ static const char *GetControlTitle(char *dst, const char *src, int nMax, int *cc
 extern HINSTANCE g_hInst;
 extern char g_langfile[];
 
-/*-------------------------------------------
-  compare version strings
----------------------------------------------*/
-void CheckTCLangVersion(void)
-{
-	char buf[80];
-	
-	if(GetPrivateProfileString("Main", "Version", "", buf,
-		80, g_langfile) > 0)
-	{
-		if(strcmp(buf, TCLOCKVERSION) == 0) return;
-	}
-	g_langfile[0] = 0;
-}
 
 /*-------------------------------------------
   returns a resource string
@@ -74,125 +60,8 @@ HFONT CreateDialogFont(void)
 	return CreateMyFont(name, size, FW_NORMAL, 0, 0);
 }
 
-/*-------------------------------------------
-  change title and size of a dialog and its controls
----------------------------------------------*/
-void SetDialogLanguage(HWND hDlg, const char *section, HFONT hfont)
-{
-	HWND hwnd;
-	HDC hdc;
-	SIZE sz;
-	const char *test = "TCLOCK light";
-								// upper/lower cases should be balanced.
-	char entry[10], buf[160], title[80];
-	char classname[80];
-	RECT rcCtrl, rcWin, rcClient;
-	POINT ptCtrl;
-	int xunit;
-	int x, y, w, h;
-	int maxwidth, winwidth, framewidth;
-	int i;
-	BOOL bSize;
-	
-	if(g_langfile[0] == 0) return;
-	
-	if(GetPrivateProfileString("Main", "Version", "", buf,
-		80, g_langfile) > 0)
-	{
-		if(strcmp(buf, TCLOCKVERSION) != 0) return;
-	}
-	
-	if(hfont != NULL) ;
-	//	SendMessage(hDlg, WM_SETFONT, (WPARAM)hfont, 0);
-	else
-		hfont = (HFONT)SendMessage(hDlg, WM_GETFONT, 0, 0);
-	
-	hdc = GetDC(hDlg);
-	SelectObject(hdc, hfont);
-	GetTextExtentPoint32(hdc, test, (int)strlen(test), &sz);
-	ReleaseDC(hDlg, hdc);
-	
-	xunit = (sz.cx * 100) / (int)strlen(test);
-	
-	GetPrivateProfileString(section, "Title", "", title,
-		80, g_langfile);
-	
-	if(title[0])
-		SetWindowText(hDlg, title);
-	
-	bSize = TRUE;
-	if(strcmp(section, "TestSound") == 0) bSize = FALSE;
-	
-	hwnd = GetWindow(hDlg, GW_CHILD);
-	maxwidth = 0;
-	for(i = 0; hwnd; i++)
-	{
-		int ccamps = 0;	// Total count of "&" in a line
-		const char *p, *sp;
-		
-		wsprintf(entry, "Line%02d", i + 1);
-		GetPrivateProfileString(section, entry, "", buf,
-			160, g_langfile);
-		if(!buf[0]) break;
-		
-		p = sp = buf;
-		
-		while(*p)
-		{
-			if(*p == '[')
-			{
-				int ccamp;	// Count of "&" in an item
-				const char *xp = p;
-				p = GetControlTitle(title, p, 80, &ccamp);
-				ccamps += ccamp;
-				
-				if(hfont != NULL)
-					SendMessage(hwnd, WM_SETFONT, (WPARAM)hfont, 0);
-				if(title[0])
-					SetWindowText(hwnd, title);
-				
-				GetClassName(hwnd, classname, 80);
-				if(bSize &&
-					strcmp(classname, "msctls_updown32") != 0)
-				{
-					GetWindowRect(hwnd, &rcCtrl);
-					ptCtrl.x = rcCtrl.left;
-					ptCtrl.y = rcCtrl.top;
-					ScreenToClient(hDlg, &ptCtrl);
-					
-					x = ((int)(xp - sp) * xunit) / 100;
-					y = ptCtrl.y;
-					w = (((int)(p - xp) - ccamp) * xunit) / 100;
-					h = rcCtrl.bottom - rcCtrl.top;
-					SetWindowPos(hwnd, NULL, x, y,
-						w, h, SWP_NOZORDER);
-				}
-				
-				hwnd = GetWindow(hwnd, GW_HWNDNEXT);
-				if(*p) p++;
-			}
-			else p++;
-		}
-		
-		w = (((int)(p - sp) - ccamps) * xunit) / 100;
-		if(maxwidth < w) maxwidth = w;
-	}
-	
-	if(!bSize) return;
-	
-	GetWindowRect(hDlg, &rcWin);
-	GetClientRect(hDlg, &rcClient);
-	winwidth = rcWin.right - rcWin.left;
-	framewidth = winwidth - rcClient.right;
-	if(maxwidth > winwidth - (xunit/100) - framewidth)
-	{
-		winwidth = maxwidth + (xunit/100) + framewidth;
-		SetWindowPos(hDlg, NULL, 0, 0,
-			winwidth,
-			rcWin.bottom - rcWin.top,
-			SWP_NOMOVE|SWP_NOZORDER);
-	}
-}
+
+
 
 /*-------------------------------------------
   get "AAA" in "[  AAA   ]"

@@ -54,6 +54,7 @@ all:
 	cd $(WORKDIR)
 	$(MAKE) -f ..\dll\tcdll.mak SRCDIR=..\dll $(MAKEOPT)
 	$(MAKE) -f ..\exe\tclock.mak SRCDIR=..\exe $(MAKEOPT)
+	$(MAKE) -f ..\property\tcprop.mak SRCDIR=..\property $(MAKEOPT)
 	cd ..
 
 clean:

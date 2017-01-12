@@ -323,7 +323,6 @@ LONG GetRegLong(HKEY rootkey, const char *subkey, const char *entry,
 
 /* -- tclang.c ---------------------------------------- */
 
-void CheckTCLangVersion(void);
 char* MyString(UINT uID, const char *entry);
 HFONT CreateDialogFont(void);
 void SetDialogLanguage(HWND hDlg, const char *section, HFONT hfont);
