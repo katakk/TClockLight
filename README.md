@@ -1,5 +1,4 @@
-# TClock Light kt [![Build Status](https://travis-ci.org/katakk/tclocklight.svg?branch=master)](https://travis-ci.org/katakk/tclocklight) [![codecov.io](https://codecov.io/github/katakk/tclocklight/coverage.svg?branch=master)](https://codecov.io/github/katakk/tclocklight?branch=master)
-
+# TClock Light kt [![Build status](https://ci.appveyor.com/api/projects/status/e2rljlqdk6gpql89/branch/master?svg=true)](https://ci.appveyor.com/project/katakk/tclocklight/branch/master)
 
 This is a modified version of TClock Light.
 
