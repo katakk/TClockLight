@@ -12,12 +12,6 @@ config は コンテキストメニューとか#if 0 とかけしました。
 
 lang いらなくしました。
 
-https://github.com/katakk/TClockLight/blob/master/source/out/tclock.exe
-
-https://github.com/katakk/TClockLight/blob/master/source/out64/tclock.exe
-
-
-
 
 
 
