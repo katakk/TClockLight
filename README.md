@@ -1,4 +1,6 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/e2rljlqdk6gpql89/branch/master?svg=true)](https://ci.appveyor.com/project/katakk/tclocklight/branch/master)
+# TClock Light kt [![Build status](https://ci.appveyor.com/api/projects/status/e2rljlqdk6gpql89/branch/master?svg=true)](https://ci.appveyor.com/project/katakk/tclocklight/branch/master)
+
+This is a modified version of TClock Light.
 
 config は コンテキストメニューとか#if 0 とかけしました。
 
@@ -17,9 +19,6 @@ https://github.com/katakk/TClockLight/blob/master/source/out64/tclock.exe
 
 
 
-# TClock Light kt
-
-This is a modified version of TClock Light.
 
 
 ## Binary packages
