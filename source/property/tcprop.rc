@@ -540,9 +540,6 @@ END
 //
 
 IDI_TCPROP              ICON    DISCARDABLE     "tcprop.ico"
-IDI_TCLOCK              ICON    DISCARDABLE     "tclock.ico"
-IDI_PLAY                ICON    DISCARDABLE     "play.ico"
-IDI_STOP                ICON    DISCARDABLE     "stop.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
