@@ -80,7 +80,7 @@ void InitClock(HWND hwnd)
 
 	PostMessage(GetParent(GetParent(hwnd)), WM_SIZE, SIZE_RESTORED, 0);
 	InvalidateRect(GetParent(GetParent(hwnd)), NULL, TRUE);
-	SetTimer(hwnd, IDTIMER_MAIN, 5, NULL);
+	SetTimer(hwnd, IDTIMER_MAIN, TC_TIMER_MAIN, NULL);
 }
 
 /*------------------------------------------------
