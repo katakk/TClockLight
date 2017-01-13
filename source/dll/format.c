@@ -46,6 +46,7 @@ struct {
 	{ 0, L"DATE", DATEHandler },
 	{ 0, L"TIME", TIMEHandler },
 	{ 0, L"SSS", MSecondHandler }, // only for testing
+	{ 0, L"KK", M24KOMAHandler }, // only for testing
 	
 	{ 0, L"USTR", UStrHandler },
 	// add your functions

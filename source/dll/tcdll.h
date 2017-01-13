@@ -98,7 +98,7 @@ void LDATEHandler(FORMATHANDLERSTRUCT* pstruc);
 void DATEHandler(FORMATHANDLERSTRUCT* pstruc);
 void TIMEHandler(FORMATHANDLERSTRUCT* pstruc);
 void MSecondHandler(FORMATHANDLERSTRUCT* pstruc);
-
+void M24KOMAHandler(FORMATHANDLERSTRUCT* pstruc);
 
 
 /* ---------- userstr.c ----------- */

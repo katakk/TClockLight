@@ -515,3 +515,15 @@ void MSecondHandler(FORMATHANDLERSTRUCT* pstruc)
 		*pstruc->dp++ = (wchar_t)(msec % 10 + '0');
 }
 
+
+/* NNN  only for testing */
+void M24KOMAHandler(FORMATHANDLERSTRUCT* pstruc)
+{
+	int msec = (int)pstruc->pt->wMilliseconds;
+	int nnn = msec / (1000 / 24);
+	pstruc->sp += 2;
+	if(*pstruc->dp)
+		*pstruc->dp++ = (wchar_t)((nnn % 100) / 10 + '0');
+	if(*pstruc->dp)
+		*pstruc->dp++ = (wchar_t)(nnn % 10 + '0');
+}
