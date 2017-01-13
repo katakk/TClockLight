@@ -6,7 +6,7 @@ setlocal DISABLEDELAYEDEXPANSION
 if "%SEVENZIP%"=="" set SEVENZIP=7-zip32
 
 :: Normal version
-set execfiles=tcdll.tclock tclock.exe
+set execfiles=tcdll.tclock tclock.exe tcprop.exe
 set pkgfiles=readme-kt.txt config-kt.txt format-kt.txt readme.html
 set srcfiles=source pack.bat make_all.bat
 
