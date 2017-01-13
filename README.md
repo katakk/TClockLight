@@ -2,15 +2,13 @@
 
 This is a modified version of TClock Light.
 
-:rabbit: TClock Light kt の機能・ソース量削除版です。
-
 ## :rabbit: 手元のWindows 10 の時計で秒表示、あわよくばミリ秒表示させたいために変更しました。
 
 :rabbit2:ミリ秒表示をデフォルト設定として追加しました。フォーマット自動生成は固定値にしてます。config.h で設定してね。生成ルーチン消しました。
 
 :rabbit2:時計の再描画間隔は5ms にしてみました。config.h で設定してね。
 
-## :rabbit: ソースは消せるだけしました。
+## :rabbit: TClock Light kt の機能・ソース量削除版です。 ソースは消せるだけしました。
 
 :rabbit2:config-kt は すべて　define TC_ENABLE* 0 に変更しました。その後ソース消しました。:clock10:も消しました。
 
