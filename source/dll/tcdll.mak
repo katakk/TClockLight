@@ -25,7 +25,7 @@ COMMONH=$(COMMONDIR)\common.h
 
 OBJS=dllmain.obj dllmain2.obj dllwndproc.obj draw.obj\
 	format.obj formattime.obj userstr.obj\
-	bmp.obj newapi.obj dllutl.obj\
+	newapi.obj dllutl.obj\
 	exec.obj utl.obj reg.obj font.obj localeinfo.obj
 
 LIBS=kernel32.lib user32.lib gdi32.lib advapi32.lib shell32.lib winmm.lib\
