@@ -15,13 +15,11 @@
 #include <shlobj.h>
 #include "../config.h"
 
-#define TCLOCKVERSION     "TClock Light kt160828"
+#define TCLOCKVERSION     "TClock Light kt160828l"
 
 #define CLASS_TCLOCKMAIN   "TClockMainClass"
 #define CLASS_TCLOCKPROP   "TClockPropertyClass"
 #define CLASS_TCLOCKTIMER  "TClockTimerClass"
-#define CLASS_TCLOCKPLAYER "TClockPlayerClass"
-#define CLASS_TCLOCKSNTP   "TClockSNTPClass"
 #define TITLE_TCLOCKMAIN   "TClock"
 
 #define REGMYKEY  "Software\\Kazubon\\TClock"

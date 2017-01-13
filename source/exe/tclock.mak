@@ -23,10 +23,9 @@ TDSFILE=$(OUTDIR)\tclock.tds
 TCLOCKH=$(SRCDIR)\tclock.h $(COMMONDIR)\common.h
 COMMONH=$(COMMONDIR)\common.h
 
-OBJS=main2.obj wndproc.obj command.obj menu.obj\
+OBJS=main2.obj wndproc.obj\
 	utl.obj exec.obj reg.obj autoformat.obj localeinfo.obj\
-	list.obj \
-	vistavol.obj
+	list.obj
 
 LIBS=kernel32.lib user32.lib gdi32.lib advapi32.lib shell32.lib winmm.lib\
 	imm32.lib ole32.lib dwmapi.lib
@@ -79,13 +78,10 @@ $(EXEFILE): main.obj $(OBJS) $(RESFILE)  TCDLL.lib
 main.obj: $(SRCDIR)\main.c $(TCLOCKH)
 main2.obj: $(SRCDIR)\main2.c $(TCLOCKH) ..\config.h
 wndproc.obj: $(SRCDIR)\wndproc.c $(TCLOCKH) ..\config.h
-command.obj: $(SRCDIR)\command.c $(TCLOCKH) $(COMMONDIR)\command.h
-menu.obj: $(SRCDIR)\menu.c $(TCLOCKH) $(COMMONDIR)\command.h
 
 # common obj files
 
 langcode.obj: $(COMMONDIR)\langcode.c $(COMMONH)
-playfile.obj: $(COMMONDIR)\playfile.c $(COMMONH)
 list.obj: $(COMMONDIR)\list.c $(COMMONH)
 utl.obj: ..\common\utl.c $(COMMONH)
 exec.obj: $(COMMONDIR)\exec.c $(COMMONH)
@@ -93,7 +89,6 @@ reg.obj: $(COMMONDIR)\reg.c $(COMMONH)
 nodeflib.obj: $(COMMONDIR)\nodeflib.c $(COMMONH)
 autoformat.obj: $(COMMONDIR)\autoformat.c $(COMMONH)
 localeinfo.obj: $(COMMONDIR)\localeinfo.c $(COMMONH)
-vistavol.obj: $(COMMONDIR)\vistavol.cpp ..\config.h
 	$(CC) $(COPT)$@ $(COMMONDIR)\vistavol.cpp
 
 # res file

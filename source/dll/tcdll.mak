@@ -25,8 +25,7 @@ COMMONH=$(COMMONDIR)\common.h
 
 OBJS=dllmain.obj dllmain2.obj dllwndproc.obj draw.obj\
 	format.obj formattime.obj userstr.obj\
-	bmp.obj newapi.obj dllutl.obj\
-	vistavol.obj \
+	newapi.obj dllutl.obj\
 	exec.obj utl.obj reg.obj font.obj localeinfo.obj
 
 LIBS=kernel32.lib user32.lib gdi32.lib advapi32.lib shell32.lib winmm.lib\
@@ -103,9 +102,6 @@ reg.obj: $(COMMONDIR)\reg.c $(COMMONH)
 font.obj: $(COMMONDIR)\font.c $(COMMONH)
 localeinfo.obj: $(COMMONDIR)\localeinfo.c $(COMMONH)
 nodeflib.obj: $(COMMONDIR)\nodeflib.c $(COMMONH)
-mixer.obj: $(COMMONDIR)\mixer.c $(COMMONH) ..\config.h
-vistavol.obj: $(COMMONDIR)\vistavol.cpp ..\config.h
-	$(CC) $(COPT)$@ $(COMMONDIR)\vistavol.cpp
 
 # res file
 
