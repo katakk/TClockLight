@@ -59,7 +59,7 @@ void InitClock(HWND hwnd)
 	g_bTaskbarPosChanging = FALSE;
 	
 	// tell tclock.exe clock's HWND
-	PostMessage(g_hwndTClockMain, TCM_HWNDCLOCK, 0, (LPARAM)hwnd);
+//	PostMessage(g_hwndTClockMain, TCM_HWNDCLOCK, 0, (LPARAM)hwnd);
 	
 	// read settings
 	LoadSetting(hwnd);

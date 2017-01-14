@@ -10,26 +10,14 @@
 #define IDD_PAGESIZE                    103
 #define IDD_PAGEFORMAT                  104
 #define IDD_FORMAT2                     105
-#define IDD_PAGEALARM                   106
-#define IDD_ALARMDAY                    107
-#define IDD_PAGECUCKOO                  108
-#define IDD_PAGEMOUSE                   109
-#define IDD_PAGEMOUSE2                  110
-#define IDD_PAGETOOLTIP                 111
-#define IDD_PAGESNTP                    112
-#define IDD_PAGESTARTBUTTON             113
-#define IDD_PAGESTARTMENU               114
-#define IDD_PAGETASKBAR                 115
-#define IDD_PAGEMISC                    116
+
+
 #define IDD_SELECTICON                  117
-#define IDD_PAGEANALOGCLOCK             118
-#define IDD_PAGEDESKTOP                 119
-#define IDD_PAGECALENDAR                120
 
 #define IDC_TREE                        2801
 #define IDC_APPLY                       2802
-#define IDC_MYHELP                      2803
 #define IDC_DUMMY                       2804
+#define IDC_CLOSE                       2805
 
 // color and font
 #define IDC_LABCOLOR                    1101
@@ -94,173 +82,6 @@
 #define IDC_AMSYMBOL                    1251
 #define IDC_PMSYMBOL                    1252
 #define IDC_ZERO                        1253
-
-// mouse
-#define IDC_ADDCLICK                    1401
-#define IDC_DELCLICK                    1402
-#define IDC_NAMECLICK                   1403
-#define IDC_MOUSEBUTTON                 1404
-#define IDC_RADSINGLE                   1405
-#define IDC_RADDOUBLE                   1406
-#define IDC_RADTRIPLE                   1407
-#define IDC_RADQUADRUPLE                1408
-#define IDC_MOUSECTRL                   1409
-#define IDC_MOUSESHIFT                  1410
-#define IDC_MOUSEALT                    1411
-#define IDC_MOUSEFUNC                   1412
-#define IDC_LABMOUSEOPT                 1413
-#define IDC_MOUSEOPT                    1414
-#define IDC_MOUSEOPTSANSHO              1415
-#define IDC_LABMOUSEOPT2                1416
-#define IDC_LMOUSEPASSTHRU              1417
-#define IDC_RCLICKMENU                  1418
-
-// mouse2
-#define IDC_DROPFILES                   1418
-#define IDC_LABDROPFILESAPP             1419
-#define IDC_DROPFILESAPP                1420
-#define IDC_DROPFILESAPPSANSHO          1421
-
-// tooltip
-#define IDC_USETOOLTIP1                 1450
-#define IDC_TOOLTIP                     1451
-#define IDC_TOOLTIPBROWSE               1452
-#define IDC_TOOLTIPSTYLE1               1453
-#define IDC_TOOLTIPSTYLE2               1454
-#define IDC_TOOLTIPTIME                 1455
-#define IDC_TOOLTIPTIMESPIN             1456
-#define IDC_TOOLTIPFONT                 1457
-#define IDC_TOOLTIPFONTSIZE             1458
-#define IDC_TOOLTIPBOLD                 1459
-#define IDC_TOOLTIPITALIC               1460
-
-// alarm
-#define IDC_COMBOALARM                  1301
-#define IDC_ADDALARM                    1302
-#define IDC_DELALARM                    1303
-#define IDC_ENABLEALARM                 1304
-#define IDC_HOURALARM                   1305
-#define IDC_MINUTEALARM                 1306
-#define IDC_SECONDALARM                 1307
-#define IDC_WDAYALARM                   1308
-#define IDC_SANSHOWDAY                  1309
-#define IDC_FILEALARM                   1310
-#define IDC_SANSHOALARM                 1311
-#define IDC_TESTALARM                   1312
-#define IDC_12HOURALARM                 1313
-#define IDC_REPEATALARM                 1314
-#define IDC_BLINKALARM                  1315
-#define IDC_ALARMBOOTEXEC               1316
-#define IDC_ALARMINTERVAL               1317
-#define IDC_ALARMINTERVALMIN            1318
-#define IDC_ALARMRESUMEEXEC             1319
-#define IDC_ALARMRESUMEDELAY            1320
-
-#define IDC_ALARMDAY0                   1350
-#define IDC_ALARMDAY1                   1351
-#define IDC_ALARMDAY2                   1352
-#define IDC_ALARMDAY3                   1353
-#define IDC_ALARMDAY4                   1354
-#define IDC_ALARMDAY5                   1355
-#define IDC_ALARMDAY6                   1356
-#define IDC_ALARMDAY7                   1357
-
-// cuckoo
-#define IDC_CUCKOO                      1371
-#define IDC_CUCKOOFILE                  1372
-#define IDC_CUCKOOBROWSE                1373
-#define IDC_CUCKOOTEST                  1374
-#define IDC_CUCKOOREPEAT                1375
-#define IDC_CUCKOOBLINK                 1376
-
-// sntp
-#define IDC_NTPSERVER                   2201
-#define IDC_SYNCNOW                     2202
-#define IDC_DELSERVER                   2203
-#define IDC_TIMEOUT                     2204
-#define IDC_TIMEOUTSPIN                 2205
-#define IDC_SNTPLOG                     2206
-#define IDC_SYNCSOUND                   2207
-#define IDC_SYNCSOUNDBROWSE             2208
-#define IDC_SNTPLOGRESULT               2209
-
-// start button
-#define IDC_STARTBTN                    1501
-#define IDC_FILESTART                   1502
-#define IDC_SANSHOSTART                 1503
-#define IDC_CAPTIONSTART                1504
-#define IDC_STARTBTNCOL                 1505
-#define IDC_STARTBTNCHOOSECOL           1506
-#define IDC_STARTBTNFONT                1507
-#define IDC_STARTBTNFONTSIZE            1508
-#define IDC_STARTBTNBOLD                1509
-#define IDC_STARTBTNITALIC              1510
-#define IDC_STARTBTNUSEBACK             1511
-#define IDC_STARTBTNBACKBMP             1512
-#define IDC_SANSHOSTARTBACKBMP          1513
-#define IDC_STARTBTNFLAT                1514
-#define IDC_STARTBTNHIDE                1515
-#define IDC_STARTMENUCLOCK              1516
-
-// select icon
-#define IDC_FNAMEICON                   1901
-#define IDC_LISTICON                    1902
-#define IDC_SANSHOICON                  1903
-
-// start menu
-#define IDC_STARTMENU                   1551
-#define IDC_STARTMENUBMP                1552
-#define IDC_STARTMENUBROWSE             1553
-#define IDC_STARTMENUTILE               1554
-#define IDC_STARTMENUCOLOR              1555
-#define IDC_STARTMENUCHOOSECOL          1556
-#define IDC_STARTMENUTRANSLAB           1557
-#define IDC_STARTMENUTRANS              1558
-#define IDC_STARTMENUTRANSSPIN          1559
-
-// taskbar
-#define IDC_TASKBARCLASSIC              2301
-#define IDC_TASKSWITCHFLAT              2302
-#define IDC_TASKSWITCH_SEPARAT          2303
-#define IDC_RBHIDE                      2304
-#define IDC_FLATTRAY                    2305
-#define IDC_TBBORDER                    2306
-#define IDC_TASKSWITCHICON              2307
-#define IDC_TBBORDEREX                  2308
-#define IDC_CAPBARTRANS                 2309
-#define IDC_BARTRANS                    2310
-#define IDC_SPINBARTRANS                2311
-
-// Misc
-#define IDC_NOCLOCK                     1601
-#define IDC_MCIWAVE                     1602
-#define IDC_DELAYSTART                  1603
-#define IDC_TASKBARRESTART              1604
-#define IDC_MOVESETTING                 1605
-#define IDC_HELPURL                     1606
-#define IDC_BROWSEHELP                  1607
-#define IDC_DESKTOPICON                 1608
-#define IDC_TRANSDESKTOPICONBK          1609
-
-// Analog Clock
-#define IDC_ANALOGCLOCK                 2401
-#define IDC_COLHOUR                     2402
-#define IDC_CHOOSECOLHOUR               2403
-#define IDC_HOURHANDBOLD                2404
-#define IDC_COLMIN                      2405
-#define IDC_CHOOSECOLMIN                2406
-#define IDC_MINHANDBOLD                 2407
-#define IDC_ANALOGPOSMIDDLE             2408
-#define IDC_ANALOGPOSLEFT               2409
-#define IDC_ANALOGPOSRIGHT              2410
-#define IDC_ANALOGHPOS                  2411
-#define IDC_ANALOGHPOSSPIN              2412
-#define IDC_ANALOGVPOS                  2413
-#define IDC_ANALOGVPOSSPIN              2414
-#define IDC_ANALOGSIZE                  2415
-#define IDC_ANALOGSIZESPIN              2416
-#define IDC_ANALOGBMP                   2417
-#define IDC_ANALOGBMPBROWSE             2418
 
 // strings
 #define IDS_BTNFACE                     1

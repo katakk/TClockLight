@@ -33,9 +33,8 @@ static LRESULT CALLBACK WndProcProperty(HWND hwnd, UINT message,
 	WPARAM wParam, LPARAM lParam);
 static INT_PTR CALLBACK DlgProc(HWND, UINT, WPARAM, LPARAM);
 static void OnInitDialog(HWND hDlg);
-static void OnOK(HWND hDlg);
 static void OnApply(HWND hDlg);
-static void OnHelp(HWND hDlg);
+static void OnClose(HWND hDlg);
 static void OnTVChanged(HWND hDlg, int nItem);
 static void InitTreeView(HWND hDlg);
 
@@ -186,14 +185,12 @@ INT_PTR CALLBACK DlgProc(HWND hDlg, UINT message,
 			id = LOWORD(wParam); // code = HIWORD(wParam);
 			switch(id)
 			{
+				case IDC_CLOSE:
+					OnClose(hDlg);
+					break;
 				case IDC_APPLY:
 					OnApply(hDlg);
 					break;
-				case IDC_MYHELP:
-					OnHelp(hDlg);
-					break;
-				case IDOK:
-					OnOK(hDlg);
 				case IDCANCEL:
 					if(g_hfontDialog)
 						DeleteObject(g_hfontDialog);
@@ -213,9 +210,6 @@ INT_PTR CALLBACK DlgProc(HWND hDlg, UINT message,
 			}
 			break;
 		}
-		case PSM_CHANGED:
-			EnableDlgItem(hDlg, IDC_APPLY, TRUE);
-			return TRUE;
 	}
 	return FALSE;
 }
@@ -225,23 +219,8 @@ INT_PTR CALLBACK DlgProc(HWND hDlg, UINT message,
 ---------------------------------------------*/
 void OnInitDialog(HWND hDlg)
 {
-	// common/tclang.c
-//	SetDialogLanguage(hDlg, "Property", g_hfontDialog);
-	
-	// hIcon = LoadIcon(g_hInst, MAKEINTRESOURCE(IDI_TCLOCK));
-	// SendMessage(hDlg, WM_SETICON, ICON_BIG, (LPARAM)hIcon);
-	
 	SetMyDialgPos(hDlg, 32, 32);
-	
 	InitTreeView(hDlg);
-}
-
-/*-------------------------------------------
-  "OK" button
----------------------------------------------*/
-void OnOK(HWND hDlg)
-{
-	OnApply(hDlg);
 }
 
 /*-------------------------------------------
@@ -262,49 +241,19 @@ void OnApply(HWND hDlg)
 			SendMessage(g_dlgPage[i].hDlg, WM_NOTIFY, 0, (LPARAM)&lp);
 	}
 	
-	if(hwndClock)
-	{
-		if(g_bApplyClock)
-			PostMessage(hwndClock, CLOCKM_REFRESHCLOCK, 0, 0);
-		if(g_bApplyTaskbar)
-			PostMessage(hwndClock, CLOCKM_REFRESHTASKBAR, 0, 0);
-		if(g_bApplyStartMenu)
-			PostMessage(hwndClock, CLOCKM_REFRESHSTARTMENU, 0, 0);
-		if(g_bApplyTip)
-			PostMessage(hwndClock, CLOCKM_REFRESHTOOLTIP, 0, 0);
-	}
-	g_bApplyClock = FALSE;
-	g_bApplyTaskbar = FALSE;
-	g_bApplyStartMenu = FALSE;
-	g_bApplyTip = FALSE;
-	
-	if(g_bApplyMain)
-	{
-		HWND hwnd = GetTClockMainWindow();
-		if(hwnd) PostMessage(hwnd, TCM_RELOADSETTING, 0, 0);
-		g_bApplyMain = FALSE;
-	}
-	
-	if(GetFocus() == GetDlgItem(hDlg, IDC_APPLY))
-		PostMessage(hDlg, WM_NEXTDLGCTL, 0, FALSE);
-	EnableDlgItem(hDlg, IDC_APPLY, FALSE);
+	if(hwndClock) PostMessage(hwndClock, CLOCKM_REFRESHCLOCK, 0, 0);
 }
 
-/*-------------------------------------------
-  "Help" button
----------------------------------------------*/
-void OnHelp(HWND hDlg)
+/*------------------------------------------------
+
+--------------------------------------------------*/
+void OnClose(HWND hDlg)
 {
-	NMHDR lp;
-	int nPage;
-	
-	if(0 <= m_lastTreeItem && m_lastTreeItem < MAX_TREEITEM)
-	{
-		nPage = g_treeItem[m_lastTreeItem].nPage;
-		lp.code = PSN_HELP;
-		if(g_dlgPage[nPage].hDlg)
-			SendMessage(g_dlgPage[nPage].hDlg, WM_NOTIFY, 0, (LPARAM)&lp);
-	}
+	HWND hwndClock;
+	hwndClock = GetClockWindow();
+	if(hwndClock) PostMessage(hwndClock, CLOCKM_EXIT, 0, 0);
+	if(GetFocus() == GetDlgItem(hDlg, IDC_CLOSE))
+		PostMessage(hDlg, WM_NEXTDLGCTL, 0, FALSE);
 }
 
 /*------------------------------------------------
@@ -390,40 +339,3 @@ void InitTreeView(HWND hDlg)
 	TreeView_SelectItem(hTree, hTreeItem[m_lastTreeItem]);
 }
 
-/*-------------------------------------------
-  Show "TClock Help"
----------------------------------------------*/
-void MyHelp(HWND hwnd, const char *section)
-{
-	char helpurl[MAX_PATH], title[MAX_PATH];
-	
-	if(!g_langfile[0]) return;
-	
-	GetMyRegStr(NULL, "HelpURL", helpurl, MAX_PATH, "");
-	if(helpurl[0] == 0)
-	{
-		if(GetPrivateProfileString("Main", "HelpURL", "", helpurl,
-			MAX_PATH, g_langfile) == 0) return;
-	}
-	
-	if(GetPrivateProfileString(section, "HelpURL", "", title,
-			MAX_PATH, g_langfile) == 0) return;
-	
-	if(strlen(helpurl) > 0 && helpurl[ strlen(helpurl) - 1 ] != '/')
-		del_title(helpurl);
-	add_title(helpurl, title);
-	
-	ShellExecute(hwnd, NULL, helpurl, NULL, "", SW_SHOW);
-}
-
-/*-------------------------------------------
-  called in PlayFile function
----------------------------------------------*/
-BOOL ExecCommandString(HWND hwnd, const char* command)
-{
-	/* ExecFile(hwnd, command); */
-	SendStringToOther(GetTClockMainWindow(), hwnd, command,
-		COPYDATA_EXEC);
-	
-	return FALSE;
-}
