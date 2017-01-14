@@ -15,19 +15,29 @@ BOOL g_bIniSetting = FALSE; // save setting to ini file?
 char g_inifile[MAX_PATH];   // ini file name
 int  g_winver;              // windows version
 
-/* Statics */
 
+typedef BOOL (__stdcall *FUNCTYPE7)(HWND, UINT, DWORD, int);
+FUNCTYPE7 dll_ChangeWindowMessageFilterEx;
+typedef BOOL (__stdcall *FUNCTYPEVISTA)(UINT, DWORD);
+FUNCTYPEVISTA dll_ChangeWindowMessageFilter;
+
+/* Statics */
 static void InitTClockMain(void);
 static void InitTextColor(void);
 static void InitFormat(void);
-static void AddMessageFilters(void);
+static void AddMessageFilters(HWND hwnd);
+static void DelMessageFilters(HWND hwnd);
 int CheckWinVersion(void);
+
+#define MSGFLT_RESET 0
+#define MSGFLT_ALLOW 1
 
 /*-------------------------------------------
    main routine
 ---------------------------------------------*/
 int TClockExeMain(void)
 {
+	HMODULE dll;
 	MSG msg;
 	WNDCLASS wndclass;
 	HWND hwnd, hwndParent;
@@ -45,6 +55,11 @@ int TClockExeMain(void)
 	}
 #endif
 	
+	dll = LoadLibrary(TEXT("user32.dll"));
+	dll_ChangeWindowMessageFilterEx = (FUNCTYPE7)GetProcAddress(dll, "ChangeWindowMessageFilterEx");
+	if(dll_ChangeWindowMessageFilterEx = NULL)
+		dll_ChangeWindowMessageFilter = (FUNCTYPEVISTA)GetProcAddress(dll, "ChangeWindowMessageFilter");
+    
 	// not to execute the program twice
 	hwnd = GetTClockMainWindow();
 	if(hwnd != NULL)
@@ -62,9 +77,6 @@ int TClockExeMain(void)
 	}
 	
 	InitTClockMain();
-	
-	// Windows Vista UIPI filter
-	AddMessageFilters();
 	
 	// register a window class
 	wndclass.style         = CS_HREDRAW | CS_VREDRAW | CS_DBLCLKS;
@@ -97,16 +109,18 @@ int TClockExeMain(void)
 	ShowWindow(hwnd, SW_HIDE);
 
 	
-
-	
+	// Windows Vista UIPI filter
+	AddMessageFilters(hwnd);
+		
 	while(GetMessage(&msg, NULL, 0, 0))
 	{
 			TranslateMessage(&msg);
 			DispatchMessage(&msg);
 	}
 	
+	DelMessageFilters(hwnd);
 	UnregisterClass(CLASS_TCLOCKMAIN, g_hInst);
-	
+	FreeLibrary(dll);
 	return (int)msg.wParam;
 }
 
@@ -229,9 +243,6 @@ void InitFormat(void)
 /*------------------------------------------------
   add the messages to the UIPI message filter
 --------------------------------------------------*/
-void AddMessageFilters(void)
-{
-	int i;
 	const UINT messages[] = {
 	//	WM_CREATE,
 		WM_CLOSE,
@@ -263,10 +274,34 @@ void AddMessageFilters(void)
 		//WM_MBUTTONUP,
 		//WM_XBUTTONUP,
 	};
-	
+
+void AddMessageFilters(HWND hwnd)
+{
+	int i;	
 	for(i = 0; i < ARRAYSIZE(messages); i++)
 	{
-		ChangeWindowMessageFilter(messages[i], MSGFLT_ADD);
+		if(dll_ChangeWindowMessageFilterEx != NULL){
+			dll_ChangeWindowMessageFilterEx(hwnd, messages[i], MSGFLT_ALLOW, 0);
+		}else{
+			if(dll_ChangeWindowMessageFilter != NULL){
+				dll_ChangeWindowMessageFilter(messages[i], MSGFLT_ADD);
+			}
+		}
+	}
+}
+
+void DelMessageFilters(HWND hwnd)
+{
+	int i;	
+	for(i = 0; i < ARRAYSIZE(messages); i++)
+	{
+		if(dll_ChangeWindowMessageFilterEx != NULL){
+			dll_ChangeWindowMessageFilterEx(hwnd, WM_APP, MSGFLT_RESET, 0);
+		}else{
+			if(dll_ChangeWindowMessageFilter != NULL){
+				dll_ChangeWindowMessageFilter(messages[i], MSGFLT_REMOVE);
+			}
+		}
 	}
 }
 

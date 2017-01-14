@@ -7,7 +7,7 @@
 ---------------------------------------------------------------*/
 
 #include "common.h"
-#include <dwmapi.h>
+//#include <dwmapi.h>
 
 extern HINSTANCE g_hInst;
 extern char g_mydir[];
@@ -404,12 +404,13 @@ BOOL IsXPVisualStyle(void)
 ---------------------------------------------*/
 BOOL IsVistaAero(void)
 {
-#if 1
+#if 0
 	BOOL ret = FALSE;
 	
 	DwmIsCompositionEnabled(&ret);
 	return ret;
 #else
+	/* XP */
 	if(GetRegLong(HKEY_CURRENT_USER,
 		"Software\\Microsoft\\Windows\\DWM",
 		"Composition", 0))

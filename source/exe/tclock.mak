@@ -28,7 +28,7 @@ OBJS=main2.obj wndproc.obj\
 	list.obj
 
 LIBS=kernel32.lib user32.lib gdi32.lib advapi32.lib shell32.lib winmm.lib\
-	imm32.lib ole32.lib dwmapi.lib
+	imm32.lib ole32.lib 
 
 all: $(EXEFILE)
 
