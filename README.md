@@ -18,5 +18,8 @@ This is a modified version of TClock Light.
 
 :rabbit2:コンテキストメニューも消しましたので既存の時計のコンテキストメニューが表示されます。
 
-:rabbit2:おわるときはtcprop.exe から終了させれます。
+## :rabbit2:おわるときはtcprop.exe から終了させれます。
 
+## :rabbit:Windows XPで起動しなかったので起動するように変更。
+
+dwmapi.dll の性的参照消した
