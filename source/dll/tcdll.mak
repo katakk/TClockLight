@@ -28,8 +28,8 @@ OBJS=dllmain.obj dllmain2.obj dllwndproc.obj draw.obj\
 	newapi.obj dllutl.obj\
 	exec.obj utl.obj reg.obj font.obj localeinfo.obj
 
-LIBS=kernel32.lib user32.lib gdi32.lib advapi32.lib shell32.lib winmm.lib\
-	ole32.lib comctl32.lib
+LIBS=kernel32.lib user32.lib gdi32.lib advapi32.lib shell32.lib \
+	comctl32.lib
 
 !IFDEF WIN64
 DLLBASE=0x60066040000

@@ -27,8 +27,8 @@ OBJS=main2.obj wndproc.obj\
 	utl.obj exec.obj reg.obj autoformat.obj localeinfo.obj\
 	list.obj
 
-LIBS=kernel32.lib user32.lib gdi32.lib advapi32.lib shell32.lib winmm.lib\
-	imm32.lib ole32.lib 
+LIBS=kernel32.lib user32.lib gdi32.lib advapi32.lib shell32.lib \
+	imm32.lib
 
 all: $(EXEFILE)
 
@@ -81,7 +81,6 @@ wndproc.obj: $(SRCDIR)\wndproc.c $(TCLOCKH) ..\config.h
 
 # common obj files
 
-langcode.obj: $(COMMONDIR)\langcode.c $(COMMONH)
 list.obj: $(COMMONDIR)\list.c $(COMMONH)
 utl.obj: ..\common\utl.c $(COMMONH)
 exec.obj: $(COMMONDIR)\exec.c $(COMMONH)

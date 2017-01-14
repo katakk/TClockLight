@@ -27,7 +27,7 @@ OBJS=pagecolor.obj pagesize.obj pageformat.obj pageformat2.obj\
 	utl.obj exec.obj reg.obj font.obj
 
 LIBS=kernel32.lib user32.lib gdi32.lib comdlg32.lib advapi32.lib\
-	shell32.lib winmm.lib comctl32.lib
+	shell32.lib comctl32.lib
 
 all: $(EXEFILE)
 
@@ -77,33 +77,14 @@ pagecolor.obj: $(SRCDIR)\pagecolor.c $(TCPROPH)
 pagesize.obj: $(SRCDIR)\pagesize.c $(TCPROPH)
 pageformat.obj: $(SRCDIR)\pageformat.c $(TCPROPH) ..\config.h
 pageformat2.obj: $(SRCDIR)\pageformat2.c $(TCPROPH)
-pageanalog.obj: $(SRCDIR)\pageanalog.c $(TCPROPH)
-pagemouse.obj: $(SRCDIR)\pagemouse.c $(TCPROPH) $(COMMONDIR)\command.h ..\config.h
-pagemouse2.obj: $(SRCDIR)\pagemouse2.c $(TCPROPH) ..\config.h
-pagealarm.obj: $(SRCDIR)\pagealarm.c $(TCPROPH)
-alarmday.obj: $(SRCDIR)\alarmday.c $(TCPROPH)
-pagecuckoo.obj: $(SRCDIR)\pagecuckoo.c $(TCPROPH)
-pagetooltip.obj: $(SRCDIR)\pagetooltip.c $(TCPROPH)
-pagesntp.obj: $(SRCDIR)\pagesntp.c $(TCPROPH)
-pagestartbtn.obj: $(SRCDIR)\pagestartbtn.c $(TCPROPH)
-selecticon.obj: $(SRCDIR)\selecticon.c $(TCPROPH)
-pagestartmenu.obj: $(SRCDIR)\pagestartmenu.c $(TCPROPH)
-pagetaskbar.obj: $(SRCDIR)\pagetaskbar.c $(TCPROPH)
-pagemisc.obj: $(SRCDIR)\pagemisc.c $(TCPROPH) ..\config.h
 
 # common obj files
 
 tclang.obj: $(COMMONDIR)\tclang.c $(COMMONH)
-langcode.obj: $(COMMONDIR)\langcode.c $(COMMONH)
 combobox.obj: $(COMMONDIR)\combobox.c $(COMMONH)
 autoformat.obj: $(COMMONDIR)\autoformat.c $(COMMONH)
 localeinfo.obj: $(COMMONDIR)\localeinfo.c $(COMMONH)
-selectfile.obj: $(COMMONDIR)\selectfile.c $(COMMONH)
-playfile.obj: $(COMMONDIR)\playfile.c $(COMMONH)
-soundselect.obj: $(COMMONDIR)\soundselect.c $(COMMONH)
 list.obj: $(COMMONDIR)\list.c $(COMMONH)
-alarmstruct.obj: $(COMMONDIR)\alarmstruct.c $(COMMONH)
-mousestruct.obj: $(COMMONDIR)\mousestruct.c $(COMMONH) $(COMMONDIR)\command.h ..\config.h
 utl.obj: $(COMMONDIR)\utl.c $(COMMONH)
 exec.obj: $(COMMONDIR)\exec.c $(COMMONH)
 reg.obj: $(COMMONDIR)\reg.c $(COMMONH)
