@@ -8,6 +8,8 @@ This is a modified version of TClock Light.
 
 :rabbit2:時計の再描画間隔は5ms にしてみました。config.h で設定してね。
 
+:rabbit2:よく考えたら 1/24 秒以下は読めないことに気が付きました。KK というフォーマット設定で　24コマ表記を追加しました。
+
 ## :rabbit: TClock Light kt の機能・ソース量削除版です。 ソースは消せるだけしました。
 
 :rabbit2:config-kt は すべて　define TC_ENABLE* 0 に変更しました。その後ソース消しました。:clock10:も消しました。
