@@ -131,7 +131,6 @@ void InitLocaleCombo(HWND hDlg, int idCombo, int deflang);
 
 void RelToAbs(char *dst, const char *src);
 void GetFileAndOption(const char* command, char* fname, char* option);
-BOOL ExecFile(HWND hwnd, const char* command);
 
 /* -- font.c -------------------------------------------- */
 

@@ -84,59 +84,6 @@ void GetFileAndOption(const char* command, char* fname, char* option)
 }
 
 /*------------------------------------------------
-  Open a file
---------------------------------------------------*/
-BOOL ExecFile(HWND hwnd, const char* command)
-{
-	char fname[MAX_PATH], path[MAX_PATH];
-	char *option;
-	SHELLEXECUTEINFO sei;
-	
-	if(*command == 0) return FALSE;
-	
-	option = malloc(strlen(command));
-	if(option == NULL) return FALSE;
-	
-	memset(&sei,0,sizeof(sei));
-	sei.cbSize = sizeof(sei);
-	sei.nShow = SW_SHOW;
-	
-	if(GetPathType(command) != PATH_URL)
-	{
-		GetFileAndOption(command, fname, option);
-		
-		if(GetPathType(fname) == PATH_ABS)
-		{
-			strcpy(path, fname);
-			del_title(path);
-		}
-		else strcpy(path, g_mydir);
-		
-		/*
-		WriteDebug(fname);
-		WriteDebug(path);
-		WriteDebug(option);
-		*/
-		
-		sei.lpFile = fname;
-		sei.lpDirectory = path;
-		sei.lpParameters = option[0] ? option : NULL;
-	}
-	else
-	{
-		sei.lpFile = command;
-		sei.lpDirectory = g_mydir;
-		sei.lpParameters = NULL;
-	}
-	
-	ShellExecuteEx(&sei);
-	
-	free(option);
-	
-	return ((int)(INT_PTR)sei.hInstApp > 32);
-}
-
-/*------------------------------------------------
   relative path / absolute path / URL
 --------------------------------------------------*/
 int GetPathType(const char *src)

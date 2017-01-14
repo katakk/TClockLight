@@ -27,7 +27,7 @@ OBJS=pagecolor.obj pagesize.obj pageformat.obj pageformat2.obj\
 	utl.obj exec.obj reg.obj font.obj
 
 LIBS=kernel32.lib user32.lib gdi32.lib comdlg32.lib advapi32.lib\
-	shell32.lib comctl32.lib
+	comctl32.lib
 
 all: $(EXEFILE)
 
