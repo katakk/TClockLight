@@ -56,7 +56,6 @@ INT_PTR CALLBACK PageSizeProc(HWND hDlg, UINT message,
 			switch(((NMHDR *)lParam)->code)
 			{
 				case PSN_APPLY: OnApply(hDlg); break;
-				case PSN_HELP: MyHelp(GetParent(hDlg), "Size"); break;
 			}
 			return TRUE;
 	}

@@ -80,7 +80,6 @@ INT_PTR CALLBACK PageColorProc(HWND hDlg, UINT message,
 			switch(((NMHDR *)lParam)->code)
 			{
 				case PSN_APPLY: OnApply(hDlg); break;
-				case PSN_HELP: MyHelp(GetParent(hDlg), "Color"); break;
 			}
 			return TRUE;
 		case WM_MEASUREITEM:

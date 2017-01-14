@@ -39,65 +39,11 @@
 #define CLOCKM_NETINIT          (WM_USER+7)
 #define CLOCKM_DELUSRSTR        (WM_USER+8)
 #define CLOCKM_EXIT             (WM_USER+9)
-#define CLOCKM_REFRESHSTARTMENU (WM_USER+10)
-#define CLOCKM_REFRESHTOOLTIP   (WM_USER+11)
 
-#define CLOCKM_VISTACALENDAR    (WM_USER+102)
-#define CLOCKM_VISTATOOLTIP     (WM_USER+103)
-
-/* -- messages to send to tclock.exe ------------------ */
-
-#define TCM_HWNDCLOCK       WM_USER
 #define TCM_CLOCKERROR      (WM_USER+1)
-#define TCM_EXIT            (WM_USER+2)
-#define TCM_STOPSOUND       (WM_USER+3)
-#define TCM_RELOADSETTING   (WM_USER+4)
-#define TCM_DESKCAL         (WM_USER+10)
-#define TCM_REQUESTSNTPLOG  (WM_USER+11)
-
-/* -- messages to send to tctimer.exe ------------------ */
-#define TIMERM_SHOWDLG      (WM_USER+1)
-#define TIMERM_REQUESTMENU  (WM_USER+2)
-#define TIMERM_STOP         (WM_USER+3)
-
-/* -- messages to send to tcplayer.exe ------------------ */
-#define PLAYERM_SHOWDLG     (WM_USER+1)
-#define PLAYERM_REQUESTMENU (WM_USER+2)
-#define PLAYERM_STOP        (WM_USER+3)
-#define PLAYERM_PAUSE       (WM_USER+4)
-#define PLAYERM_PREV        (WM_USER+5)
-#define PLAYERM_NEXT        (WM_USER+6)
-
-/* -- dwData of COPYDATASTRUCT ----------------------- */
-
-#define COPYDATA_USTR0      0
-#define COPYDATA_USTR1      1
-#define COPYDATA_USTR2      2
-#define COPYDATA_USTR3      3
-#define COPYDATA_USTR4      4
-#define COPYDATA_USTR5      5
-#define COPYDATA_USTR6      6
-#define COPYDATA_USTR7      7
-#define COPYDATA_USTR8      8
-#define COPYDATA_USTR9      9
-#define COPYDATA_DISP1      100
-#define COPYDATA_DISP2      101
-#define COPYDATA_DISP3      102
-#define COPYDATA_CAT1       103
-#define COPYDATA_CAT2       104
-#define COPYDATA_CAT3       105
-#define COPYDATA_PLAY       106
-#define COPYDATA_SOUND      107
-#define COPYDATA_COPY       108
-#define COPYDATA_EXEC       109
-#define COPYDATA_SNTPLOG    110
-#define COPYDATA_SNTPLOGADD 111
-#define COPYDATA_TOOLTIP    112
 
 /* -- buffer size --------------------------------------- */
-
 #define BUFSIZE_FORMAT  256
-#define BUFSIZE_TOOLTIP 256
 #define BUFSIZE_DISP     41
 #define BUFSIZE_USTR     41
 #define BUFSIZE_NAME     40

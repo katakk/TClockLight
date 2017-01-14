@@ -7,7 +7,6 @@
 
 /* ---------- main.c --------------- */
 
-void MyHelp(HWND hwnd, const char *title);
 BOOL ExecCommandString(HWND hwnd, const char* command);
 
 extern HINSTANCE g_hInst;
