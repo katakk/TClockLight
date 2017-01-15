@@ -1,4 +1,4 @@
-# TClock Light kt [![Build status](https://ci.appveyor.com/api/projects/status/e2rljlqdk6gpql89/branch/master?svg=true)](https://ci.appveyor.com/project/katakk/tclocklight/branch/master)
+# TClock Light kt [![Build status](https://ci.appveyor.com/api/projects/status/e2rljlqdk6gpql89/branch/master?svg=true)](https://ci.appveyor.com/project/katakk/tclocklight/branch/master) [![coverity](https://scan.coverity.com/projects/11483/badge.svg?flat=1)](https://scan.coverity.com/projects/tclocklight)
 
 This is a modified version of TClock Light.
 
