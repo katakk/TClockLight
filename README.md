@@ -22,4 +22,6 @@ This is a modified version of TClock Light.
 
 ## :rabbit:Windows XPで起動しなかったので起動するように変更。
 
-dwmapi.dll の性的参照消した
+dwmapi.dll の静的参照消した
+
+フォントは XPだと Verdana 　10だと Segoe UI が見やすくて良いです。
