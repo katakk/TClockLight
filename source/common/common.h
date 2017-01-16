@@ -24,10 +24,6 @@
 
 #define REGMYKEY  "Software\\Kazubon\\TClock"
 
-#define TCLANGTXT "tclang.txt"
-#define TCMENUTXT "tcmenu.txt"
-#define LANGDIR   "lang"
-
 /* -- messages to send to tcdll.tclock ----------------- */
 
 #define CLOCKM_REFRESHCLOCK     (WM_USER+1)
@@ -62,41 +58,6 @@ void *del_listitem(void *top, void *item);
 void *clear_list(void *top);
 void *get_listitem(void *top, int index);
 
-/* -- alarmstruct.c ---------------------------------------- */
-
-// struct of Alarm
-typedef struct _tagAlarmStruct
-{
-	struct _tagAlarmStruct *next;
-	char name[BUFSIZE_NAME];
-	BOOL bEnable;
-	char strHours[80];
-	char strMinutes[80];
-	char strWDays[80];
-	char hours[24];
-	char minutes[60];
-	char wdays[7];
-	int  second;
-	char fname[MAX_PATH];
-	BOOL bHour12;
-	BOOL bRepeat;
-	BOOL bRepeatJihou;
-	BOOL bBlink;
-	int  nBlinkSec;
-	BOOL bBootExec;
-	BOOL bInterval;
-	int  nInterval;
-	DWORD tickLast;
-	BOOL bResumeExec;
-	int  nResumeDelay;
-	BOOL bResumeTimer;
-} ALARMSTRUCT;
-typedef ALARMSTRUCT* PALARMSTRUCT;
-
-PALARMSTRUCT LoadAlarm(void);
-void SaveAlarm(const PALARMSTRUCT plist);
-void SetAlarmTime(PALARMSTRUCT pAS);
-
 /* -- autoformat.c ---------------------------------------- */
 
 #define NUM_FORMATPART 11
@@ -130,7 +91,6 @@ void InitLocaleCombo(HWND hDlg, int idCombo, int deflang);
 /* -- exec.c -------------------------------------------- */
 
 void RelToAbs(char *dst, const char *src);
-void GetFileAndOption(const char* command, char* fname, char* option);
 
 /* -- font.c -------------------------------------------- */
 
@@ -312,16 +272,6 @@ void SetMyDialgPos(HWND hwnd, int xLen, int yLen);
 void GetScreenRect(HWND hwnd, RECT *prc);
 void WriteDebug(const char* s);
 void WriteDebugW(const wchar_t* s);
-
-/* ---------- mixer.c ----------------- */
-
-BOOL GetMasterVolume(int *Val);
-BOOL GetMasterMute(BOOL *Val);
-BOOL SetMasterVolume(int Val);
-BOOL UpDownMasterVolume(int dif);
-BOOL ReverseMasterMute(void);
-BOOL InitMixer(void);
-void ReleaseMixer(void);
 
 /* -- Macros ---------------------------------------- */
 

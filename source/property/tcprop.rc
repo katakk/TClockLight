@@ -221,31 +221,16 @@ BEGIN
     IDS_COLOR               "Color and Font"
     IDS_SIZEPOS             "Size and Position"
     IDS_FORMAT              "Format"
-    IDS_ALARM               "Alarm"
-    IDS_CUCKOO              "Cuckoo clock"
-    IDS_MOUSE               "Mouse"
-    IDS_CLICK               "Click"
-    IDS_MOUSE2              "Drop"
 END
 
 STRINGTABLE DISCARDABLE 
 BEGIN
     IDS_SYNC                "Synchronization"
-    IDS_TOOLTIP             "ToolTip"
     IDS_TASKBAR             "Taskbar"
-    IDS_STARTBUTTON         "Start button"
-    IDS_STARTMENU           "Start menu"
     IDS_MISC                "Misc"
-    IDS_LEFTBUTTON          "Left button"
-    IDS_RIGHTBUTTONM        "Right button"
-    IDS_MIDDLEBUTTONM       "Middle button"
-    IDS_XBUTTON1            "Side button 1"
-    IDS_XBUTTON2            "Side button 2"
     IDS_FILE                "File"
     IDS_NONE                "(None)"
     IDS_OPENFILE            "Open File"
-    IDS_MOUSECOPY           "Copy to Clipboard"
-    IDS_SYNCTIME            "Synchronize"
 END
 
 STRINGTABLE DISCARDABLE 
@@ -256,15 +241,10 @@ BEGIN
     IDS_LOGOFF              "Log off"
     IDS_RUN                 "Run"
     IDS_ALLMIN              "Minimize All Windows"
-    IDS_SHOWDESK            "Show Desktop"
-    IDS_SCREENSAVER         "Screen Saver"
     IDS_MONOFF              "Monitor OFF"
-    IDS_KYU                 "Kyu!"
-    IDS_TCCOMMAND           "TClock command"
     IDS_FORMATCOPY          "Format"
     IDS_NUMERO              "No."
     IDS_MONOFFSEC           "Seconds"
-    IDS_RECYCLE             "Recycle Bin"
     IDS_OPENBY              "Open with..."
 END
 
@@ -276,7 +256,5 @@ BEGIN
     IDS_FOLDER              "Folder"
     IDS_WHEELUP             "WheelUp"
     IDS_WHEELDOWN           "WheelDown"
-    IDS_VOLVAL              "Volume"
-    IDS_VOLDELTA            "Delta"
 END
 

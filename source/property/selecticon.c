@@ -17,7 +17,6 @@ static void EndSelectIcon(HWND hDlg);
 static void OnOK(HWND hDlg);
 static void OnMeasureItem(HWND hDlg, LPARAM lParam);
 static void OnDrawItem(LPARAM lParam);
-static void OnBrowse(HWND hDlg);
 
 static char* m_fname_index;
 static HINSTANCE m_hInst;
@@ -62,9 +61,6 @@ INT_PTR CALLBACK DlgProcSelectIcon(HWND hDlg, UINT message,
 			id = LOWORD(wParam);
 			switch(id)
 			{
-				case IDC_SANSHOICON:
-					OnBrowse(hDlg);
-					break;
 				case IDOK:
 					OnOK(hDlg);
 				case IDCANCEL:
@@ -218,41 +214,5 @@ void OnDrawItem(LPARAM lParam)
 		rc.top + (rc.bottom - rc.top - cyicon)/2,
 		(HICON)pDis->itemData,
 		cxicon, cyicon, 0, NULL, DI_NORMAL);
-}
-
-/*------------------------------------------------
-  "Browse" button
---------------------------------------------------*/
-void OnBrowse(HWND hDlg)
-{
-	const char *filter = "Bitmap, Icon (*.bmp, *.ico)\0*.bmp;*.ico\0"
-		"Executable (*.exe, *.dll)\0*.exe;*.dll\0"
-		"All (*.*)\0*.*\0\0";
-	char deffile[MAX_PATH], fname[MAX_PATH];
-	HFILE hf;
-	char head[2];
-	
-	GetDlgItemText(hDlg, IDC_FNAMEICON, deffile, MAX_PATH);
-	
-	if(!SelectMyFile(m_hInst, hDlg, filter, 2, deffile, fname))
-		return;
-	
-	hf = _lopen(fname, OF_READ);
-	if(hf == HFILE_ERROR) return;
-	_lread(hf, head, 2);
-	_lclose(hf);
-	strcpy(m_fname_index, fname);
-	
-	if(head[0] == 'M' && head[1] == 'Z') // Executable
-	{
-		if(InitSelectIcon(hDlg))
-			PostMessage(hDlg, WM_NEXTDLGCTL,
-				(WPARAM)GetDlgItem(hDlg, IDC_LISTICON), TRUE);
-	}
-	else
-	{
-		EndSelectIcon(hDlg);
-		EndDialog(hDlg, IDOK);
-	}
 }
 

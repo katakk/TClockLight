@@ -8,9 +8,6 @@
 
 #include "common.h"
 
-/* Statics */
-static const char *GetControlTitle(char *dst, const char *src, int nMax, int *ccAmp);
-
 /* Externs */
 
 extern HINSTANCE g_hInst;
@@ -58,51 +55,5 @@ HFONT CreateDialogFont(void)
 	}
 	
 	return CreateMyFont(name, size, FW_NORMAL, 0, 0);
-}
-
-
-
-
-/*-------------------------------------------
-  get "AAA" in "[  AAA   ]"
----------------------------------------------*/
-const char *GetControlTitle(char *dst, const char *src, int nMax, int *ccAmp)
-{
-	const char *sp, *ep;
-	int i;
-	
-	*ccAmp = 0;
-	
-	if(*src != '[') return src;
-	src++;
-	
-	while(*src == ' ') src++;
-	sp = src;
-	
-	ep = NULL;
-	while(*src && *src != ']')
-	{
-		if(*src == ' ')
-		{
-			if(!ep) ep = src;
-		}
-		else
-		{
-			if(*src == '&')
-			{
-				src = CharNext(src);
-				++*ccAmp;
-			}
-			ep = NULL;
-		}
-		src = CharNext(src);
-	}
-	if(!ep) ep = src;
-	
-	for(i = 0; i < nMax - 1 && sp != ep; i++)
-		*dst++ = *sp++;
-	*dst = 0;
-	
-	return src;
 }
 

@@ -32,57 +32,6 @@ void RelToAbs(char *dst, const char *src)
 		strcpy(dst, src);
 }
 
-/*--------------------------------------------------------
-  Retrieve a file name and option from a command string
-----------------------------------------------------------*/
-void GetFileAndOption(const char* command, char* fname, char* option)
-{
-	const char *p;
-	char *dp;
-	const char *pspace, *pfound;
-	char tempfname[MAX_PATH], foundfname[MAX_PATH];
-	BOOL bFound = FALSE;
-	
-	p = command;
-	dp = tempfname;
-	pspace = pfound = NULL;
-	
-	while(1)
-	{
-		if(*p == ' ' || *p == 0)
-		{
-			if(!pspace) pspace = p;
-			
-			*dp = 0;
-			
-			if(GetRealFileName(foundfname, tempfname))
-			{
-				strcpy(fname, foundfname);
-				bFound = TRUE; pfound = p;
-			}
-			
-			if(*p == 0) break;
-		}
-		*dp++ = *p++;
-	}
-	
-	if(bFound)
-	{
-		p = pfound;
-	}
-	else
-	{
-		p = command;
-		dp = fname;
-		while(p != pspace) *dp++ = *p++;
-		*dp = 0;
-	}
-	
-	while(*p == ' ') p++;
-	while(*p) *option++ = *p++;
-	*option = 0;
-}
-
 /*------------------------------------------------
   relative path / absolute path / URL
 --------------------------------------------------*/
