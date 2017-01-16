@@ -311,7 +311,7 @@ void InitTreeView(HWND hDlg)
 {
 	HWND hTree;
 	TV_INSERTSTRUCT tv;
-	HTREEITEM hTreeItem[MAX_TREEITEM];
+	HTREEITEM hTreeItem[MAX_TREEITEM] = { NULL };
 	int i;
 	
 	hTree = GetDlgItem(hDlg, IDC_TREE);
