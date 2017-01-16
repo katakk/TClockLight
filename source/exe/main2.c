@@ -55,11 +55,7 @@ int TClockExeMain(void)
 	}
 #endif
 	
-	dll = LoadLibrary(TEXT("user32.dll"));
-	dll_ChangeWindowMessageFilterEx = (FUNCTYPE7)GetProcAddress(dll, "ChangeWindowMessageFilterEx");
-	if(dll_ChangeWindowMessageFilterEx = NULL)
-		dll_ChangeWindowMessageFilter = (FUNCTYPEVISTA)GetProcAddress(dll, "ChangeWindowMessageFilter");
-    
+
 	// not to execute the program twice
 	hwnd = GetTClockMainWindow();
 	if(hwnd != NULL)
@@ -108,7 +104,11 @@ int TClockExeMain(void)
 	ShowWindow(hwnd, SW_MINIMIZE);
 	ShowWindow(hwnd, SW_HIDE);
 
-	
+		dll = LoadLibrary(TEXT("user32.dll"));
+	dll_ChangeWindowMessageFilterEx = (FUNCTYPE7)GetProcAddress(dll, "ChangeWindowMessageFilterEx");
+	if(dll_ChangeWindowMessageFilterEx == NULL)
+		dll_ChangeWindowMessageFilter = (FUNCTYPEVISTA)GetProcAddress(dll, "ChangeWindowMessageFilter");
+    
 	// Windows Vista UIPI filter
 	AddMessageFilters(hwnd);
 		
