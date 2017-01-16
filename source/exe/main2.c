@@ -16,10 +16,8 @@ char g_inifile[MAX_PATH];   // ini file name
 int  g_winver;              // windows version
 
 
-typedef BOOL (__stdcall *FUNCTYPE7)(HWND, UINT, DWORD, int);
-FUNCTYPE7 dll_ChangeWindowMessageFilterEx;
-typedef BOOL (__stdcall *FUNCTYPEVISTA)(UINT, DWORD);
-FUNCTYPEVISTA dll_ChangeWindowMessageFilter;
+static BOOL (WINAPI *dll_ChangeWindowMessageFilterEx)(HWND, UINT, DWORD, int) = NULL;
+static BOOL (WINAPI *dll_ChangeWindowMessageFilter)(UINT, DWORD) = NULL;
 
 /* Statics */
 static void InitTClockMain(void);
@@ -105,9 +103,9 @@ int TClockExeMain(void)
 	ShowWindow(hwnd, SW_HIDE);
 
 		dll = LoadLibrary(TEXT("user32.dll"));
-	dll_ChangeWindowMessageFilterEx = (FUNCTYPE7)GetProcAddress(dll, "ChangeWindowMessageFilterEx");
+	(FARPROC)dll_ChangeWindowMessageFilterEx = GetProcAddress(dll, "ChangeWindowMessageFilterEx");
 	if(dll_ChangeWindowMessageFilterEx == NULL)
-		dll_ChangeWindowMessageFilter = (FUNCTYPEVISTA)GetProcAddress(dll, "ChangeWindowMessageFilter");
+		(FARPROC)dll_ChangeWindowMessageFilter = GetProcAddress(dll, "ChangeWindowMessageFilter");
     
 	// Windows Vista UIPI filter
 	AddMessageFilters(hwnd);
