@@ -445,7 +445,7 @@ void TimeDifHandler(FORMATHANDLERSTRUCT* pstruc)
 	dif *= 60;
 	if(*pstruc->sp == ':')
 	{
-		int dif2;
+		int dif2 = 0;
 		pstruc->sp++;
 		if('0' <= *pstruc->sp && *pstruc->sp <= '9')
 		{
