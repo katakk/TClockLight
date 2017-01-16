@@ -1,428 +1,361 @@
 
-        TClock Light ‰ü‘¢”Å  by K.Takata
+        TClock Light æ”¹é€ ç‰ˆ  by K.Takata
           Ver.kt160911 (based on tclocklight-040702-3)
 
-‚PDŠT—v
-@ƒ^ƒXƒNƒgƒŒƒC‚ÌŽžŒv‚ð‰ü‘¢‚·‚éƒ\ƒtƒg‚Å‚ ‚é TClock Light (‚©‚¸‚Ú‚ñŽì)(*1) ‚ð
-K.Takata ‚ªŸŽè‚É‰ü•Ï‚µ‚½‚à‚Ì‚Å‚·B
-@Á”ïƒƒ‚ƒŠ‚ÌíŒ¸AƒƒO•\Ž¦‚Ì‰ü‘PAƒAƒ‰[ƒ€‹@”\‚Ì‹­‰»AVista/7/8/10 ‚Ö‚Ì‘Î‰žA
-x64 ‚Ö‚Ì‘Î‰ž‚È‚Ç‚Ì•ÏX‚ðs‚Á‚Ä‚¢‚Ü‚·B
+ï¼‘ï¼Žæ¦‚è¦
+ã€€ã‚¿ã‚¹ã‚¯ãƒˆãƒ¬ã‚¤ã®æ™‚è¨ˆã‚’æ”¹é€ ã™ã‚‹ã‚½ãƒ•ãƒˆã§ã‚ã‚‹ TClock Light (ã‹ãšã¼ã‚“æ°ä½œ)(*1) ã‚’
+K.Takata ãŒå‹æ‰‹ã«æ”¹å¤‰ã—ãŸã‚‚ã®ã§ã™ã€‚ã‚’å‹æ‰‹ã«æ”¹å¤‰ã—ãŸã‚‚ã®ã§ã™ã€‚
+ã€€æ¶ˆè²»ãƒ¡ãƒ¢ãƒªã®å‰Šæ¸›ã€ãƒ­ã‚°è¡¨ç¤ºã®å‰Šé™¤ã€ã‚¢ãƒ©ãƒ¼ãƒ æ©Ÿèƒ½ã®å‰Šé™¤ã€Vista/7/8/10 ã¸ã®å¯¾å¿œã€
+x64 ã¸ã®å¯¾å¿œãªã©ã®å¤‰æ›´ã‚’è¡Œã£ã¦ã„ã¾ã™ã€‚
 
 (*1) http://homepage1.nifty.com/kazubon/tclocklight/
 
 
-‚QDƒCƒ“ƒXƒg[ƒ‹
-@ˆê”Êƒ†[ƒU[Œ ŒÀ‚Å‘‚«ž‚Ý‰Â”\‚È“K“–‚ÈƒfƒBƒŒƒNƒgƒŠ‚ð—pˆÓ‚µA‚»‚±‚Éƒtƒ@ƒCƒ‹
-‚ð‰ð“€‚µ‚Ä‚­‚¾‚³‚¢B(C:\Program Files ‚È‚Ç‚É‚ÍƒCƒ“ƒXƒg[ƒ‹‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B)
-@‚»‚ÌŒãAŽg—p‚µ‚Ä‚¢‚é OS ‚É‡‚í‚¹‚ÄAx64, x86 ‚¢‚¸‚ê‚©‚ÌƒfƒBƒŒƒNƒgƒŠ‚É“ü‚Á‚Ä
-‚¢‚éƒtƒ@ƒCƒ‹‚ðA1ŠK‘wã‚ÉƒRƒs[‚µ‚Ä‚­‚¾‚³‚¢BˆÈ‰º‚Ì‚æ‚¤‚ÉAŽÀsƒtƒ@ƒCƒ‹‚Ì‚ ‚é
-êŠ‚É lang ƒfƒBƒŒƒNƒgƒŠ‚ª‚È‚¯‚ê‚Î‚È‚è‚Ü‚¹‚ñB
+ï¼’ï¼Žã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
+ã€€ä¸€èˆ¬ãƒ¦ãƒ¼ã‚¶ãƒ¼æ¨©é™ã§æ›¸ãè¾¼ã¿å¯èƒ½ãªé©å½“ãªãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’ç”¨æ„ã—ã€ãã“ã«ãƒ•ã‚¡ã‚¤ãƒ«
+ã‚’è§£å‡ã—ã¦ãã ã•ã„ã€‚(C:\Program Files ãªã©ã«ã¯ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ãªã„ã§ãã ã•ã„ã€‚)
+ã€€ãã®å¾Œã€ä½¿ç”¨ã—ã¦ã„ã‚‹ OS ã«åˆã‚ã›ã¦ã€x64, x86 ã„ãšã‚Œã‹ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«å…¥ã£ã¦
+ã„ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã€1éšŽå±¤ä¸Šã«ã‚³ãƒ”ãƒ¼ã—ã¦ãã ã•ã„ã€‚
 
      tclock
-     „   tcdll.tclock
-     „   tclock.exe
-     „   tcplayer.exe
-     „   tcprop.exe
-     „   tcsntp.exe
-     „   tctimer.exe
-     „ 
-     „¤„Ÿlang
-             tclang-ja.txt
-             tclang.txt
-             tcmenu-ja.txt
-             tcmenu.txt
+     â”‚  tcdll.tclock
+     â”‚  tclock.exe
+     
+     â”‚  tcprop.exe
+     
 
-@‚±‚Ìó‘Ô‚Å tclock.exe ‚ðŽÀs‚·‚é‚ÆATClock Light‚ª‹N“®‚µ‚Ü‚·B
+ã€€ã“ã®çŠ¶æ…‹ã§ tclock.exe ã‚’å®Ÿè¡Œã™ã‚‹ã¨ã€TClock LightãŒèµ·å‹•ã—ã¾ã™ã€‚
 
-@TClock Light ‚ð‹N“®‚µ‚½Û‚ÉA"language file not found" ‚Æ•\Ž¦‚³‚ê‚éê‡‚âA
-ŽžŒv‚ð‰EƒNƒŠƒbƒN‚µ‚½Û‚ÉAƒƒjƒ…[‚É Exit TClock ‚Æ‚µ‚©•\Ž¦‚³‚ê‚È‚¢ê‡‚ÍA
-ƒCƒ“ƒXƒg[ƒ‹‚ÉŽ¸”s‚µ‚Ä‚¢‚Ü‚·Bã‹L‚Ì‚æ‚¤‚ÈƒfƒBƒŒƒNƒgƒŠ\¬‚É‚È‚Á‚Ä‚¢‚é‚±‚Æ‚ð
-Ä“xŠm”F‚µ‚Ä‚­‚¾‚³‚¢B
-
-@ƒIƒŠƒWƒiƒ‹‚Ì TClock Light ‚Æ“¯—l‚ÉAƒXƒ^[ƒgƒAƒbƒv‚É“o˜^‚·‚é‹@”\‚Í‚È‚¢‚½‚ß
-Ž©“®‹N“®‚ð‚³‚¹‚é‚É‚ÍAƒXƒ^[ƒgƒAƒbƒv‚ÉŽè“®‚Å“o˜^‚·‚é•K—v‚ª‚ ‚è‚Ü‚·B
-@ƒXƒ^[ƒgƒAƒbƒv‚ÍA’ÊíˆÈ‰º‚ÌêŠ‚É‚ ‚è‚Ü‚·B(<user> ‚Ì•”•ª‚ÍŽ©•ª‚Ìƒ†[ƒU[
-–¼‚É“Ç‚Ý‘Ö‚¦‚Ä‚­‚¾‚³‚¢B)
+ã€€ã‚ªãƒªã‚¸ãƒŠãƒ«ã® TClock Light ã¨åŒæ§˜ã«ã€ã‚¹ã‚¿ãƒ¼ãƒˆã‚¢ãƒƒãƒ—ã«ç™»éŒ²ã™ã‚‹æ©Ÿèƒ½ã¯ãªã„ãŸã‚
+è‡ªå‹•èµ·å‹•ã‚’ã•ã›ã‚‹ã«ã¯ã€ã‚¹ã‚¿ãƒ¼ãƒˆã‚¢ãƒƒãƒ—ã«æ‰‹å‹•ã§ç™»éŒ²ã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚
+ã€€ã‚¹ã‚¿ãƒ¼ãƒˆã‚¢ãƒƒãƒ—ã¯ã€é€šå¸¸ä»¥ä¸‹ã®å ´æ‰€ã«ã‚ã‚Šã¾ã™ã€‚(<user> ã®éƒ¨åˆ†ã¯è‡ªåˆ†ã®ãƒ¦ãƒ¼ã‚¶ãƒ¼
+åã«èª­ã¿æ›¿ãˆã¦ãã ã•ã„ã€‚)
 
   C:\Users\<user>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
 
-‚RD•ÏX“_
-@ƒIƒŠƒWƒiƒ‹‚Ìƒo[ƒWƒ‡ƒ“‚Å‚ ‚é tclocklight-040702-3 ‚©‚ç‚Ì•ÏX“_‚ð
-ˆÈ‰º‚ÉŽ¦‚µ‚Ü‚·B
+ï¼“ï¼Žå¤‰æ›´ç‚¹
+ã€€ã‚ªãƒªã‚¸ãƒŠãƒ«ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã§ã‚ã‚‹ tclocklight-040702-3 ã‹ã‚‰ã®å¤‰æ›´ç‚¹ã‚’
+ä»¥ä¸‹ã«ç¤ºã—ã¾ã™ã€‚
 
-3.1. Á”ïƒƒ‚ƒŠ‚ÌíŒ¸
-@IME ŠÖ˜A‚Ì DLL ‚ð“Ç‚Ýž‚Ü‚È‚¢‚æ‚¤‚É•ÏX‚·‚é‚±‚Æ‚ÅAÁ”ïƒƒ‚ƒŠ‚ðíŒ¸
-‚µ‚Ü‚µ‚½B(tclock.exe)
+3.1. æ¶ˆè²»ãƒ¡ãƒ¢ãƒªã®å‰Šæ¸›
+ã€€IME é–¢é€£ã® DLL ã‚’èª­ã¿è¾¼ã¾ãªã„ã‚ˆã†ã«å¤‰æ›´ã™ã‚‹ã“ã¨ã§ã€æ¶ˆè²»ãƒ¡ãƒ¢ãƒªã‚’å‰Šæ¸›
+ã—ã¾ã—ãŸã€‚(tclock.exe)
 
-3.2. ‰EƒNƒŠƒbƒNƒƒjƒ…[‚Ì‹““®‚ª•sŽ©‘R‚È“_‚ðC³
-@‰EƒNƒŠƒbƒNƒƒjƒ…[‚ªƒL[ƒ{[ƒh‚Å‘€ì‚Å‚«‚È‚©‚Á‚½‚èAƒƒjƒ…[ˆÈŠO‚Ì—Ìˆæ‚ð
-ƒNƒŠƒbƒN‚µ‚Ä‚àƒƒjƒ…[‚ªÁ‚¦‚È‚¢‚±‚Æ‚ª‚ ‚é–â‘è‚ðC³‚µ‚Ü‚µ‚½B
-
-3.3. ‰EƒNƒŠƒbƒNƒƒjƒ…[‚ÉƒAƒNƒZƒXƒL[‚ð’Ç‰Á
-@‰EƒNƒŠƒbƒNƒƒjƒ…[‚ÉƒAƒNƒZƒXƒL[‚ð’Ç‰Á‚·‚é‚±‚Æ‚ÅAƒL[ƒ{[ƒh‚Å‘f‘‚­
-€–Ú‚ð‘I‘ð‚Å‚«‚é‚æ‚¤‚É‚µ‚Ü‚µ‚½B
-
-3.4. ƒAƒ‰[ƒ€‹@”\‚ð‹­‰»
-@ƒŒƒWƒ…[ƒ€ŽžiƒXƒŠ[ƒv‚â‹xŽ~ó‘Ô‚©‚ç‚Ì•œ‹AŽžj‚ÉƒvƒƒOƒ‰ƒ€‚ðŽÀs‚Å‚«‚é
-‚æ‚¤‚ÉƒAƒ‰[ƒ€‹@”\‚ð‹­‰»‚µ‚Ü‚µ‚½B
-
-@—á‚¦‚ÎAƒm[ƒgƒpƒ\ƒRƒ“‚È‚Ç‚Å timeadjx(*2) ‚ðŽg‚¤ê‡‚È‚Ç‚É—L—p‚Å‚·B
-itimeadjx ‚ðŽg‚¤‚ÆŽžŒv‚Ì¸“x‚ðŒüã‚³‚¹‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·‚ªA‹xŽ~ó‘Ô‚È‚Ç‚ð
-  Žg‚¤‚ÆÝ’è‚ª‰Šú‰»‚³‚ê‚Ä‚µ‚Ü‚¤‚½‚ßA•œ‹AŽž‚ÉÄŽÀs‚·‚é•K—v‚ª‚ ‚è‚Ü‚·Bj
-
-(*2) http://www.monyo.com/technical/products/timeadjx/
-
-3.5. Žž‡‚í‚¹‚ÌÝ’è‰æ–Ê‚ÅƒƒO‚ð“Ç‚Ýž‚Þ‚æ‚¤‚É•ÏX
-@Žž‡‚í‚¹‚ÌÝ’è‚Ìƒ_ƒCƒAƒƒOƒ{ƒbƒNƒX‚ð•\Ž¦‚·‚éÛ‚ÉAƒƒO (SNTP.txt) ‚Ì
-ÅV 2KB ‚ð“Ç‚Ýž‚ñ‚Å•\Ž¦‚·‚é‚æ‚¤‚É•ÏX‚µ‚Ü‚µ‚½B
-
-3.6. Žž‡‚í‚¹‚ÌƒƒO‚Ì•\Ž¦—“‚ð­‚µŠg‘å
-@ƒƒO‚Ì•\Ž¦s”‚ª 1s‘‚¦‚é‚Í‚¸‚Å‚·B
-
-3.7. ƒfƒtƒHƒ‹ƒg‚Ì NTP ƒT[ƒo‚ð•ÏX
-@ƒfƒtƒHƒ‹ƒg‚Ì NTP ƒT[ƒo‚ð ntp1.jst.mfeed.ad.jp ‚©‚çAƒ‰ƒEƒ“ƒhƒƒrƒ“‚ð
-—˜—p‚µ‚½ ntp.jst.mfeed.ad.jp ‚É•ÏX‚µ‚Ü‚µ‚½BiƒT[ƒo‚Ì•‰‰×ŒyŒ¸‚Ì‚½‚ßj
-
-3.8. XP ƒe[ƒ}•ÏXŽž‚ÉŽžŒv‚Ì”wŒi‚ª‚¨‚©‚µ‚­‚È‚Á‚Ä‚µ‚Ü‚¤ƒoƒO‚ðC³
-@TClock”Â‚ÌuTClock LightƒXƒŒƒbƒh@•ÊŠÙ part1v(*3) ‚Ì 17Ž ‚ÌC³‚ð
-‘g‚Ýž‚Ý‚Ü‚µ‚½B
+3.8. XP ãƒ†ãƒ¼ãƒžå¤‰æ›´æ™‚ã«æ™‚è¨ˆã®èƒŒæ™¯ãŒãŠã‹ã—ããªã£ã¦ã—ã¾ã†ãƒã‚°ã‚’ä¿®æ­£
+ã€€TClockæ¿ã®ã€ŒTClock Lightã‚¹ãƒ¬ãƒƒãƒ‰@åˆ¥é¤¨ part1ã€(*3) ã® 17æ° ã®ä¿®æ­£ã‚’
+çµ„ã¿è¾¼ã¿ã¾ã—ãŸã€‚
 
 (*3) http://tclock2ch.no.land.to/cgi-bin/test/read.cgi/tclock/1112788230
 
-3.9. Vista ˆÈ~‚ÅŽžŒv‚Ì•¶Žš‚Ì•\Ž¦‚ª‚¨‚©‚µ‚¢–â‘è‚ðC³
-@Vista ‚ÅŽžŒv‚Ì•¶Žš‚Ì•\Ž¦ˆÊ’u‚ªã‚É‚¸‚ê‚½‚èA•¶ŽšF‚ª‚¨‚©‚µ‚¢–â‘è‚ð
-C³‚µ‚Ü‚µ‚½B
-iVista/7 ‚Å‚ÍAWinXP ‚Æ“¯‚¶ˆ—‚Å•\Ž¦‚·‚ê‚Î‚æ‚¢‚Ì‚¾‚ªAƒo[ƒWƒ‡ƒ“”»’èˆ—‚ª
-  ŠÔˆá‚Á‚Ä‚¨‚èAWin2k ‚Æ“¯‚¶ˆ—‚Å•\Ž¦‚µ‚Ä‚¢‚½‚Ì‚ªŒ´ˆöBj
+3.9. Vista ä»¥é™ã§æ™‚è¨ˆã®æ–‡å­—ã®è¡¨ç¤ºãŒãŠã‹ã—ã„å•é¡Œã‚’ä¿®æ­£
+ã€€Vista ã§æ™‚è¨ˆã®æ–‡å­—ã®è¡¨ç¤ºä½ç½®ãŒä¸Šã«ãšã‚ŒãŸã‚Šã€æ–‡å­—è‰²ãŒãŠã‹ã—ã„å•é¡Œã‚’
+ä¿®æ­£ã—ã¾ã—ãŸã€‚
+ï¼ˆVista/7 ã§ã¯ã€WinXP ã¨åŒã˜å‡¦ç†ã§è¡¨ç¤ºã™ã‚Œã°ã‚ˆã„ã®ã ãŒã€ãƒãƒ¼ã‚¸ãƒ§ãƒ³åˆ¤å®šå‡¦ç†ãŒ
+  é–“é•ã£ã¦ãŠã‚Šã€Win2k ã¨åŒã˜å‡¦ç†ã§è¡¨ç¤ºã—ã¦ã„ãŸã®ãŒåŽŸå› ã€‚ï¼‰
 
-3.10. Vista ˆÈ~‚ÅŠÇ—ŽÒŒ ŒÀ‚Å‹N“®‚·‚é‚Æƒƒjƒ…[‚ª•\Ž¦‚³‚ê‚È‚¢–â‘è‚ðC³
-@Vista/7 ‚Å tclock.exe ‚ðŠÇ—ŽÒŒ ŒÀ‚Å‹N“®‚·‚é‚ÆAUIPI (User Interface
-Privilege Isolation) ‚Ì§ŒÀ‚ÅAŽžŒv‚ð‰EƒNƒŠƒbƒN‚µ‚Ä‚àƒƒjƒ…[‚ª
-•\Ž¦‚³‚ê‚È‚©‚Á‚½–â‘è‚ðC³‚µ‚Ü‚µ‚½B
+3.10. Vista ä»¥é™ã§ç®¡ç†è€…æ¨©é™ã§èµ·å‹•ã™ã‚‹ã¨ãƒ¡ãƒ‹ãƒ¥ãƒ¼ãŒè¡¨ç¤ºã•ã‚Œãªã„å•é¡Œã‚’ä¿®æ­£
+ã€€Vista/7 ã§ tclock.exe ã‚’ç®¡ç†è€…æ¨©é™ã§èµ·å‹•ã™ã‚‹ã¨ã€UIPI (User Interface
+Privilege Isolation) ã®åˆ¶é™ã§ã€æ™‚è¨ˆã‚’å³ã‚¯ãƒªãƒƒã‚¯ã—ã¦ã‚‚ãƒ¡ãƒ‹ãƒ¥ãƒ¼ãŒ
+è¡¨ç¤ºã•ã‚Œãªã‹ã£ãŸå•é¡Œã‚’ä¿®æ­£ã—ã¾ã—ãŸã€‚
 
-3.11. Vista ˆÈ~‚ÌƒJƒŒƒ“ƒ_[‚É‘Î‰ž
-@Vista ˆÈ~‚Å‚ÍAŽžŒv‚ð¶ƒNƒŠƒbƒN‚·‚é‚ÆƒJƒŒƒ“ƒ_[‚ª•\Ž¦‚³‚ê‚Ü‚·‚ªA‚±‚Ì
-ƒJƒŒƒ“ƒ_[‚ð TClock Light ‚©‚ç•\Ž¦‚·‚é‚±‚Æ‚ª‚Å‚«‚é‚æ‚¤‚É‚È‚è‚Ü‚µ‚½B
+3.11. Vista ä»¥é™ã®ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼ã«å¯¾å¿œ
+ã€€Vista ä»¥é™ã§ã¯ã€æ™‚è¨ˆã‚’å·¦ã‚¯ãƒªãƒƒã‚¯ã™ã‚‹ã¨ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼ãŒè¡¨ç¤ºã•ã‚Œã¾ã™
+ 
 
-3.11.1. Vista/7/8/10 ‚ÌÝ’è
-@uƒvƒƒpƒeƒBv¨uƒ}ƒEƒX‘€ìv¨uƒNƒŠƒbƒNv‚ÌƒV[ƒg‚ð‘I‘ð‚µAƒ{ƒ^ƒ“‚É
-u¶ƒ{ƒ^ƒ“vuƒVƒ“ƒOƒ‹v‚ð‘I‘ð‚µA‹@”\‚ÉuTClock‚ÌƒRƒ}ƒ“ƒhv‚ð‘I‘ð‚µA
-”Ô†—“‚Éu134v‚Æ“ü—Í‚·‚é‚ÆA¶ƒNƒŠƒbƒN‚ÅƒJƒŒƒ“ƒ_[‚ª•\Ž¦‚³‚ê‚Ü‚·B
-@ƒ_ƒuƒ‹ƒNƒŠƒbƒN‚ÉƒRƒ}ƒ“ƒh‚ª“o˜^‚³‚ê‚Ä‚¢‚é‚ÆAƒVƒ“ƒOƒ‹ƒNƒŠƒbƒN‚©ƒ_ƒuƒ‹
-ƒNƒŠƒbƒN‚©‚Ì”»•Ê‚ª•K—v‚É‚È‚é‚½‚ßAƒVƒ“ƒOƒ‹ƒNƒŠƒbƒN‚µ‚Ä‚©‚çƒJƒŒƒ“ƒ_[‚ª
-•\Ž¦‚³‚ê‚é‚Ü‚Å‚ÉA‘½­ŽžŠÔ‚ªŠ|‚©‚è‚Ü‚·BƒVƒ“ƒOƒ‹ƒNƒŠƒbƒN‚Å‚·‚®‚ÉƒJƒŒƒ“ƒ_[
-‚ª•\Ž¦‚³‚ê‚é‚æ‚¤‚É‚·‚é‚É‚ÍAƒ_ƒuƒ‹ƒNƒŠƒbƒN‚É‚ÍƒRƒ}ƒ“ƒh‚ð“o˜^‚µ‚È‚¢‚æ‚¤‚É
-‚µ‚Ä‚¨‚­•K—v‚ª‚ ‚è‚Ü‚·B‚È‚¨AVista ˆÈ~‚Å‚ÍŽžŒv‚ðƒ_ƒuƒ‹ƒNƒŠƒbƒN‚µ‚Ä‚à
-u“ú•t‚ÆŽž‚ÌƒvƒƒpƒeƒBv‚ª•\Ž¦‚³‚ê‚È‚­‚È‚è‚Ü‚µ‚½‚Ì‚ÅAƒ_ƒuƒ‹ƒNƒŠƒbƒN‚Ì
-ƒRƒ}ƒ“ƒh‚Ííœ‚µ‚Ä‚¨‚­‚ÆAVista ˆÈ~‚Ì•W€‚Æ“¯‚¶‘€ì‚É‚È‚è‚Ü‚·B
 
-3.11.2. Windows 10 Anniversary Update ‚ÌÝ’è
-@Win10AU ‚Å‚ÍAƒJƒŒƒ“ƒ_[‚Ì•\Ž¦ƒ^ƒCƒ~ƒ“ƒO‚ª•ÏX‚³‚ê‚Ü‚µ‚½B]—ˆ‚ÍAŽžŒv‚ð
-¶ƒ{ƒ^ƒ“‚Å‰Ÿ‚·‚Æ•\Ž¦‚³‚ê‚Ä‚¢‚Ü‚µ‚½‚ªAWin10AU ‚Å‚ÍAŽžŒv‚ð¶ƒ{ƒ^ƒ“‚Å‰Ÿ‚µ‚Ä
-‚©‚ç—£‚·‚Æ•\Ž¦‚³‚ê‚é‚æ‚¤‚É‚È‚è‚Ü‚µ‚½B
-@uƒvƒƒpƒeƒBv¨uƒ}ƒEƒX‘€ìv¨uƒNƒŠƒbƒNv‚ÌƒV[ƒg‚ð‘I‘ð‚µAuí‚É
-¶ƒ{ƒ^ƒ“ƒƒbƒZ[ƒW‚ð’Ê‰ß‚³‚¹‚év‚Éƒ`ƒFƒbƒN‚ð“ü‚ê‚é‚ÆAWin10AU ‚Ì•W€‚Æ“¯‚¶
-“®ì‚ÅƒJƒŒƒ“ƒ_[‚ª•\Ž¦‚³‚ê‚é‚æ‚¤‚É‚È‚è‚Ü‚·B‚È‚¨A‚±‚ÌÝ’è‚ðs‚Á‚½ê‡A
-‘¼‚Ì¶ƒ{ƒ^ƒ“‚ÉÝ’è‚µ‚½‹@”\‚Í‚·‚×‚Ä–³Ž‹‚³‚ê‚Ü‚·B
+3.11.2. Windows 10 Anniversary Update ã®è¨­å®š
+ã€€Win10AU ã§ã¯ã€ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼ã®è¡¨ç¤ºã‚¿ã‚¤ãƒŸãƒ³ã‚°ãŒå¤‰æ›´ã•ã‚Œã¾ã—ãŸã€‚å¾“æ¥ã¯ã€æ™‚è¨ˆã‚’
+å·¦ãƒœã‚¿ãƒ³ã§æŠ¼ã™ã¨è¡¨ç¤ºã•ã‚Œã¦ã„ã¾ã—ãŸãŒã€Win10AU ã§ã¯ã€æ™‚è¨ˆã‚’å·¦ãƒœã‚¿ãƒ³ã§æŠ¼ã—ã¦
+ã‹ã‚‰é›¢ã™ã¨è¡¨ç¤ºã•ã‚Œã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã—ãŸã€‚
+ã€€ã€Œãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã€â†’ã€Œãƒžã‚¦ã‚¹æ“ä½œã€â†’ã€Œã‚¯ãƒªãƒƒã‚¯ã€ã®ã‚·ãƒ¼ãƒˆã‚’é¸æŠžã—ã€ã€Œå¸¸ã«
+å·¦ãƒœã‚¿ãƒ³ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€šéŽã•ã›ã‚‹ã€ã«ãƒã‚§ãƒƒã‚¯ã‚’å…¥ã‚Œã‚‹ã¨ã€Win10AU ã®æ¨™æº–ã¨åŒã˜
+å‹•ä½œã§ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼ãŒè¡¨ç¤ºã•ã‚Œã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã™ã€‚ãªãŠã€ã“ã®è¨­å®šã‚’è¡Œã£ãŸå ´åˆã€
+ä»–ã®å·¦ãƒœã‚¿ãƒ³ã«è¨­å®šã—ãŸæ©Ÿèƒ½ã¯ã™ã¹ã¦ç„¡è¦–ã•ã‚Œã¾ã™ã€‚
 
-3.12. ‘¼‚Ì‰ü‘¢”Å‚ÌC³E‹@”\Šg’£‚ðŽæ‚èž‚Ý
-3.12.1. C³‚ÌŽæ‚èž‚Ý
-@‘¼‚Ì TClock Light ‰ü‘¢”Å‚É‚æ‚éƒoƒOC³‚ðˆê•”Žæ‚èž‚ñ‚Å‚¢‚Ü‚·BÚ×‚ÍXV—š—ð
-‚ðŽQÆ‚µ‚Ä‚­‚¾‚³‚¢B
+3.12. ä»–ã®æ”¹é€ ç‰ˆã®ä¿®æ­£ãƒ»æ©Ÿèƒ½æ‹¡å¼µã‚’å–ã‚Šè¾¼ã¿
+3.12.1. ä¿®æ­£ã®å–ã‚Šè¾¼ã¿
+ã€€ä»–ã® TClock Light æ”¹é€ ç‰ˆã«ã‚ˆã‚‹ãƒã‚°ä¿®æ­£ã‚’ä¸€éƒ¨å–ã‚Šè¾¼ã‚“ã§ã„ã¾ã™ã€‚è©³ç´°ã¯æ›´æ–°å±¥æ­´
+ã‚’å‚ç…§ã—ã¦ãã ã•ã„ã€‚
 
-3.12.2. ‹@”\Šg’£‚ÌŽæ‚èž‚Ý
-@ˆÈ‰º‚Ì TClock Light ‰ü‘¢”Å‚Ì‹@”\Šg’£‚ðƒ\[ƒXƒŒƒxƒ‹‚Åˆê•”Žæ‚èž‚ñ‚Å‚¢‚Ü‚·B
-‚»‚ê‚¼‚ê‚Ì‹@”\Šg’£‚ÍƒIƒt‚É‚µ‚Ä‚ ‚è‚Ü‚·‚Ì‚ÅAŽg—p‚·‚éÛ‚É‚ÍÝ’è‚ð•ÏX‚µ‚Ä
-ƒRƒ“ƒpƒCƒ‹‚·‚é•K—v‚ª‚ ‚è‚Ü‚·BÚ×‚Í config-kt.txt ‚ðŽQÆ‚µ‚Ä‚­‚¾‚³‚¢B
+3.12.2. æ©Ÿèƒ½æ‹¡å¼µã®å–ã‚Šè¾¼ã¿
+ã€€ä»¥ä¸‹ã® TClock Light æ”¹é€ ç‰ˆã®æ©Ÿèƒ½æ‹¡å¼µã‚’ã‚½ãƒ¼ã‚¹ãƒ¬ãƒ™ãƒ«ã§ä¸€éƒ¨å–ã‚Šè¾¼ã‚“ã§ã„ã¾ã™ã€‚
+ãã‚Œãžã‚Œã®æ©Ÿèƒ½æ‹¡å¼µã¯ã‚ªãƒ•ã«ã—ã¦ã‚ã‚Šã¾ã™ã®ã§ã€ä½¿ç”¨ã™ã‚‹éš›ã«ã¯è¨­å®šã‚’å¤‰æ›´ã—ã¦
+ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚è©³ç´°ã¯ config-kt.txt ã‚’å‚ç…§ã—ã¦ãã ã•ã„ã€‚
 
-Etclocklight-050716 (TClock LightƒXƒŒƒbƒh@•ÊŠÙ part1 11Ž)
-ETClock Light Unofficial 060502 (by ŸFDQ3TClockŽ)
-Etclocklight- 080409 (by slicŽ)
+ãƒ»tclocklight-050716 (TClock Lightã‚¹ãƒ¬ãƒƒãƒ‰@åˆ¥é¤¨ part1 11æ°)
+ãƒ»TClock Light Unofficial 060502 (by â—†FDQ3TClockæ°)
+ãƒ»tclocklight- 080409 (by slicæ°)
 
-‚ ‚é‚¢‚ÍA•Ê”z•z‚Ì custom ”Å‚ªŽg—p‚Å‚«‚Ü‚·Bcustom ”Å‚Å‚Ç‚Ì‹@”\‚ª—LŒø‰»‚³‚ê‚Ä
-‚¢‚é‚©‚ÍAƒ\[ƒXƒtƒ@ƒCƒ‹“à‚Ì source_all\config.h ‚¨‚æ‚Ñ source_custom\config.h
-‚ÅŠm”F‚Å‚«‚Ü‚·Bicustom ”Å‚ÌÚ×‚É‚Â‚¢‚Ä‚Íà–¾‚ðÈ‚«‚Ü‚·Bj
 
-3.13. x64 ‚Ö‚Ì‘Î‰ž
-@x64 ‚É³Ž®‘Î‰ž‚µ‚Ü‚µ‚½B
-@‚È‚¨Ax64 ‚Ö‚Ì‘Î‰ž‚Í tclocklight-040702-3-amd64 (*4) ‚ðŽQl‚É‚µ‚Ä‚¢‚Ü‚·B
+3.13. x64 ã¸ã®å¯¾å¿œ
+ã€€x64 ã«æ­£å¼å¯¾å¿œã—ã¾ã—ãŸã€‚
+ã€€ãªãŠã€x64 ã¸ã®å¯¾å¿œã¯ tclocklight-040702-3-amd64 (*4) ã‚’å‚è€ƒã«ã—ã¦ã„ã¾ã™ã€‚
 
 (*4)
  http://www.program-lab.jp/blog/progmemo/archives/2005/05/tclock_lightox6.html
 
-3.14. High DPI ‚Ö‚Ì‘Î‰ž
-@High DPI ‚É‘Î‰ž‚µ‚½‚±‚Æ‚ÅAƒƒjƒ…[‚âƒ_ƒCƒAƒƒOƒ{ƒbƒNƒX‚ª‚«‚ê‚¢‚É•\Ž¦‚³‚ê‚é
-‚æ‚¤‚É‚È‚è‚Ü‚µ‚½B
+3.14. High DPI ã¸ã®å¯¾å¿œ
+ã€€High DPI ã«å¯¾å¿œã—ãŸã“ã¨ã§ã€ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚„ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ãƒœãƒƒã‚¯ã‚¹ãŒãã‚Œã„ã«è¡¨ç¤ºã•ã‚Œã‚‹
+ã‚ˆã†ã«ãªã‚Šã¾ã—ãŸã€‚
 
-3.15. ‘Ž® _m, _d, _h, _n ‚ð’Ç‰Á
-@ŒŽA“úAŽžA•ª‚ª 2 Œ…‚É–ž‚½‚È‚¢ê‡Aæ“ª‚ÉƒXƒy[ƒX‚ð“ü‚ê‚é‘Ž®‚Æ‚µ‚ÄA
-_m, _d, _h, _n ‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
-@—á‚¦‚ÎA"_h:nn:ss" ‚Æ‚¢‚¤‘Ž®‚ðÝ’è‚·‚é‚ÆA" 9:59:59" ‚©‚ç "10:00:00" ‚É
-•\Ž¦‚ªØ‚è‘Ö‚í‚Á‚Ä‚àAŽžŒv‚Ì•‚ª‚¸‚ê‚È‚­‚È‚è‚Ü‚µ‚½B
-
-
-‚SD”»–¾‚µ‚Ä‚¢‚é§–ñE–â‘è“_
-4.1. ŠÇ—ŽÒŒ ŒÀ‚Å‹N“®‚µ‚È‚¢‚ÆAtcsntp.exe ‚É‚æ‚éŽž‡‚í‚¹‚ª‚Å‚«‚È‚¢
-@Žž‚ðÝ’è‚·‚é‚É‚ÍŠÇ—ŽÒŒ ŒÀ‚ª•K—v‚Å‚·B‚»‚Ì‚½‚ßAVista ˆÈ~‚Å
-UAC (User Account Control) ‚ª—LŒø‚Èê‡‚ÉAtcsntp.exe ‚ðŽg‚Á‚Ä SNTP ‚Å
-Žž‡‚í‚¹‚ð‚µ‚½‚¢ê‡‚ÍAtclock.exe ‚ðŠÇ—ŽÒŒ ŒÀ‚Å‹N“®‚µ‚È‚¯‚ê‚Î
-‚¢‚¯‚Ü‚¹‚ñB‚µ‚©‚µ‚±‚ê‚ðs‚¤‚ÆATClock Light ‚©‚ç‹N“®‚³‚ê‚é‘¼‚ÌƒvƒƒOƒ‰ƒ€‚à
-ŠÇ—ŽÒŒ ŒÀ‚Å‹N“®‚³‚ê‚é‚±‚Æ‚Æ‚È‚èAƒZƒLƒ…ƒŠƒeƒB[ã‚ÌŠëŒ¯«‚ª‚‚­‚È‚é‚Ì‚Å
-‚¨‘E‚ß‚µ‚Ü‚¹‚ñB
-
-4.2. ƒXƒ^[ƒgƒAƒbƒv‚Å tclock.exe ‚ðŠÇ—ŽÒŒ ŒÀ‚Å‹N“®‚Å‚«‚È‚¢
-@UAC ‚ª—LŒø‚Èê‡AƒXƒ^[ƒgƒAƒbƒv‚Å tclock.exe ‚ðŠÇ—ŽÒŒ ŒÀ‚Å‹N“®‚µ‚æ‚¤‚Æ
-‚µ‚Ä‚àAƒuƒƒbƒN‚³‚ê‚Ä‚µ‚Ü‚¢‚Ü‚·BŠÇ—ŽÒŒ ŒÀ‚Å‹N“®‚·‚é‚½‚ß‚É‚ÍA–ˆ‰ñŽè“®‚Å
-ƒuƒƒbƒN‚ð‰ðœ‚·‚é•K—v‚ª‚ ‚è‚Ü‚·B
-iƒXƒ^[ƒgƒAƒbƒv‚Ì‘ã‚í‚è‚Éƒ^ƒXƒNƒXƒPƒWƒ…[ƒ‰‚ðŽg‚¦‚ÎAƒuƒƒbƒN‚Í‰ñ”ð‚Å‚«
-‚Ü‚·‚ªA‘Oq‚Ì‚æ‚¤‚ÉƒZƒLƒ…ƒŠƒeƒB[ã‚ÌŠÏ“_‚©‚ç‚¨‘E‚ß‚µ‚Ü‚¹‚ñB‚È‚¨Aƒ^ƒXƒN
-ƒXƒPƒWƒ…[ƒ‰‚ðŽg‚¤ê‡‚ÍAExplorer ‚Ì‹N“®Œã‚É TClock Light ‚ª‹N“®‚·‚é‚æ‚¤
-‚ÉÝ’è‚·‚é•K—v‚ª‚ ‚è‚Ü‚·Bj
-
-¦ˆÈã‚Ì‚æ‚¤‚È–â‘è‚ª‚ ‚é‚½‚ßAVista ˆÈ~‚Å‚ÌŽž‡‚í‚¹‚ÍATClock Light ‚Ì‹@”\‚ð
-  Žg‚í‚¸‚ÉAOS ‚Ì•W€‹@”\‚ðŽg‚¤‚±‚Æ‚ð‚¨‘E‚ß‚µ‚Ü‚·BÝ’è‚ÌÚ×‚ÍA—á‚¦‚ÎˆÈ‰º‚Ì
-  ƒTƒCƒg‚ðŽQÆ‚µ‚Ä‚­‚¾‚³‚¢B
-  http://wiki.nothing.sh/page?NTP
-  http://www.daytradenet.com/blog/tokidoki/archives/12/11/041530.html
-
-¦‘¼‚Ì•û–@‚Æ‚µ‚Ä‚ÍAƒ^ƒXƒNƒXƒPƒWƒ…[ƒ‰‚©‚ç tcsntp.exe ‚ð’èŠú“I‚É‹N“®‚·‚é
-  ‚æ‚¤‚É‚µAtclock.exe ‚Í’ÊíŒ ŒÀ‚Ì‚Ü‚Ü‹N“®‚·‚é•û–@‚à‚ ‚è‚Ü‚·B
-
-4.3. ƒXƒ^[ƒgƒ{ƒ^ƒ“‚Ì‰ü‘¢‚ª‹@”\‚µ‚È‚¢
-@ƒXƒ^[ƒgƒ{ƒ^ƒ“‚ð‰ü‘¢‚·‚éAŽžŒv‚ÉƒXƒ^[ƒgƒƒjƒ…[‚ÌŠe‹@”\‚ª“®ì‚µ‚Ü‚¹‚ñB
-Œ»Žž“_‚Å‚ÍC³‚ÌŒ©’Ê‚µ‚Í—§‚Á‚Ä‚¢‚Ü‚¹‚ñB
-
-4.4. C:\Program Files ˆÈ‰º‚ÉƒCƒ“ƒXƒg[ƒ‹‚·‚é‚ÆŽžŒv‚ª‰ü‘¢‚Å‚«‚È‚¢
-@UAC ‚ª—LŒø‚Èê‡AC:\Program Files ˆÈ‰º‚Ìƒtƒ@ƒCƒ‹‚ð•ÏX‚·‚é‚É‚ÍŠÇ—ŽÒŒ ŒÀ‚ª
-•K—v‚Å‚·BTClock Light ‚ð C:\Program Files ˆÈ‰º‚ÉƒCƒ“ƒXƒg[ƒ‹‚·‚é‚ÆAÝ’è
-ƒtƒ@ƒCƒ‹ (tclock.ini) ‚ð³‚µ‚­“Ç‚Ý‘‚«‚Å‚«‚È‚­‚È‚é‚½‚ßAŽžŒv‚ª‰ü‘¢‚Å‚«‚È‚¢
-‚È‚Ç‚Ì–â‘è‚ª”­¶‚µ‚Ü‚·B
-@‰ñ”ð•û–@‚Æ‚µ‚Ä‚ÍATClock Light ‚Íˆê”ÊŒ ŒÀ‚Å‘‚«ž‚ß‚éƒtƒHƒ‹ƒ_‚ÉƒCƒ“ƒXƒg[ƒ‹
-‚·‚é‚æ‚¤‚É‚µ‚Ä‚­‚¾‚³‚¢B
-@‚Ç‚¤‚µ‚Ä‚à C:\Program Files ˆÈ‰º‚ÉƒCƒ“ƒXƒg[ƒ‹‚µ‚½‚¢ê‡‚ÍAtclock.ini ‚ð
-ˆê”Êƒ†[ƒU[‚ª‘‚«ž‚Ý‚Å‚«‚é‚æ‚¤‚ÉAƒAƒNƒZƒX‹–‰Â‚ð•ÏX‚µ‚Ä‚­‚¾‚³‚¢B
-
-4.5. Win10AU ‚Åƒ}ƒ‹ƒ`ƒfƒBƒXƒvƒŒƒCŽg—pŽžAƒƒCƒ“‚ÌŽžŒv‚µ‚©‰ü‘¢‚Å‚«‚È‚¢
-@Win10AU ‚Å‚Íƒ}ƒ‹ƒ`ƒfƒBƒXƒvƒŒƒCŽg—pŽž‚ÉAƒƒCƒ“‚ÌƒfƒBƒXƒvƒŒƒCˆÈŠO‚É‚àŽžŒv‚ª
-•\Ž¦‚Å‚«‚é‚æ‚¤‚É‚È‚è‚Ü‚µ‚½‚ªAŒ»Žž“_‚Å‚ÍAƒƒCƒ“ˆÈŠO‚ÌŽžŒv‚Í‰ü‘¢‚Å‚«‚Ü‚¹‚ñB
+3.15. æ›¸å¼ _m, _d, _h, _n, SSS, KK ã‚’è¿½åŠ 
+ã€€æœˆã€æ—¥ã€æ™‚ã€åˆ†ãŒ 2 æ¡ã«æº€ãŸãªã„å ´åˆã€å…ˆé ­ã«ã‚¹ãƒšãƒ¼ã‚¹ã‚’å…¥ã‚Œã‚‹æ›¸å¼ã¨ã—ã¦ã€
+_m, _d, _h, _n ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
+ã€€ä¾‹ãˆã°ã€"_h:nn:ss" ã¨ã„ã†æ›¸å¼ã‚’è¨­å®šã™ã‚‹ã¨ã€" 9:59:59" ã‹ã‚‰ "10:00:00" ã«
+è¡¨ç¤ºãŒåˆ‡ã‚Šæ›¿ã‚ã£ã¦ã‚‚ã€æ™‚è¨ˆã®å¹…ãŒãšã‚Œãªããªã‚Šã¾ã—ãŸã€‚
 
 
-‚TDXV—š—ð
+ï¼”ï¼Žåˆ¤æ˜Žã—ã¦ã„ã‚‹åˆ¶ç´„ãƒ»å•é¡Œç‚¹
+
+
+4.2. ã‚¹ã‚¿ãƒ¼ãƒˆã‚¢ãƒƒãƒ—ã§ tclock.exe ã‚’ç®¡ç†è€…æ¨©é™ã§èµ·å‹•ã§ããªã„
+ã€€UAC ãŒæœ‰åŠ¹ãªå ´åˆã€ã‚¹ã‚¿ãƒ¼ãƒˆã‚¢ãƒƒãƒ—ã§ tclock.exe ã‚’ç®¡ç†è€…æ¨©é™ã§èµ·å‹•ã—ã‚ˆã†ã¨
+ã—ã¦ã‚‚ã€ãƒ–ãƒ­ãƒƒã‚¯ã•ã‚Œã¦ã—ã¾ã„ã¾ã™ã€‚ç®¡ç†è€…æ¨©é™ã§èµ·å‹•ã™ã‚‹ãŸã‚ã«ã¯ã€æ¯Žå›žæ‰‹å‹•ã§
+ãƒ–ãƒ­ãƒƒã‚¯ã‚’è§£é™¤ã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚
+ï¼ˆã‚¹ã‚¿ãƒ¼ãƒˆã‚¢ãƒƒãƒ—ã®ä»£ã‚ã‚Šã«ã‚¿ã‚¹ã‚¯ã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ©ã‚’ä½¿ãˆã°ã€ãƒ–ãƒ­ãƒƒã‚¯ã¯å›žé¿ã§ã
+ã¾ã™ãŒã€å‰è¿°ã®ã‚ˆã†ã«ã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£ãƒ¼ä¸Šã®è¦³ç‚¹ã‹ã‚‰ãŠè–¦ã‚ã—ã¾ã›ã‚“ã€‚ãªãŠã€ã‚¿ã‚¹ã‚¯
+ã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ©ã‚’ä½¿ã†å ´åˆã¯ã€Explorer ã®èµ·å‹•å¾Œã« TClock Light ãŒèµ·å‹•ã™ã‚‹ã‚ˆã†
+ã«è¨­å®šã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚ï¼‰
+
+â€»Vista ä»¥é™ã§ã®æ™‚åˆ»åˆã‚ã›ã¯ã€OS ã®æ¨™æº–æ©Ÿèƒ½ã‚’ä½¿ã†ã“ã¨ã‚’ãŠè–¦ã‚ã—ã¾ã™ã€‚ã¾ãŸã¯æ¡œæ™‚è¨ˆ
+  
+  
+
+4.3. ã‚¹ã‚¿ãƒ¼ãƒˆãƒœã‚¿ãƒ³ã®æ”¹é€ ãŒæ©Ÿèƒ½ã—ãªã„
+ã€€å‹•ä½œã—ã¾ã›ã‚“ã€‚
+
+
+4.4. C:\Program Files ä»¥ä¸‹ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ã¨æ™‚è¨ˆãŒæ”¹é€ ã§ããªã„
+ã€€UAC ãŒæœ‰åŠ¹ãªå ´åˆã€C:\Program Files ä»¥ä¸‹ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å¤‰æ›´ã™ã‚‹ã«ã¯ç®¡ç†è€…æ¨©é™ãŒ
+å¿…è¦ã§ã™ã€‚TClock Light ã‚’ C:\Program Files ä»¥ä¸‹ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ã¨ã€è¨­å®š
+ãƒ•ã‚¡ã‚¤ãƒ« (tclock.ini) ã‚’æ­£ã—ãèª­ã¿æ›¸ãã§ããªããªã‚‹ãŸã‚ã€æ™‚è¨ˆãŒæ”¹é€ ã§ããªã„
+ãªã©ã®å•é¡ŒãŒç™ºç”Ÿã—ã¾ã™ã€‚
+ã€€å›žé¿æ–¹æ³•ã¨ã—ã¦ã¯ã€TClock Light ã¯ä¸€èˆ¬æ¨©é™ã§æ›¸ãè¾¼ã‚ã‚‹ãƒ•ã‚©ãƒ«ãƒ€ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
+ã™ã‚‹ã‚ˆã†ã«ã—ã¦ãã ã•ã„ã€‚
+ã€€ã©ã†ã—ã¦ã‚‚ C:\Program Files ä»¥ä¸‹ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ãŸã„å ´åˆã¯ã€tclock.ini ã‚’
+ä¸€èˆ¬ãƒ¦ãƒ¼ã‚¶ãƒ¼ãŒæ›¸ãè¾¼ã¿ã§ãã‚‹ã‚ˆã†ã«ã€ã‚¢ã‚¯ã‚»ã‚¹è¨±å¯ã‚’å¤‰æ›´ã—ã¦ãã ã•ã„ã€‚
+
+4.5. Win10AU ã§ãƒžãƒ«ãƒãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ä½¿ç”¨æ™‚ã€ãƒ¡ã‚¤ãƒ³ã®æ™‚è¨ˆã—ã‹æ”¹é€ ã§ããªã„
+ã€€Win10AU ã§ã¯ãƒžãƒ«ãƒãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ä½¿ç”¨æ™‚ã«ã€ãƒ¡ã‚¤ãƒ³ã®ãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ä»¥å¤–ã«ã‚‚æ™‚è¨ˆãŒ
+è¡¨ç¤ºã§ãã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã—ãŸãŒã€ç¾æ™‚ç‚¹ã§ã¯ã€ãƒ¡ã‚¤ãƒ³ä»¥å¤–ã®æ™‚è¨ˆã¯æ”¹é€ ã§ãã¾ã›ã‚“ã€‚
+
+
+ï¼•ï¼Žæ›´æ–°å±¥æ­´
 2005/04/07
-Eƒƒ‚ƒŠÁ”ï—ÊíŒ¸B
+ãƒ»ãƒ¡ãƒ¢ãƒªæ¶ˆè²»é‡å‰Šæ¸›ã€‚
 
 2005/04/09
-E‰EƒNƒŠƒbƒNƒƒjƒ…[‚Ì‹““®‰ü‘PB
-E‰EƒNƒŠƒbƒNƒƒjƒ…[‚ÉƒAƒNƒZƒXƒL[’Ç‰ÁB
+ãƒ»å³ã‚¯ãƒªãƒƒã‚¯ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®æŒ™å‹•æ”¹å–„ã€‚
+ãƒ»å³ã‚¯ãƒªãƒƒã‚¯ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã«ã‚¢ã‚¯ã‚»ã‚¹ã‚­ãƒ¼è¿½åŠ ã€‚
 
 2005/04/26
-EƒAƒ‰[ƒ€‹@”\‹­‰»B
+ãƒ»ã‚¢ãƒ©ãƒ¼ãƒ æ©Ÿèƒ½å¼·åŒ–ã€‚
 
 2005/04/29
-EƒƒO•\Ž¦‰ü‘PBiSNTP.txt ‚Ì––”ö 2KB ‚ð“Ç‚Ýž‚ñ‚Å•\Ž¦Bj
-EƒfƒtƒHƒ‹ƒg NTP ƒT[ƒo•ÏXB
+ãƒ»ãƒ­ã‚°è¡¨ç¤ºæ”¹å–„ã€‚ï¼ˆSNTP.txt ã®æœ«å°¾ 2KB ã‚’èª­ã¿è¾¼ã‚“ã§è¡¨ç¤ºã€‚ï¼‰
+ãƒ»ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ NTP ã‚µãƒ¼ãƒå¤‰æ›´ã€‚
 
 2005/05/07
-Eƒƒjƒ…[‚Ì‡”Ô‚ðC³B
+ãƒ»ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®é †ç•ªã‚’ä¿®æ­£ã€‚
 
 2005/05/12
-EƒƒO•\Ž¦‰ü‘PBis’PˆÊ‚Å•\Ž¦Bj
+ãƒ»ãƒ­ã‚°è¡¨ç¤ºæ”¹å–„ã€‚ï¼ˆè¡Œå˜ä½ã§è¡¨ç¤ºã€‚ï¼‰
 
 2006/01/04
-EŽž‡‚í‚¹¸“xŒüã”Å‚ð‘g‚Ýž‚ÞB
-EƒƒO•\Ž¦‰ü‘PBitclocklight-050716 ‚ðŽQl‚ÉC³j
-@ƒSƒ~‚ð•\Ž¦‚µ‚È‚¢‚æ‚¤‚ÉC³B
-@ƒ_ƒCƒAƒƒO‚ðŠJ‚¢‚½‚Æ‚«‚ÉƒƒO‚ÌÅIs‚ð•\Ž¦‚·‚é‚æ‚¤‚É‰ü‘PB
+ãƒ»æ™‚åˆ»åˆã‚ã›ç²¾åº¦å‘ä¸Šç‰ˆã‚’çµ„ã¿è¾¼ã‚€ã€‚
+ãƒ»ãƒ­ã‚°è¡¨ç¤ºæ”¹å–„ã€‚ï¼ˆtclocklight-050716 ã‚’å‚è€ƒã«ä¿®æ­£ï¼‰
+ã€€ã‚´ãƒŸã‚’è¡¨ç¤ºã—ãªã„ã‚ˆã†ã«ä¿®æ­£ã€‚
+ã€€ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ã‚’é–‹ã„ãŸã¨ãã«ãƒ­ã‚°ã®æœ€çµ‚è¡Œã‚’è¡¨ç¤ºã™ã‚‹ã‚ˆã†ã«æ”¹å–„ã€‚
 
 2007/03/21
-EƒƒO•\Ž¦‰ü‘PB
-@ƒƒOƒtƒ@ƒCƒ‹ƒTƒCƒY‚ª 2KB ‚É–ž‚½‚È‚¢‚Æ‚«‚ÍAƒtƒ@ƒCƒ‹‚Ìæ“ª‚©‚ç•\Ž¦‚·‚é‚æ‚¤
-  ‚ÉC³Bi¡‚Ü‚Å‚ÍAs’PˆÊ‚Å•\Ž¦‚³‚ê‚é‚æ‚¤‚É‚·‚é‚½‚ß‚ÉAÅ‰‚Ì‰üs‚Ü‚Å‚Í
-  •K‚¸“Ç‚Ý”ò‚Î‚µ‚Ä‚¢‚½B‚»‚Ì‚½‚ßæ“ªs‚ª•\Ž¦‚³‚ê‚È‚©‚Á‚½Bj
-Eƒƒ‚ƒŠÁ”ï—ÊíŒ¸‹@”\‚ÌC³B
-@DisableIME() ‚Å FreeLibrary() ‚ªŽÀs‚³‚ê‚È‚¢‰Â”\«‚ª‚ ‚Á‚½‚Ì‚ðC³B
-EXP ‚Åƒe[ƒ}•ÏXŽž‚Ì“®ì‚ÌC³B
-EŽž‡‚í‚¹¸“xŒüã”Å‚Ì‘g‚Ýž‚Ý‚ð‚â‚ß‚½B
-@iŽÀsƒGƒ‰[‚ª”­¶‚·‚é‚±‚Æ‚ª‚ ‚Á‚½‚½‚ßBj
+ãƒ»ãƒ­ã‚°è¡¨ç¤ºæ”¹å–„ã€‚
+ã€€ãƒ­ã‚°ãƒ•ã‚¡ã‚¤ãƒ«ã‚µã‚¤ã‚ºãŒ 2KB ã«æº€ãŸãªã„ã¨ãã¯ã€ãƒ•ã‚¡ã‚¤ãƒ«ã®å…ˆé ­ã‹ã‚‰è¡¨ç¤ºã™ã‚‹ã‚ˆã†
+  ã«ä¿®æ­£ã€‚ï¼ˆä»Šã¾ã§ã¯ã€è¡Œå˜ä½ã§è¡¨ç¤ºã•ã‚Œã‚‹ã‚ˆã†ã«ã™ã‚‹ãŸã‚ã«ã€æœ€åˆã®æ”¹è¡Œã¾ã§ã¯
+  å¿…ãšèª­ã¿é£›ã°ã—ã¦ã„ãŸã€‚ãã®ãŸã‚å…ˆé ­è¡ŒãŒè¡¨ç¤ºã•ã‚Œãªã‹ã£ãŸã€‚ï¼‰
+ãƒ»ãƒ¡ãƒ¢ãƒªæ¶ˆè²»é‡å‰Šæ¸›æ©Ÿèƒ½ã®ä¿®æ­£ã€‚
+ã€€DisableIME() ã§ FreeLibrary() ãŒå®Ÿè¡Œã•ã‚Œãªã„å¯èƒ½æ€§ãŒã‚ã£ãŸã®ã‚’ä¿®æ­£ã€‚
+ãƒ»XP ã§ãƒ†ãƒ¼ãƒžå¤‰æ›´æ™‚ã®å‹•ä½œã®ä¿®æ­£ã€‚
+ãƒ»æ™‚åˆ»åˆã‚ã›ç²¾åº¦å‘ä¸Šç‰ˆã®çµ„ã¿è¾¼ã¿ã‚’ã‚„ã‚ãŸã€‚
+ã€€ï¼ˆå®Ÿè¡Œã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã™ã‚‹ã“ã¨ãŒã‚ã£ãŸãŸã‚ã€‚ï¼‰
 
 2007/12/23
-EVista ‚ÌƒJƒŒƒ“ƒ_[•\Ž¦‚É‘Î‰žBiƒRƒ}ƒ“ƒh”Ô† 134 ‚ðŽg—pj
-EƒŠƒ“ƒJƒIƒvƒVƒ‡ƒ“‚Å /WS:AGGRESSIVE ‚ðŽw’è‚·‚é‚±‚Æ‚ÅAƒƒ‚ƒŠŽg—p—Ê‚ðíŒ¸B
-  (tclock.exe ‚Ì‚Ý)
-Etclocklight-040702-3-amd64 ‚ðŽQl‚ÉAX64 —p‚ÉƒRƒ“ƒpƒCƒ‹‚Å‚«‚é‚æ‚¤‚ÉC³B
-  “®ì‚Í–¢Šm”FB
-  (V‚µ‚¢ PSDK ‚ð“ü‚ê‚Ä‚¢‚È‚¢ VC6 ‚Å‚àƒRƒ“ƒpƒCƒ‹‚Å‚«‚é‚æ‚¤‚É‘ÎôÏ‚ÝB)
-Etclocklight-050716 ‚ÌC³‚ð‚¢‚­‚Â‚©Žæ‚èž‚ÞB
-  - ƒAƒ‰[ƒ€‚Ì‘Ž®‚Å‚¤‚Á‚©‚è0ŽžŠÔ‚¨‚«‚â0•ª‚¨‚«‚É‚·‚é‚Æ–³ŒÀƒ‹[ƒv‚É‚È‚é‚Ì‚ðC³
-  - WinXPˆÈŠO‚Å”wŒiF1‚Ìƒ`ƒFƒbƒN‚ðŠO‚·‚Æ•\Ž¦‚ª‚¨‚©‚µ‚­‚È‚é‚Ì‚ðC³
-  - ‘Ž®Y‚Ì’l‚ª10‚Ì—Ýæ‚ÌŽžA1Œ…•\Ž¦‚³‚ê‚È‚¢‚Ì‚ðC³
-  - TransparentBlt()‚ðWin98‚Å‚ÍŽg‚í‚È‚¢‚æ‚¤‚ÉC³iƒŠƒ\[ƒXƒŠ[ƒN‚·‚é‚ç‚µ‚¢j
-  - ”Žš‚ð“ü—Í‚·‚é‚×‚«ƒGƒfƒBƒbƒgƒ{ƒbƒNƒX‚Í”ŽšˆÈŠO“ü—Í‚Å‚«‚È‚¢‚æ‚¤‚ÉC³
-  - ƒAƒ‰[ƒ€‚Ì—j“ú‚ÌÝ’è‚Ì•\Ž¦‚ðC³
+ãƒ»Vista ã®ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼è¡¨ç¤ºã«å¯¾å¿œã€‚ï¼ˆã‚³ãƒžãƒ³ãƒ‰ç•ªå· 134 ã‚’ä½¿ç”¨ï¼‰
+ãƒ»ãƒªãƒ³ã‚«ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã§ /WS:AGGRESSIVE ã‚’æŒ‡å®šã™ã‚‹ã“ã¨ã§ã€ãƒ¡ãƒ¢ãƒªä½¿ç”¨é‡ã‚’å‰Šæ¸›ã€‚
+  (tclock.exe ã®ã¿)
+ãƒ»tclocklight-040702-3-amd64 ã‚’å‚è€ƒã«ã€X64 ç”¨ã«ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã§ãã‚‹ã‚ˆã†ã«ä¿®æ­£ã€‚
+  å‹•ä½œã¯æœªç¢ºèªã€‚
+  (æ–°ã—ã„ PSDK ã‚’å…¥ã‚Œã¦ã„ãªã„ VC6 ã§ã‚‚ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã§ãã‚‹ã‚ˆã†ã«å¯¾ç­–æ¸ˆã¿ã€‚)
+ãƒ»tclocklight-050716 ã®ä¿®æ­£ã‚’ã„ãã¤ã‹å–ã‚Šè¾¼ã‚€ã€‚
+  - ã‚¢ãƒ©ãƒ¼ãƒ ã®æ›¸å¼ã§ã†ã£ã‹ã‚Š0æ™‚é–“ãŠãã‚„0åˆ†ãŠãã«ã™ã‚‹ã¨ç„¡é™ãƒ«ãƒ¼ãƒ—ã«ãªã‚‹ã®ã‚’ä¿®æ­£
+  - WinXPä»¥å¤–ã§èƒŒæ™¯è‰²1ã®ãƒã‚§ãƒƒã‚¯ã‚’å¤–ã™ã¨è¡¨ç¤ºãŒãŠã‹ã—ããªã‚‹ã®ã‚’ä¿®æ­£
+  - æ›¸å¼Yã®å€¤ãŒ10ã®ç´¯ä¹—ã®æ™‚ã€1æ¡è¡¨ç¤ºã•ã‚Œãªã„ã®ã‚’ä¿®æ­£
+  - TransparentBlt()ã‚’Win98ã§ã¯ä½¿ã‚ãªã„ã‚ˆã†ã«ä¿®æ­£ï¼ˆãƒªã‚½ãƒ¼ã‚¹ãƒªãƒ¼ã‚¯ã™ã‚‹ã‚‰ã—ã„ï¼‰
+  - æ•°å­—ã‚’å…¥åŠ›ã™ã‚‹ã¹ãã‚¨ãƒ‡ã‚£ãƒƒãƒˆãƒœãƒƒã‚¯ã‚¹ã¯æ•°å­—ä»¥å¤–å…¥åŠ›ã§ããªã„ã‚ˆã†ã«ä¿®æ­£
+  - ã‚¢ãƒ©ãƒ¼ãƒ ã®æ›œæ—¥ã®è¨­å®šã®è¡¨ç¤ºã‚’ä¿®æ­£
 
 2007/12/29
-EX64 ‘Î‰žC³‚»‚Ì‚QBDialogProc ‚Ì–ß‚è’l‚ð BOOL ‚©‚ç INT_PTR ‚ÉC³B
-  “®ì‚Í–¢Šm”FB
+ãƒ»X64 å¯¾å¿œä¿®æ­£ãã®ï¼’ã€‚DialogProc ã®æˆ»ã‚Šå€¤ã‚’ BOOL ã‹ã‚‰ INT_PTR ã«ä¿®æ­£ã€‚
+  å‹•ä½œã¯æœªç¢ºèªã€‚
 
 2009/06/27
-EVista ‚ÅƒƒCƒŠƒI‚È‚Ç‚ðŽg‚Á‚½‚Æ‚«‚É•¶Žš‚ª‚É‚¶‚Þ‚Ì‚ðC³B
-EVista ‚ÅƒfƒtƒHƒ‹ƒgƒtƒHƒ“ƒg‚Æ‚µ‚ÄƒƒCƒŠƒI‚ðŽæ“¾‚Å‚«‚é‚æ‚¤‚ÉC³B
-Ex64 ‘Î‰ž‚ÌC³˜R‚ê‚ª‚ ‚Á‚½‚½‚ßC³B(sntp.c L53 / int ¨ SOCKET)
-Ex64 ‚É³Ž®‚É‘Î‰žB
-EDLL ‚Ìƒx[ƒXƒAƒhƒŒƒX‚ðÝ’èBi0x66040000 ‚Ü‚½‚Í 0x60066040000j
-EƒRƒ“ƒpƒCƒ‹•û–@‚ÉŠÖ‚·‚éC³
-  - x64 ƒRƒ“ƒpƒCƒ‹Žž‚Ìì‹Æ/o—ÍƒfƒBƒŒƒNƒgƒŠ‚ðAx86 ‚Æ‚Í•Ê‚É‚µ‚½B
-  - x64 ƒRƒ“ƒpƒCƒ‹Žž‚à NODEFAULTLIB ‚Åƒtƒ@ƒCƒ‹ƒTƒCƒY‚ð¬‚³‚­‚Å‚«‚é‚æ‚¤‚É‚µ‚½B
-  - VC2005 ˆÈ~‚ðŽg‚Á‚½‚Æ‚«‚Éo‚éAƒZƒLƒ…ƒŠƒeƒB‚ªŽã‚¢ŠÖ”‚É‘Î‚·‚éŒx‚ð
-    —}§‚µ‚½Bi_CRT_SECURE_NO_WARNINGSj
+ãƒ»Vista ã§ãƒ¡ã‚¤ãƒªã‚ªãªã©ã‚’ä½¿ã£ãŸã¨ãã«æ–‡å­—ãŒã«ã˜ã‚€ã®ã‚’ä¿®æ­£ã€‚
+ãƒ»Vista ã§ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãƒ•ã‚©ãƒ³ãƒˆã¨ã—ã¦ãƒ¡ã‚¤ãƒªã‚ªã‚’å–å¾—ã§ãã‚‹ã‚ˆã†ã«ä¿®æ­£ã€‚
+ãƒ»x64 å¯¾å¿œã®ä¿®æ­£æ¼ã‚ŒãŒã‚ã£ãŸãŸã‚ä¿®æ­£ã€‚(sntp.c L53 / int â†’ SOCKET)
+ãƒ»x64 ã«æ­£å¼ã«å¯¾å¿œã€‚
+ãƒ»DLL ã®ãƒ™ãƒ¼ã‚¹ã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’è¨­å®šã€‚ï¼ˆ0x66040000 ã¾ãŸã¯ 0x60066040000ï¼‰
+ãƒ»ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«æ–¹æ³•ã«é–¢ã™ã‚‹ä¿®æ­£
+  - x64 ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«æ™‚ã®ä½œæ¥­/å‡ºåŠ›ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’ã€x86 ã¨ã¯åˆ¥ã«ã—ãŸã€‚
+  - x64 ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«æ™‚ã‚‚ NODEFAULTLIB ã§ãƒ•ã‚¡ã‚¤ãƒ«ã‚µã‚¤ã‚ºã‚’å°ã•ãã§ãã‚‹ã‚ˆã†ã«ã—ãŸã€‚
+  - VC2005 ä»¥é™ã‚’ä½¿ã£ãŸã¨ãã«å‡ºã‚‹ã€ã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£ãŒå¼±ã„é–¢æ•°ã«å¯¾ã™ã‚‹è­¦å‘Šã‚’
+    æŠ‘åˆ¶ã—ãŸã€‚ï¼ˆ_CRT_SECURE_NO_WARNINGSï¼‰
 
 2009/06/28
-EVista Aero •sŽg—pŽž‚Ì•¶Žš•`‰æ•ûŽ®‚ðˆÈ‘O‚Ì‚à‚Ì‚É–ß‚µ‚½B
-@i’áƒXƒyƒbƒNƒ}ƒVƒ“‚Å•¶Žš‚ª‚¿‚ç‚Â‚­ê‡‚ª‚ ‚Á‚½‚½‚ßBj
+ãƒ»Vista Aero ä¸ä½¿ç”¨æ™‚ã®æ–‡å­—æç”»æ–¹å¼ã‚’ä»¥å‰ã®ã‚‚ã®ã«æˆ»ã—ãŸã€‚
+ã€€ï¼ˆä½Žã‚¹ãƒšãƒƒã‚¯ãƒžã‚·ãƒ³ã§æ–‡å­—ãŒã¡ã‚‰ã¤ãå ´åˆãŒã‚ã£ãŸãŸã‚ã€‚ï¼‰
 
 2009/07/04
-Etclocklight-050716 ‚ÌC³‚ð‚¢‚­‚Â‚©Žæ‚èž‚ÞB
-  - WinXP SP2‚Åƒ‚ƒjƒ^[OFF‚ªŽg‚¦‚È‚¢‚©‚à‚µ‚ê‚È‚¢‚Ì‚ðC³‚µ‚½‚©‚à
-E‘¼‚Ì‰ü‘¢”Å‚É‚æ‚é‹@”\Šg’£‚ðƒ\[ƒXƒŒƒxƒ‹‚Å‘g‚Ýž‚ÝB
-@config.h ‚ðC³‚µ‚ÄƒRƒ“ƒpƒCƒ‹‚·‚é‚±‚Æ‚ÅAŠe‹@”\‚ðŒÂ•Ê‚É—LŒø‰»/–³Œø‰»‚Å‚«‚é
-@‚æ‚¤‚É‚µ‚½B
-E‹@”\‚Ì—LŒø‰»/–³Œø‰»‘Î‰ž‚Ì“s‡ãAƒvƒƒpƒeƒB‰æ–Ê‚Ìƒy[ƒW‡˜‚ðˆê•”“ü‚ê‘Ö‚¦B
+ãƒ»tclocklight-050716 ã®ä¿®æ­£ã‚’ã„ãã¤ã‹å–ã‚Šè¾¼ã‚€ã€‚
+  - WinXP SP2ã§ãƒ¢ãƒ‹ã‚¿ãƒ¼OFFãŒä½¿ãˆãªã„ã‹ã‚‚ã—ã‚Œãªã„ã®ã‚’ä¿®æ­£ã—ãŸã‹ã‚‚
+ãƒ»ä»–ã®æ”¹é€ ç‰ˆã«ã‚ˆã‚‹æ©Ÿèƒ½æ‹¡å¼µã‚’ã‚½ãƒ¼ã‚¹ãƒ¬ãƒ™ãƒ«ã§çµ„ã¿è¾¼ã¿ã€‚
+ã€€config.h ã‚’ä¿®æ­£ã—ã¦ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã™ã‚‹ã“ã¨ã§ã€å„æ©Ÿèƒ½ã‚’å€‹åˆ¥ã«æœ‰åŠ¹åŒ–/ç„¡åŠ¹åŒ–ã§ãã‚‹
+ã€€ã‚ˆã†ã«ã—ãŸã€‚
+ãƒ»æ©Ÿèƒ½ã®æœ‰åŠ¹åŒ–/ç„¡åŠ¹åŒ–å¯¾å¿œã®éƒ½åˆä¸Šã€ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ç”»é¢ã®ãƒšãƒ¼ã‚¸é †åºã‚’ä¸€éƒ¨å…¥ã‚Œæ›¿ãˆã€‚
 
 2009/07/08
-EXP ‚È‚Ç‚Å•¶ŽšF‚Ì‰Šú’l‚ª³‚µ‚­Ý’è‚³‚ê‚È‚¢ê‡‚ª‚ ‚Á‚½‚Ì‚ðC³B
-EVista ‚Å‚à‰¹—ÊŠÖ˜A‹@”\‚ªŽg‚¦‚é‚æ‚¤‚ÉC³B
-Ex64 ‚Åƒƒ‚ƒŠŠÖ˜A‚Ì‘Ž®‚ª“®‚©‚È‚©‚Á‚½‚Ì‚ðC³B
-Eƒƒ‚ƒŠŽg—p—¦‚ÌŒvŽZ‚ªƒoƒO‚Á‚Ä‚¢‚½‚Ì‚ðC³B
-Eƒƒ‚ƒŠŠÖ˜A‚Ì‘Ž®‚Å¬”•”‚ðˆµ‚¦‚é‚æ‚¤‚É•ÏXB
-Eƒƒ‚ƒŠŠÖ˜A‚Ì‘Ž®‚É GB ’PˆÊ‚Ì‘Ž®‚ð’Ç‰ÁB
+ãƒ»XP ãªã©ã§æ–‡å­—è‰²ã®åˆæœŸå€¤ãŒæ­£ã—ãè¨­å®šã•ã‚Œãªã„å ´åˆãŒã‚ã£ãŸã®ã‚’ä¿®æ­£ã€‚
+ãƒ»Vista ã§ã‚‚éŸ³é‡é–¢é€£æ©Ÿèƒ½ãŒä½¿ãˆã‚‹ã‚ˆã†ã«ä¿®æ­£ã€‚
+ãƒ»x64 ã§ãƒ¡ãƒ¢ãƒªé–¢é€£ã®æ›¸å¼ãŒå‹•ã‹ãªã‹ã£ãŸã®ã‚’ä¿®æ­£ã€‚
+ãƒ»ãƒ¡ãƒ¢ãƒªä½¿ç”¨çŽ‡ã®è¨ˆç®—ãŒãƒã‚°ã£ã¦ã„ãŸã®ã‚’ä¿®æ­£ã€‚
+ãƒ»ãƒ¡ãƒ¢ãƒªé–¢é€£ã®æ›¸å¼ã§å°æ•°éƒ¨ã‚’æ‰±ãˆã‚‹ã‚ˆã†ã«å¤‰æ›´ã€‚
+ãƒ»ãƒ¡ãƒ¢ãƒªé–¢é€£ã®æ›¸å¼ã« GB å˜ä½ã®æ›¸å¼ã‚’è¿½åŠ ã€‚
 
 2009/07/12
-EDWM Žg—p—L–³‚Ìƒ`ƒFƒbƒN‚ðŠÈ—ª‰»B
-Eformat-kt.txt ’Ç‰ÁB
-EXP ‚Åƒ^ƒXƒNƒo[ƒ{ƒ^ƒ“‚ðƒOƒ‹[ƒv‰»‚µ‚È‚¢‚æ‚¤‚É‚µ‚½ê‡Auƒ^ƒXƒNƒo[‚É
-  ƒAƒCƒRƒ“‚Ì‚Ý‚ð•\Ž¦vÝ’è‚ð—LŒø‚É‚Å‚«‚é‚æ‚¤‚É•ÏXB
-EWin2k ˆÈ~‚Å‚ÍAƒƒbƒZ[ƒWê—pƒEƒBƒ“ƒhƒE‚ðŽg‚¤‚±‚Æ‚ÅAƒƒ‚ƒŠÁ”ï—ÊíŒ¸B
-EVista ‚ÅƒXƒ^[ƒgƒ{ƒ^ƒ“‚ð‰B‚¹‚é‚æ‚¤‚É•ÏXB
+ãƒ»DWM ä½¿ç”¨æœ‰ç„¡ã®ãƒã‚§ãƒƒã‚¯ã‚’ç°¡ç•¥åŒ–ã€‚
+ãƒ»format-kt.txt è¿½åŠ ã€‚
+ãƒ»XP ã§ã‚¿ã‚¹ã‚¯ãƒãƒ¼ãƒœã‚¿ãƒ³ã‚’ã‚°ãƒ«ãƒ¼ãƒ—åŒ–ã—ãªã„ã‚ˆã†ã«ã—ãŸå ´åˆã€ã€Œã‚¿ã‚¹ã‚¯ãƒãƒ¼ã«
+  ã‚¢ã‚¤ã‚³ãƒ³ã®ã¿ã‚’è¡¨ç¤ºã€è¨­å®šã‚’æœ‰åŠ¹ã«ã§ãã‚‹ã‚ˆã†ã«å¤‰æ›´ã€‚
+ãƒ»Win2k ä»¥é™ã§ã¯ã€ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å°‚ç”¨ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚’ä½¿ã†ã“ã¨ã§ã€ãƒ¡ãƒ¢ãƒªæ¶ˆè²»é‡å‰Šæ¸›ã€‚
+ãƒ»Vista ã§ã‚¹ã‚¿ãƒ¼ãƒˆãƒœã‚¿ãƒ³ã‚’éš ã›ã‚‹ã‚ˆã†ã«å¤‰æ›´ã€‚
 
 2009/07/18
-Ehttp://distantland.hp.infoseek.co.jp/tclock/mod/ ‚ÅŒöŠJ‚³‚ê‚Ä‚¢‚½
- uTClock Light Žž‡‚í‚¹¸“xŒüã”Åv‚¨‚æ‚Ñ tclocklight-050716 ‚Ì
-  tcsntp ŠÖ˜A‚ÌC³‚ðƒ}[ƒWA‚³‚ç‚É“ÆŽ©‚É¸“xŒüãB
-  - Distantland ”Å‚Å‚Í RFC 1769iÅV‚Í RFC 4330j‚É]‚Á‚ÄAƒpƒPƒbƒg‚Ì‰•œ
-    ŽžŠÔ‚ðl—¶‚µ‚ÄŽž‡‚í‚¹‚ð‚·‚é‚æ‚¤‚ÉC³B
-  - 050716 ”Å‚Å‚Í Distantland ”Å ‚ð Borland C++ ‚ÅƒRƒ“ƒpƒCƒ‹‚Å‚«‚é‚æ‚¤‚É‚·‚é
-    ‚½‚ßAƒCƒ“ƒ‰ƒCƒ“ƒAƒZƒ“ƒuƒ‰•”•ª‚ð C ‚ÉC³BiC³‚Ì‰ß’ö‚ÅA0.1% ’ö“x‚Ì
-    ŒvŽZŒë·‚ªŠÜ‚Ü‚ê‚Ä‚¢‚½–Í—lBj
-  - ‚¢‚¸‚ê‚Ì”Å‚à GetSystemTimeAsFileTime() ‚Ì¸“x‚É‚Â‚¢‚Ä‚Í‘S‚­l—¶‚µ‚Ä
-    ‚¢‚È‚©‚Á‚½‚½‚ßAl—¶‚·‚é‚æ‚¤‚ÉC³B
-   iGetSystemTimeAsFileTime() ‚ÍAXP ˆÈ‘O‚Å‚ÍA‚½‚¢‚Ä‚¢‚Ìê‡ 15ms ’ö“x‚Ì
-    •ª‰ð”\‚µ‚©‚È‚¢‚½‚ßAtcsntp ‚ðŽg‚Á‚ÄŽž‡‚í‚¹‚ð‚µ‚½’¼Œã‚ÉAÄ“x tcsntp ‚ð
-    ŽÀs‚µ‚Ä‚à 15ms ’ö“x‚Ì‚¸‚ê‚ªo‚éê‡‚ª‚ ‚Á‚½B‚È‚¨AVista ˆÈ~‚Å‚Í•ª‰ð”\‚Í
-    1ms ‚ÉŒüã‚µ‚Ä‚¢‚é–Í—lBj
-EŒ ŒÀ‚ª‚È‚¢ó‘Ô‚ÅAtcsntp ‚ðŽg‚Á‚ÄŽž‡‚í‚¹‚ð‚µ‚æ‚¤‚Æ‚µ‚½ê‡‚ÉAƒƒO‚É
-  ƒGƒ‰[‚ÌŒ´ˆö‚ðŽc‚·‚æ‚¤‚ÉC³B
+ãƒ»http://distantland.hp.infoseek.co.jp/tclock/mod/ ã§å…¬é–‹ã•ã‚Œã¦ã„ãŸ
+ ã€ŒTClock Light æ™‚åˆ»åˆã‚ã›ç²¾åº¦å‘ä¸Šç‰ˆã€ãŠã‚ˆã³ tclocklight-050716 ã®
+  tcsntp é–¢é€£ã®ä¿®æ­£ã‚’ãƒžãƒ¼ã‚¸ã€ã•ã‚‰ã«ç‹¬è‡ªã«ç²¾åº¦å‘ä¸Šã€‚
+  - Distantland ç‰ˆã§ã¯ RFC 1769ï¼ˆæœ€æ–°ã¯ RFC 4330ï¼‰ã«å¾“ã£ã¦ã€ãƒ‘ã‚±ãƒƒãƒˆã®å¾€å¾©
+    æ™‚é–“ã‚’è€ƒæ…®ã—ã¦æ™‚åˆ»åˆã‚ã›ã‚’ã™ã‚‹ã‚ˆã†ã«ä¿®æ­£ã€‚
+  - 050716 ç‰ˆã§ã¯ Distantland ç‰ˆ ã‚’ Borland C++ ã§ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã§ãã‚‹ã‚ˆã†ã«ã™ã‚‹
+    ãŸã‚ã€ã‚¤ãƒ³ãƒ©ã‚¤ãƒ³ã‚¢ã‚»ãƒ³ãƒ–ãƒ©éƒ¨åˆ†ã‚’ C ã«ä¿®æ­£ã€‚ï¼ˆä¿®æ­£ã®éŽç¨‹ã§ã€0.1% ç¨‹åº¦ã®
+    è¨ˆç®—èª¤å·®ãŒå«ã¾ã‚Œã¦ã„ãŸæ¨¡æ§˜ã€‚ï¼‰
+  - ã„ãšã‚Œã®ç‰ˆã‚‚ GetSystemTimeAsFileTime() ã®ç²¾åº¦ã«ã¤ã„ã¦ã¯å…¨ãè€ƒæ…®ã—ã¦
+    ã„ãªã‹ã£ãŸãŸã‚ã€è€ƒæ…®ã™ã‚‹ã‚ˆã†ã«ä¿®æ­£ã€‚
+   ï¼ˆGetSystemTimeAsFileTime() ã¯ã€XP ä»¥å‰ã§ã¯ã€ãŸã„ã¦ã„ã®å ´åˆ 15ms ç¨‹åº¦ã®
+    åˆ†è§£èƒ½ã—ã‹ãªã„ãŸã‚ã€tcsntp ã‚’ä½¿ã£ã¦æ™‚åˆ»åˆã‚ã›ã‚’ã—ãŸç›´å¾Œã«ã€å†åº¦ tcsntp ã‚’
+    å®Ÿè¡Œã—ã¦ã‚‚ 15ms ç¨‹åº¦ã®ãšã‚ŒãŒå‡ºã‚‹å ´åˆãŒã‚ã£ãŸã€‚ãªãŠã€Vista ä»¥é™ã§ã¯åˆ†è§£èƒ½ã¯
+    1ms ã«å‘ä¸Šã—ã¦ã„ã‚‹æ¨¡æ§˜ã€‚ï¼‰
+ãƒ»æ¨©é™ãŒãªã„çŠ¶æ…‹ã§ã€tcsntp ã‚’ä½¿ã£ã¦æ™‚åˆ»åˆã‚ã›ã‚’ã—ã‚ˆã†ã¨ã—ãŸå ´åˆã«ã€ãƒ­ã‚°ã«
+  ã‚¨ãƒ©ãƒ¼ã®åŽŸå› ã‚’æ®‹ã™ã‚ˆã†ã«ä¿®æ­£ã€‚
 
 2009/07/19
-EƒƒbƒZ[ƒWê—pƒEƒBƒ“ƒhƒE‚ðŽg‚¤‚ÆAuƒŒƒWƒ…[ƒ€Žž‚ÉŽÀsv‚ª‹@”\‚µ‚È‚­‚È‚é
-  iWM_POWERBROADCAST ‚ðŽó‚¯Žæ‚ê‚È‚­‚È‚éj‚±‚Æ‚ª”»–¾‚µ‚½‚½‚ßAŒ³‚É–ß‚µ‚½B
-EVista ‚Å C:\Program Files ˆÈ‰º‚ÉƒCƒ“ƒXƒg[ƒ‹‚µ‚½ê‡‚Ì§ŒÀŽ–€‚ð’Ç‹LB
+ãƒ»ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å°‚ç”¨ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚’ä½¿ã†ã¨ã€ã€Œãƒ¬ã‚¸ãƒ¥ãƒ¼ãƒ æ™‚ã«å®Ÿè¡Œã€ãŒæ©Ÿèƒ½ã—ãªããªã‚‹
+  ï¼ˆï¼WM_POWERBROADCAST ã‚’å—ã‘å–ã‚Œãªããªã‚‹ï¼‰ã“ã¨ãŒåˆ¤æ˜Žã—ãŸãŸã‚ã€å…ƒã«æˆ»ã—ãŸã€‚
+ãƒ»Vista ã§ C:\Program Files ä»¥ä¸‹ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ãŸå ´åˆã®åˆ¶é™äº‹é …ã‚’è¿½è¨˜ã€‚
 
 2009/07/23
-EƒfƒXƒNƒgƒbƒvƒAƒCƒRƒ“‚ÉŠÖ‚·‚é‹@”\‚ð—LŒø‰»‚µ‚½‚Æ‚«‚ÉAXVŠÔŠu‚É‡‚í‚¹‚Ä
-  ƒfƒXƒNƒgƒbƒvƒAƒCƒRƒ“‚ª‚¿‚ç‚Â‚¢‚Ä‚¢‚½‚Ì‚ðC³B
+ãƒ»ãƒ‡ã‚¹ã‚¯ãƒˆãƒƒãƒ—ã‚¢ã‚¤ã‚³ãƒ³ã«é–¢ã™ã‚‹æ©Ÿèƒ½ã‚’æœ‰åŠ¹åŒ–ã—ãŸã¨ãã«ã€æ›´æ–°é–“éš”ã«åˆã‚ã›ã¦
+  ãƒ‡ã‚¹ã‚¯ãƒˆãƒƒãƒ—ã‚¢ã‚¤ã‚³ãƒ³ãŒã¡ã‚‰ã¤ã„ã¦ã„ãŸã®ã‚’ä¿®æ­£ã€‚
 
 2009/07/27
-EXP ‚Åuƒ^ƒXƒNƒo[‚ÉƒAƒCƒRƒ“‚Ì‚Ý‚ð•\Ž¦vÝ’è‚ðŽg‚¦‚é‚æ‚¤‚É‚·‚éðŒ‚ðŠÔˆá‚¦‚Ä
-  ‚¢‚½‚Ì‚ðC³Biƒ^ƒXƒNƒo[ƒ{ƒ^ƒ“‚ÌƒOƒ‹[ƒv‰»‚Å‚Í‚È‚­Auƒ^ƒXƒNƒo[ƒ{ƒ^ƒ“‚ð
-  ƒXƒ‰ƒCƒh‚·‚év‚ð off ‚É‚µ‚½‚Æ‚«‚ÉŽg‚¦‚é‚æ‚¤‚ÉC³Bj
-EVista ‚Å Aero ‚ÆŒÝŠ·‚Ì‚È‚¢ƒ\ƒtƒg‚ðŽg‚¤‚±‚Æ‚ÅAˆêŽž“I‚É Aero ‚ªƒIƒt‚É‚È‚Á‚½
-  ê‡‚ÉA•¶Žš‚ª‚¿‚ç‚Â‚­‚Ì‚ðC³B
+ãƒ»XP ã§ã€Œã‚¿ã‚¹ã‚¯ãƒãƒ¼ã«ã‚¢ã‚¤ã‚³ãƒ³ã®ã¿ã‚’è¡¨ç¤ºã€è¨­å®šã‚’ä½¿ãˆã‚‹ã‚ˆã†ã«ã™ã‚‹æ¡ä»¶ã‚’é–“é•ãˆã¦
+  ã„ãŸã®ã‚’ä¿®æ­£ã€‚ï¼ˆã‚¿ã‚¹ã‚¯ãƒãƒ¼ãƒœã‚¿ãƒ³ã®ã‚°ãƒ«ãƒ¼ãƒ—åŒ–ã§ã¯ãªãã€ã€Œã‚¿ã‚¹ã‚¯ãƒãƒ¼ãƒœã‚¿ãƒ³ã‚’
+  ã‚¹ãƒ©ã‚¤ãƒ‰ã™ã‚‹ã€ã‚’ off ã«ã—ãŸã¨ãã«ä½¿ãˆã‚‹ã‚ˆã†ã«ä¿®æ­£ã€‚ï¼‰
+ãƒ»Vista ã§ Aero ã¨äº’æ›ã®ãªã„ã‚½ãƒ•ãƒˆã‚’ä½¿ã†ã“ã¨ã§ã€ä¸€æ™‚çš„ã« Aero ãŒã‚ªãƒ•ã«ãªã£ãŸ
+  å ´åˆã«ã€æ–‡å­—ãŒã¡ã‚‰ã¤ãã®ã‚’ä¿®æ­£ã€‚
 
 2009/07/29
-EŽž‡‚í‚¹‚ÌÝ’è‰æ–Ê‚ð•\Ž¦’†‚É tcsntp /silent ‚ðŽÀs‚µ‚½ê‡‚Å‚àAŽž
-  ‡‚í‚¹‚ªs‚í‚ê‚é‚æ‚¤‚É•ÏXB
-EVista ‚Å‚ÍAŽž‡‚í‚¹‚ÌÝ’è‰æ–Ê‚Ìu¡‚·‚®“¯Šúvƒ{ƒ^ƒ“‚ÉƒV[ƒ‹ƒhƒAƒCƒRƒ“‚ª
-  •\Ž¦‚³‚ê‚é‚æ‚¤‚É•ÏXBiƒ{ƒ^ƒ“‚ð‰Ÿ‚·‚ÆA¸Šiƒ_ƒCƒAƒƒO‚ª•\Ž¦‚³‚êA‹–‰Â‚µ‚½
-  ê‡‚É‚ÍŽž‡‚í‚¹‚ªs‚í‚ê‚éBj
-Ex64 ‚Å CPU Žg—p—¦‚ÌŠg’£‘Ž®‚ªŽg‚¦‚È‚©‚Á‚½‚Ì‚ðC³B
+ãƒ»æ™‚åˆ»åˆã‚ã›ã®è¨­å®šç”»é¢ã‚’è¡¨ç¤ºä¸­ã« tcsntp /silent ã‚’å®Ÿè¡Œã—ãŸå ´åˆã§ã‚‚ã€æ™‚åˆ»
+  åˆã‚ã›ãŒè¡Œã‚ã‚Œã‚‹ã‚ˆã†ã«å¤‰æ›´ã€‚
+ãƒ»Vista ã§ã¯ã€æ™‚åˆ»åˆã‚ã›ã®è¨­å®šç”»é¢ã®ã€Œä»Šã™ãåŒæœŸã€ãƒœã‚¿ãƒ³ã«ã‚·ãƒ¼ãƒ«ãƒ‰ã‚¢ã‚¤ã‚³ãƒ³ãŒ
+  è¡¨ç¤ºã•ã‚Œã‚‹ã‚ˆã†ã«å¤‰æ›´ã€‚ï¼ˆãƒœã‚¿ãƒ³ã‚’æŠ¼ã™ã¨ã€æ˜‡æ ¼ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ãŒè¡¨ç¤ºã•ã‚Œã€è¨±å¯ã—ãŸ
+  å ´åˆã«ã¯æ™‚åˆ»åˆã‚ã›ãŒè¡Œã‚ã‚Œã‚‹ã€‚ï¼‰
+ãƒ»x64 ã§ CPU ä½¿ç”¨çŽ‡ã®æ‹¡å¼µæ›¸å¼ãŒä½¿ãˆãªã‹ã£ãŸã®ã‚’ä¿®æ­£ã€‚
 
 2009/08/22
-EŽžŒvƒEƒBƒ“ƒhƒE‚ÉƒtƒH[ƒJƒX‚ª‚ ‚é‚Æ‚«‚ÉAƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒL[‚ð‰Ÿ‚µ‚Ä
-  ƒƒjƒ…[‚ðo‚·‚ÆA•Ï‚ÈˆÊ’u‚É•\Ž¦‚³‚ê‚é‚Ì‚ðC³B
-E‰B‚µƒEƒBƒ“ƒhƒE‚ÌƒEƒBƒ“ƒhƒEƒXƒ^ƒCƒ‹‚ð WS_DISABLED ‚É•ÏXBiŠÂ‹«‚É‚æ‚Á‚Ä‚Í
-  ‚³‚ç‚È‚éÈƒƒ‚ƒŠ‰»Bj
+ãƒ»æ™‚è¨ˆã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã«ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ãŒã‚ã‚‹ã¨ãã«ã€ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚­ãƒ¼ã‚’æŠ¼ã—ã¦
+  ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’å‡ºã™ã¨ã€å¤‰ãªä½ç½®ã«è¡¨ç¤ºã•ã‚Œã‚‹ã®ã‚’ä¿®æ­£ã€‚
+ãƒ»éš ã—ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚¹ã‚¿ã‚¤ãƒ«ã‚’ WS_DISABLED ã«å¤‰æ›´ã€‚ï¼ˆç’°å¢ƒã«ã‚ˆã£ã¦ã¯
+  ã•ã‚‰ãªã‚‹çœãƒ¡ãƒ¢ãƒªåŒ–ã€‚ï¼‰
 
 2009/09/06
-EVista ‚Åƒlƒbƒgƒ[ƒN‘—ŽóM—Ê‚ÌŠg’£‘Ž®‚ðŽg‚¤‚ÆAŽÀÛ‚Ì“]‘——Ê‚æ‚è‚à‘å‚«‚¢
-  ”’l‚ª•\Ž¦‚³‚ê‚é‚Ì‚ðC³B
-Eƒlƒbƒgƒ[ƒN‘—ŽóM—Ê‚ÉA–³ü LAN ‚Ì‘—ŽóM—Ê‚ðŠÜ‚ß‚é‚æ‚¤‚ÉC³B
+ãƒ»Vista ã§ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯é€å—ä¿¡é‡ã®æ‹¡å¼µæ›¸å¼ã‚’ä½¿ã†ã¨ã€å®Ÿéš›ã®è»¢é€é‡ã‚ˆã‚Šã‚‚å¤§ãã„
+  æ•°å€¤ãŒè¡¨ç¤ºã•ã‚Œã‚‹ã®ã‚’ä¿®æ­£ã€‚
+ãƒ»ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯é€å—ä¿¡é‡ã«ã€ç„¡ç·š LAN ã®é€å—ä¿¡é‡ã‚’å«ã‚ã‚‹ã‚ˆã†ã«ä¿®æ­£ã€‚
 
 2009/09/23
-Etclocklight-unofficial-060502 ‚Ì•ÏX‚ðˆê•”Žæ‚èž‚ÞB
-  - ƒLƒ…I‹@”\‚ð­‚µ•ÏXBƒ^ƒXƒNƒo[‚ª‚Ç‚ÌˆÊ’u‚É‚ ‚Á‚Ä‚àAƒ^ƒXƒNƒo[‚É
-    d‚È‚Á‚½‘‹‚ð‰Ÿ‚µ–ß‚·‹@”\‚ÉB
-EƒEƒBƒ“ƒhƒEˆÚ“®‚ÉŽg‚¤ API ‚ð SetWindowPos() ‚É“ˆêB
+ãƒ»tclocklight-unofficial-060502 ã®å¤‰æ›´ã‚’ä¸€éƒ¨å–ã‚Šè¾¼ã‚€ã€‚
+  - ã‚­ãƒ¥ï¼æ©Ÿèƒ½ã‚’å°‘ã—å¤‰æ›´ã€‚ã‚¿ã‚¹ã‚¯ãƒãƒ¼ãŒã©ã®ä½ç½®ã«ã‚ã£ã¦ã‚‚ã€ã‚¿ã‚¹ã‚¯ãƒãƒ¼ã«
+    é‡ãªã£ãŸçª“ã‚’æŠ¼ã—æˆ»ã™æ©Ÿèƒ½ã«ã€‚
+ãƒ»ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ç§»å‹•ã«ä½¿ã† API ã‚’ SetWindowPos() ã«çµ±ä¸€ã€‚
 
 2009/09/26
-EVista ‚Å C:\Program Files ˆÈ‰º‚ÉƒCƒ“ƒXƒg[ƒ‹‚µ‚½ê‡‚È‚ÇAtclock.ini ‚É
-  Ý’è‚ð‘‚«ž‚ß‚È‚©‚Á‚½ê‡‚ÉAƒGƒ‰[ƒƒbƒZ[ƒW‚ð•\Ž¦‚·‚é‚æ‚¤‚ÉC³B
-  i‚½‚¾‚µ¡‰ñ‚ÍAtclock.exe ‚Ì‚Ý‚Ì‘Î‰žBj
+ãƒ»Vista ã§ C:\Program Files ä»¥ä¸‹ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ãŸå ´åˆãªã©ã€tclock.ini ã«
+  è¨­å®šã‚’æ›¸ãè¾¼ã‚ãªã‹ã£ãŸå ´åˆã«ã€ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’è¡¨ç¤ºã™ã‚‹ã‚ˆã†ã«ä¿®æ­£ã€‚
+  ï¼ˆãŸã ã—ä»Šå›žã¯ã€tclock.exe ã®ã¿ã®å¯¾å¿œã€‚ï¼‰
 
 2010/02/04
-Etclocklight-050716 ‚ÌC³‚ðˆê•”Žæ‚èž‚ÞB
-  - ƒtƒHƒ“ƒgƒTƒCƒY‚ð3‚Ì”{”‚Å‚È‚¢”‚É‚·‚é‚Æ–{—ˆ‚æ‚è¬‚³‚­•\Ž¦‚³‚ê‚é‚Ì‚ðC³
-EWindows 7 ‚Å‚Ì“®ì‚ðŠm”FB
-EVista/7 ‚ÅƒJƒŒƒ“ƒ_[‚ª•\Ž¦‚³‚ê‚½ó‘Ô‚ÅAÄ“xŽžŒv‚ð¶ƒNƒŠƒbƒN‚·‚é‚ÆAˆê“x
-  ƒJƒŒƒ“ƒ_[‚ªÁ‚¦‚Ä‚©‚çÄ“x•\Ž¦‚³‚ê‚é‚Ì‚ðC³B
+ãƒ»tclocklight-050716 ã®ä¿®æ­£ã‚’ä¸€éƒ¨å–ã‚Šè¾¼ã‚€ã€‚
+  - ãƒ•ã‚©ãƒ³ãƒˆã‚µã‚¤ã‚ºã‚’3ã®å€æ•°ã§ãªã„æ•°ã«ã™ã‚‹ã¨æœ¬æ¥ã‚ˆã‚Šå°ã•ãè¡¨ç¤ºã•ã‚Œã‚‹ã®ã‚’ä¿®æ­£
+ãƒ»Windows 7 ã§ã®å‹•ä½œã‚’ç¢ºèªã€‚
+ãƒ»Vista/7 ã§ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼ãŒè¡¨ç¤ºã•ã‚ŒãŸçŠ¶æ…‹ã§ã€å†åº¦æ™‚è¨ˆã‚’å·¦ã‚¯ãƒªãƒƒã‚¯ã™ã‚‹ã¨ã€ä¸€åº¦
+  ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼ãŒæ¶ˆãˆã¦ã‹ã‚‰å†åº¦è¡¨ç¤ºã•ã‚Œã‚‹ã®ã‚’ä¿®æ­£ã€‚
 
 2012/01/04
-EVista/7 ‚ÅA‰¹—Ê‚Ì‘Ž®‚ðŽg‚Á‚½Û‚ÉAŽÀÛ‚æ‚è 1 ¬‚³‚¢’l‚ª•\Ž¦‚³‚ê‚éê‡‚ª
-  ‚ ‚é‚Ì‚ðC³B
-E“ú•t‚ª•Ï‚í‚éÛA–ˆ•b•\Ž¦XV‚ðs‚¤ƒtƒ‰ƒO‚ð off ‚É‚µ‚Ä‚¢‚½‚Ì‚ðC³B
-Ex64 ”Å‚ÌƒCƒ“ƒXƒg[ƒ‹•û–@‚ÌÚ×‚ð’Ç‹LB
-ENTP ‚ÌÝ’è•û–@‚Ì‹LÚ‚ðAwiki@nothing ‚Ì‹LŽ–‚ðŽQÆ‚·‚é‚æ‚¤‚É•ÏXB
-EWindows SDK 7.1 ‚É‚æ‚é x64 ƒrƒ‹ƒh‚É‘Î‰žB
-Etclock.exe ‹N“®Žž‚É lang ƒfƒBƒŒƒNƒgƒŠ‚ªŒ©‚Â‚©‚ç‚È‚¢ê‡‚ÍƒƒbƒZ[ƒW‚ð
-  •\Ž¦‚·‚é‚æ‚¤‚É•ÏXB
-ESNTP ‚ÌƒƒO‚É”N‚Ì•\Ž¦‚ð’Ç‰ÁB
+ãƒ»Vista/7 ã§ã€éŸ³é‡ã®æ›¸å¼ã‚’ä½¿ã£ãŸéš›ã«ã€å®Ÿéš›ã‚ˆã‚Š 1 å°ã•ã„å€¤ãŒè¡¨ç¤ºã•ã‚Œã‚‹å ´åˆãŒ
+  ã‚ã‚‹ã®ã‚’ä¿®æ­£ã€‚
+ãƒ»æ—¥ä»˜ãŒå¤‰ã‚ã‚‹éš›ã€æ¯Žç§’è¡¨ç¤ºæ›´æ–°ã‚’è¡Œã†ãƒ•ãƒ©ã‚°ã‚’ off ã«ã—ã¦ã„ãŸã®ã‚’ä¿®æ­£ã€‚
+ãƒ»x64 ç‰ˆã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«æ–¹æ³•ã®è©³ç´°ã‚’è¿½è¨˜ã€‚
+ãƒ»NTP ã®è¨­å®šæ–¹æ³•ã®è¨˜è¼‰ã‚’ã€wiki@nothing ã®è¨˜äº‹ã‚’å‚ç…§ã™ã‚‹ã‚ˆã†ã«å¤‰æ›´ã€‚
+ãƒ»Windows SDK 7.1 ã«ã‚ˆã‚‹ x64 ãƒ“ãƒ«ãƒ‰ã«å¯¾å¿œã€‚
+ãƒ»tclock.exe èµ·å‹•æ™‚ã« lang ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªãŒè¦‹ã¤ã‹ã‚‰ãªã„å ´åˆã¯ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’
+  è¡¨ç¤ºã™ã‚‹ã‚ˆã†ã«å¤‰æ›´ã€‚
+ãƒ»SNTP ã®ãƒ­ã‚°ã«å¹´ã®è¡¨ç¤ºã‚’è¿½åŠ ã€‚
 
 2016/09/11
-EWindows 10 Anniversary Update ‚Å“®‚©‚È‚¢–â‘è‚Ì‘ÎˆB(T-Clock Redux ‚Ì
-  ƒR[ƒh‚ðŽQl‚ÉB)
-EHigh DPI ‘Î‰žB
-EWin9x/NT4/2000/XP ƒTƒ|[ƒgI—¹BŒÃ‚¢ƒR[ƒh‚ÌíœB
-EVC6`VC2008, BCC ‚ÌƒTƒ|[ƒgI—¹B
-EVC2012`VC2015 ‚É‘Î‰žB
-EƒvƒƒpƒeƒB‚Ìuƒ}ƒEƒX‘€ìvƒ^ƒu‚ÅAu‹@”\vƒhƒƒbƒvƒ_ƒEƒ“‚ðŠJ‚¢‚½‚¾‚¯‚ÅA
-  ‚»‚ê‚ÉŠÖ˜A‚·‚éƒIƒvƒVƒ‡ƒ“Ý’è‚ªÁ‚¦‚é‚Ì‚ðC³B
-Etclocklight-050716 ‚Ì×‚©‚¢ƒoƒOC³‚ðˆê•”Žæ‚èž‚ÞB
-E‹N“®ŽžŠÔ‚Ì•\Ž¦‚ª 49.7 “ú‚ÅƒŠƒZƒbƒg‚³‚ê‚é–â‘è‚ðC³B(all ”Å)
-E‘Ž® _m, _d, _h, _n ‚ð’Ç‰ÁB
-E‘Ž® NxxG, HxxT ‚ð’Ç‰ÁB(all ”Å)
-E‘Ž® \xXXXX; ‚ðƒTƒƒQ[ƒgƒyƒA‚É‘Î‰žB
-E‚©‚¸‚Ú‚ñŽ‚É‚æ‚éÅIƒeƒXƒgƒo[ƒWƒ‡ƒ“‚Å‚ ‚é tclocklight-040905 (ƒ\[ƒX
-  ‚Ì‚Ý‚ÌŒöŠJ) ‚Ì‘å”¼‚ðŽæ‚èž‚ÝB
-  - ƒc[ƒ‹ƒ`ƒbƒv‘Ž®‚Ìƒtƒ@ƒCƒ‹‚©‚ç‚Ì“Ç‚Ýž‚ÝB
-  - ƒc[ƒ‹ƒ`ƒbƒv‚ÌƒtƒHƒ“ƒgŽw’èB
-  - ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“ƒIƒvƒVƒ‡ƒ“ /tip ‚É‚æ‚éƒc[ƒ‹ƒ`ƒbƒv‚Ì•\Ž¦B
-  - ƒAƒ‰[ƒ€Aƒ}ƒEƒX‹@”\Aƒ^ƒCƒ}[‚Ìˆ—‚ðƒŠƒ“ƒNƒŠƒXƒg‚É•ÏXB
-  - (memreduce ‚Í•sÌ—p)
-EExplorer‚ÌƒNƒ‰ƒbƒVƒ…Œã‚É‰ü‘¢‚µ’¼‚·Ý’è‚ðƒfƒtƒHƒ‹ƒg‚Å—LŒø‰»B
-Etclocklight-050716 ‚Ì‘•ü‚ÆƒAƒiƒƒOŽžŒv‹@”\‚ðŽæ‚èž‚ÞB(all ”Å)
-  ‚±‚ê‚É”º‚¢Aall ”Å‚ÍƒfƒtƒHƒ‹ƒgƒ‰ƒCƒuƒ‰ƒŠ‚Æ‚ÌƒŠƒ“ƒN‚ª•K{‚Æ‚È‚Á‚½B
-Eƒ}ƒ‹ƒ`ƒfƒBƒXƒvƒŒƒCŽg—pŽž‚Ì‹““®‚ðˆê•”‰ü‘PB
-Ex86 ”Å‚ð 64bit OS ‚ÅŽÀs‚Å‚«‚È‚¢‚æ‚¤‚Éƒ`ƒFƒbƒN‚ð’Ç‰ÁB
-EƒfƒtƒHƒ‹ƒg‚ÌŽžŠÔ‚Ì‘Ž®‚ð hh ‚©‚ç _h ‚É•ÏXB
+ãƒ»Windows 10 Anniversary Update ã§å‹•ã‹ãªã„å•é¡Œã®å¯¾å‡¦ã€‚(T-Clock Redux ã®
+  ã‚³ãƒ¼ãƒ‰ã‚’å‚è€ƒã«ã€‚)
+ãƒ»High DPI å¯¾å¿œã€‚
+ãƒ»Win9x/NT4/2000/XP ã‚µãƒãƒ¼ãƒˆçµ‚äº†ã€‚å¤ã„ã‚³ãƒ¼ãƒ‰ã®å‰Šé™¤ã€‚
+ãƒ»VC6ï½žVC2008, BCC ã®ã‚µãƒãƒ¼ãƒˆçµ‚äº†ã€‚
+ãƒ»VC2012ï½žVC2015 ã«å¯¾å¿œã€‚
+ãƒ»ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®ã€Œãƒžã‚¦ã‚¹æ“ä½œã€ã‚¿ãƒ–ã§ã€ã€Œæ©Ÿèƒ½ã€ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ã‚’é–‹ã„ãŸã ã‘ã§ã€
+  ãã‚Œã«é–¢é€£ã™ã‚‹ã‚ªãƒ—ã‚·ãƒ§ãƒ³è¨­å®šãŒæ¶ˆãˆã‚‹ã®ã‚’ä¿®æ­£ã€‚
+ãƒ»tclocklight-050716 ã®ç´°ã‹ã„ãƒã‚°ä¿®æ­£ã‚’ä¸€éƒ¨å–ã‚Šè¾¼ã‚€ã€‚
+ãƒ»èµ·å‹•æ™‚é–“ã®è¡¨ç¤ºãŒ 49.7 æ—¥ã§ãƒªã‚»ãƒƒãƒˆã•ã‚Œã‚‹å•é¡Œã‚’ä¿®æ­£ã€‚(all ç‰ˆ)
+ãƒ»æ›¸å¼ _m, _d, _h, _n ã‚’è¿½åŠ ã€‚
+ãƒ»æ›¸å¼ NxxG, HxxT ã‚’è¿½åŠ ã€‚(all ç‰ˆ)
+ãƒ»æ›¸å¼ \xXXXX; ã‚’ã‚µãƒ­ã‚²ãƒ¼ãƒˆãƒšã‚¢ã«å¯¾å¿œã€‚
+ãƒ»ã‹ãšã¼ã‚“æ°ã«ã‚ˆã‚‹æœ€çµ‚ãƒ†ã‚¹ãƒˆãƒãƒ¼ã‚¸ãƒ§ãƒ³ã§ã‚ã‚‹ tclocklight-040905 (ã‚½ãƒ¼ã‚¹
+  ã®ã¿ã®å…¬é–‹) ã®å¤§åŠã‚’å–ã‚Šè¾¼ã¿ã€‚
+  - ãƒ„ãƒ¼ãƒ«ãƒãƒƒãƒ—æ›¸å¼ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ã®èª­ã¿è¾¼ã¿ã€‚
+  - ãƒ„ãƒ¼ãƒ«ãƒãƒƒãƒ—ã®ãƒ•ã‚©ãƒ³ãƒˆæŒ‡å®šã€‚
+  - ã‚³ãƒžãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³ã‚ªãƒ—ã‚·ãƒ§ãƒ³ /tip ã«ã‚ˆã‚‹ãƒ„ãƒ¼ãƒ«ãƒãƒƒãƒ—ã®è¡¨ç¤ºã€‚
+  - ã‚¢ãƒ©ãƒ¼ãƒ ã€ãƒžã‚¦ã‚¹æ©Ÿèƒ½ã€ã‚¿ã‚¤ãƒžãƒ¼ã®å‡¦ç†ã‚’ãƒªãƒ³ã‚¯ãƒªã‚¹ãƒˆã«å¤‰æ›´ã€‚
+  - (memreduce ã¯ä¸æŽ¡ç”¨)
+ãƒ»Explorerã®ã‚¯ãƒ©ãƒƒã‚·ãƒ¥å¾Œã«æ”¹é€ ã—ç›´ã™è¨­å®šã‚’ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã§æœ‰åŠ¹åŒ–ã€‚
+ãƒ»tclocklight-050716 ã®è£…é£¾ã¨ã‚¢ãƒŠãƒ­ã‚°æ™‚è¨ˆæ©Ÿèƒ½ã‚’å–ã‚Šè¾¼ã‚€ã€‚(all ç‰ˆ)
+  ã“ã‚Œã«ä¼´ã„ã€all ç‰ˆã¯ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãƒ©ã‚¤ãƒ–ãƒ©ãƒªã¨ã®ãƒªãƒ³ã‚¯ãŒå¿…é ˆã¨ãªã£ãŸã€‚
+ãƒ»ãƒžãƒ«ãƒãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ä½¿ç”¨æ™‚ã®æŒ™å‹•ã‚’ä¸€éƒ¨æ”¹å–„ã€‚
+ãƒ»x86 ç‰ˆã‚’ 64bit OS ã§å®Ÿè¡Œã§ããªã„ã‚ˆã†ã«ãƒã‚§ãƒƒã‚¯ã‚’è¿½åŠ ã€‚
+ãƒ»ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®æ™‚é–“ã®æ›¸å¼ã‚’ hh ã‹ã‚‰ _h ã«å¤‰æ›´ã€‚
 
 
-‚UDƒ‰ƒCƒZƒ“ƒX
-@ƒIƒŠƒWƒiƒ‹‚Ìƒ‰ƒCƒZƒ“ƒX‚ª GPL ‚Å‚ ‚é‚½‚ßA‚±‚Ì‰ü‘¢”Å‚Ìƒ‰ƒCƒZƒ“ƒX‚à
-“–‘R GPL ‚Å‚·B
+ï¼–ï¼Žãƒ©ã‚¤ã‚»ãƒ³ã‚¹
+ã€€ã‚ªãƒªã‚¸ãƒŠãƒ«ã®ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ãŒ GPL ã§ã‚ã‚‹ãŸã‚ã€ã“ã®æ”¹é€ ç‰ˆã®ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚‚
+å½“ç„¶ GPL ã§ã™ã€‚
 
 
-‚VD˜A—æ
-  ‰ü‘¢”ÅìŽÒ: K.Takata
+ï¼—ï¼Žé€£çµ¡å…ˆ
+  æ”¹é€ ç‰ˆä½œè€…: K.Takata
   URL: http://k-takata.o.oo7.jp/
-       https://github.com/k-takata/TClockLight (ƒ\[ƒXƒR[ƒh)
+       https://github.com/k-takata/TClockLight (ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰)
 
