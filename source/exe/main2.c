@@ -289,11 +289,11 @@ void DelMessageFilters(HWND hwnd)
 	int i;	
 	for(i = 0; i < ARRAYSIZE(messages); i++)
 	{
-		if(dll_ChangeWindowMessageFilterEx != NULL){
-			dll_ChangeWindowMessageFilterEx(hwnd, WM_APP, MSGFLT_RESET, 0);
+		if(m_pChangeWindowMessageFilterEx != NULL){
+			m_pChangeWindowMessageFilterEx(hwnd, WM_APP, MSGFLT_RESET, 0);
 		}else{
-			if(dll_ChangeWindowMessageFilter != NULL){
-				dll_ChangeWindowMessageFilter(messages[i], MSGFLT_REMOVE);
+			if(m_pChangeWindowMessageFilter != NULL){
+				m_pChangeWindowMessageFilter(messages[i], MSGFLT_REMOVE);
 			}
 		}
 	}
