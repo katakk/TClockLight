@@ -16,8 +16,6 @@ char g_inifile[MAX_PATH];   // ini file name
 int  g_winver;              // windows version
 
 
-static BOOL (WINAPI *dll_ChangeWindowMessageFilterEx)(HWND, UINT, DWORD, int) = NULL;
-static BOOL (WINAPI *dll_ChangeWindowMessageFilter)(UINT, DWORD) = NULL;
 
 /* Statics */
 static void InitTClockMain(void);
@@ -26,6 +24,8 @@ static void InitFormat(void);
 static void AddMessageFilters(HWND hwnd);
 static void DelMessageFilters(HWND hwnd);
 int CheckWinVersion(void);
+static BOOL (WINAPI *m_pChangeWindowMessageFilterEx)(HWND, UINT, DWORD, int) = NULL;
+static BOOL (WINAPI *m_pChangeWindowMessageFilter)(UINT, DWORD) = NULL;
 
 #define MSGFLT_RESET 0
 #define MSGFLT_ALLOW 1
@@ -53,7 +53,6 @@ int TClockExeMain(void)
 	}
 #endif
 	
-
 	// not to execute the program twice
 	hwnd = GetTClockMainWindow();
 	if(hwnd != NULL)
@@ -78,9 +77,7 @@ int TClockExeMain(void)
 	wndclass.cbClsExtra    = 0;
 	wndclass.cbWndExtra    = 0;
 	wndclass.hInstance     = g_hInst;
-
 	wndclass.hIcon         = NULL;
-
 	wndclass.hCursor       = NULL;
 	wndclass.hbrBackground = (HBRUSH)(COLOR_WINDOW+1);
 	wndclass.lpszMenuName  = NULL;
@@ -92,7 +89,6 @@ int TClockExeMain(void)
 	// message-only window can't receive WM_POWERBROADCAST
 	hwndParent = NULL;
 
-
 	// create a hidden window
 	hwnd = CreateWindowEx(0,
 		CLASS_TCLOCKMAIN, TITLE_TCLOCKMAIN,
@@ -102,10 +98,10 @@ int TClockExeMain(void)
 	ShowWindow(hwnd, SW_MINIMIZE);
 	ShowWindow(hwnd, SW_HIDE);
 
-		dll = LoadLibrary(TEXT("user32.dll"));
-	(FARPROC)dll_ChangeWindowMessageFilterEx = GetProcAddress(dll, "ChangeWindowMessageFilterEx");
-	if(dll_ChangeWindowMessageFilterEx == NULL)
-		(FARPROC)dll_ChangeWindowMessageFilter = GetProcAddress(dll, "ChangeWindowMessageFilter");
+	dll = LoadLibrary(TEXT("user32.dll"));
+	(FARPROC)m_pChangeWindowMessageFilterEx = GetProcAddress(dll, "ChangeWindowMessageFilterEx");
+	if(m_pChangeWindowMessageFilterEx == NULL)
+		(FARPROC)m_pChangeWindowMessageFilter = GetProcAddress(dll, "ChangeWindowMessageFilter");
     
 	// Windows Vista UIPI filter
 	AddMessageFilters(hwnd);
@@ -278,11 +274,11 @@ void AddMessageFilters(HWND hwnd)
 	int i;	
 	for(i = 0; i < ARRAYSIZE(messages); i++)
 	{
-		if(dll_ChangeWindowMessageFilterEx != NULL){
-			dll_ChangeWindowMessageFilterEx(hwnd, messages[i], MSGFLT_ALLOW, 0);
+		if(m_pChangeWindowMessageFilterEx != NULL){
+			m_pChangeWindowMessageFilterEx(hwnd, messages[i], MSGFLT_ALLOW, 0);
 		}else{
-			if(dll_ChangeWindowMessageFilter != NULL){
-				dll_ChangeWindowMessageFilter(messages[i], MSGFLT_ADD);
+			if(m_pChangeWindowMessageFilter != NULL){
+				m_pChangeWindowMessageFilter(messages[i], MSGFLT_ADD);
 			}
 		}
 	}
