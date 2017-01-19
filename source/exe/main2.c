@@ -16,25 +16,20 @@ char g_inifile[MAX_PATH];   // ini file name
 int  g_winver;              // windows version
 
 
-
 /* Statics */
 static void InitTClockMain(void);
 static void InitTextColor(void);
 static void InitFormat(void);
-static void AddMessageFilters(HWND hwnd);
-static void DelMessageFilters(HWND hwnd);
+static void AddMessageFilters(void);
 int CheckWinVersion(void);
 static BOOL (WINAPI *m_pChangeWindowMessageFilter)(UINT, DWORD) = NULL;
-
-#define MSGFLT_RESET 0
-#define MSGFLT_ALLOW 1
 
 /*-------------------------------------------
    main routine
 ---------------------------------------------*/
 int TClockExeMain(void)
 {
-	HMODULE dll;
+	HMODULE user32_dll;
 	MSG msg;
 	WNDCLASS wndclass;
 	HWND hwnd, hwndParent;
@@ -70,6 +65,12 @@ int TClockExeMain(void)
 	
 	InitTClockMain();
 	
+	// Windows Vista UIPI filter
+	user32_dll = LoadLibrary(TEXT("user32.dll"));
+	(FARPROC)m_pChangeWindowMessageFilter =
+	       GetProcAddress(user32_dll, "ChangeWindowMessageFilter");   
+	AddMessageFilters();
+	
 	// register a window class
 	wndclass.style         = CS_HREDRAW | CS_VREDRAW | CS_DBLCLKS;
 	wndclass.lpfnWndProc   = WndProc;
@@ -94,22 +95,16 @@ int TClockExeMain(void)
 		hwndParent, NULL, g_hInst, NULL);
 	ShowWindow(hwnd, SW_MINIMIZE);
 	ShowWindow(hwnd, SW_HIDE);
-
-	dll = LoadLibrary(TEXT("user32.dll"));
-	(FARPROC)m_pChangeWindowMessageFilter = GetProcAddress(dll, "ChangeWindowMessageFilter");
-    
-	// Windows Vista UIPI filter
-	AddMessageFilters();
-		
+	
 	while(GetMessage(&msg, NULL, 0, 0))
 	{
 			TranslateMessage(&msg);
 			DispatchMessage(&msg);
 	}
 	
-	DelMessageFilters(hwnd);
 	UnregisterClass(CLASS_TCLOCKMAIN, g_hInst);
-	FreeLibrary(dll);
+	FreeLibrary(user32_dll);
+
 	return (int)msg.wParam;
 }
 
@@ -232,6 +227,9 @@ void InitFormat(void)
 /*------------------------------------------------
   add the messages to the UIPI message filter
 --------------------------------------------------*/
+void AddMessageFilters(void)
+{
+	int i;
 	const UINT messages[] = {
 	//	WM_CREATE,
 		WM_CLOSE,
@@ -263,26 +261,11 @@ void InitFormat(void)
 		//WM_MBUTTONUP,
 		//WM_XBUTTONUP,
 	};
-
-void AddMessageFilters(HWND hwnd)
-{
-	int i;	
+	
 	for(i = 0; i < ARRAYSIZE(messages); i++)
 	{
-			if(m_pChangeWindowMessageFilter != NULL){
-				m_pChangeWindowMessageFilter(messages[i], MSGFLT_ADD);
-			}
-	}
-}
-
-void DelMessageFilters(HWND hwnd)
-{
-	int i;	
-	for(i = 0; i < ARRAYSIZE(messages); i++)
-	{
-			if(m_pChangeWindowMessageFilter != NULL){
-				m_pChangeWindowMessageFilter(messages[i], MSGFLT_REMOVE);
-			}
+		if(m_pChangeWindowMessageFilter)
+			m_pChangeWindowMessageFilter(messages[i], MSGFLT_ADD);
 	}
 }
 
