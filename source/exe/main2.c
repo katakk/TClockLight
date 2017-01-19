@@ -24,7 +24,6 @@ static void InitFormat(void);
 static void AddMessageFilters(HWND hwnd);
 static void DelMessageFilters(HWND hwnd);
 int CheckWinVersion(void);
-static BOOL (WINAPI *m_pChangeWindowMessageFilterEx)(HWND, UINT, DWORD, int) = NULL;
 static BOOL (WINAPI *m_pChangeWindowMessageFilter)(UINT, DWORD) = NULL;
 
 #define MSGFLT_RESET 0
@@ -84,8 +83,6 @@ int TClockExeMain(void)
 	wndclass.lpszClassName = CLASS_TCLOCKMAIN;
 	RegisterClass(&wndclass);
 	
-
-
 	// message-only window can't receive WM_POWERBROADCAST
 	hwndParent = NULL;
 
@@ -99,12 +96,10 @@ int TClockExeMain(void)
 	ShowWindow(hwnd, SW_HIDE);
 
 	dll = LoadLibrary(TEXT("user32.dll"));
-	(FARPROC)m_pChangeWindowMessageFilterEx = GetProcAddress(dll, "ChangeWindowMessageFilterEx");
-	if(m_pChangeWindowMessageFilterEx == NULL)
-		(FARPROC)m_pChangeWindowMessageFilter = GetProcAddress(dll, "ChangeWindowMessageFilter");
+	(FARPROC)m_pChangeWindowMessageFilter = GetProcAddress(dll, "ChangeWindowMessageFilter");
     
 	// Windows Vista UIPI filter
-	AddMessageFilters(hwnd);
+	AddMessageFilters();
 		
 	while(GetMessage(&msg, NULL, 0, 0))
 	{
@@ -274,13 +269,9 @@ void AddMessageFilters(HWND hwnd)
 	int i;	
 	for(i = 0; i < ARRAYSIZE(messages); i++)
 	{
-		if(m_pChangeWindowMessageFilterEx != NULL){
-			m_pChangeWindowMessageFilterEx(hwnd, messages[i], MSGFLT_ALLOW, 0);
-		}else{
 			if(m_pChangeWindowMessageFilter != NULL){
 				m_pChangeWindowMessageFilter(messages[i], MSGFLT_ADD);
 			}
-		}
 	}
 }
 
@@ -289,13 +280,9 @@ void DelMessageFilters(HWND hwnd)
 	int i;	
 	for(i = 0; i < ARRAYSIZE(messages); i++)
 	{
-		if(m_pChangeWindowMessageFilterEx != NULL){
-			m_pChangeWindowMessageFilterEx(hwnd, WM_APP, MSGFLT_RESET, 0);
-		}else{
 			if(m_pChangeWindowMessageFilter != NULL){
 				m_pChangeWindowMessageFilter(messages[i], MSGFLT_REMOVE);
 			}
-		}
 	}
 }
 
