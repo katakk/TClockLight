@@ -97,7 +97,6 @@ void TIMEHandler(FORMATHANDLERSTRUCT* pstruc);
 void MSecondHandler(FORMATHANDLERSTRUCT* pstruc);
 void M24KOMAHandler(FORMATHANDLERSTRUCT* pstruc);
 
-
 /* ---------- userstr.c ----------- */
 void InitUserStr(void);
 void UStrHandler(FORMATHANDLERSTRUCT* pstruc);
@@ -105,14 +104,8 @@ void UStrHandler(FORMATHANDLERSTRUCT* pstruc);
 extern wchar_t g_userstr[10][BUFSIZE_USTR];
 extern wchar_t g_sdisp1[], g_sdisp2[], g_scat1[], g_scat2[];
 
-
-
-
 /* ---------- newapi.c ------------ */
 void EndNewAPI(void);
-
-/* ---------- bmp.c --------------- */
-HBITMAP ReadBitmap(HWND hwnd, const char* fname, BOOL b);
 
 /* ---------- dllutl.c --------------- */
 BOOL IsSubclassed(HWND hwnd);
@@ -121,40 +114,3 @@ BOOL CreateOffScreenDC(HDC hdc, HDC *phdcMem, HBITMAP *phbmp,
 BOOL GetBmpSize(HBITMAP hbmp, int* w, int* h);
 void CopyParentSurface(HWND hwnd, HDC hdcDest, int xdst, int ydst,
 	int w, int h, int xsrc, int ysrc);
-
-/* ---------- sysinfo.c --------------- */
-void InitSysInfo(HWND hwnd);
-void EndSysInfo(HWND hwnd);
-void OnTimerSysInfo(void);
-void ElapsedTimeHandler(FORMATHANDLERSTRUCT* pstruc);
-void NetworkHandler(FORMATHANDLERSTRUCT* pstruc);
-void MemoryHandler(FORMATHANDLERSTRUCT* pstruc);
-void HDDHandler(FORMATHANDLERSTRUCT* pstruc);
-void CPUHandler(FORMATHANDLERSTRUCT* pstruc);
-void BatteryHandler(FORMATHANDLERSTRUCT* pstruc);
-void ACStatusHandler(FORMATHANDLERSTRUCT* pstruc);
-void VolumeHandler(FORMATHANDLERSTRUCT* pstruc);
-void VolumeMuteHandler(FORMATHANDLERSTRUCT* pstruc);
-void MuteHandler(FORMATHANDLERSTRUCT* pstruc);
-void RefreshVolume(void);
-
-/* ---------- net.c --------------- */
-void Net_start(void);
-void Net_get(ULONGLONG *recv, ULONGLONG *send);
-void Net_end(void);
-
-/* ---------- hdd.c --------------- */
-void GetDiskSpace(int nDrive, ULONGLONG *all, ULONGLONG *free);
-
-/* ---------- cpu.c --------------- */
-void CpuMoni_start(void);
-int CpuMoni_get(void);
-void CpuMoni_end(void);
-
-/* ---------- battery.c --------------- */
-void GetBatteryLifePercent(int *batteryLife, int *batteryMode);
-
-/* ---------- desktop.c  ---------- */
-void SetDesktopIcons(void);
-void EndDesktopIcons(void);
-
