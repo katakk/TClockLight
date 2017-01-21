@@ -50,7 +50,6 @@ extern int     g_OrigClockWidth;
 extern int     g_OrigClockHeight;
 extern BOOL    g_bVertTaskbar;
 extern BOOL    g_bTaskbarPosChanging;
-extern BOOL    g_bLMousePassThru;
 
 /* ---------- wndproc.c ----------- */
 LRESULT CALLBACK SubclassProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam, UINT_PTR uIdSubclass, DWORD_PTR dwRefData);

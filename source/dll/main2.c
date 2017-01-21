@@ -23,7 +23,6 @@ int     g_OrigClockWidth;      // original clock width
 int     g_OrigClockHeight;     // original clock height
 BOOL    g_bVertTaskbar;        // vertical taskbar ?
 BOOL    g_bTaskbarPosChanging;
-BOOL    g_bLMousePassThru;     // pass through left button messages
 
 #define SUBCLASS_ID			1
 #define SUBCLASSTRAY_ID		2
@@ -133,10 +132,6 @@ void OnDestroy(HWND hwnd)
 ---------------------------------------------------------------*/
 void LoadSetting(HWND hwnd)
 {
-
-	g_bLMousePassThru = GetMyRegLong("Mouse", "LeftMousePassThrough",
-			(g_winver&WIN10RS1) != 0);
-	
 	LoadFormatSetting(hwnd);   // format.c
 	LoadDrawingSetting(hwnd);  // drawing.c
 }

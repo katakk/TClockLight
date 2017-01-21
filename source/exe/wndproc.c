@@ -27,7 +27,6 @@ static UINT m_uTaskbarRestart;     // taskbar recreating message
 static BOOL m_bHook = FALSE;
 static BOOL m_bStartTimer = FALSE;
 
-
 /*-------------------------------------------
    the window procedure
 ---------------------------------------------*/
@@ -44,21 +43,13 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case WM_ENDSESSION:
 			if(wParam) ClearTClockMain(hwnd);
 			break;
-
-		
 		case WM_TIMER:
 			switch(wParam)
 			{
 				case IDTIMER_START:
 					OnTimerStart(hwnd); break;
-
 			}
 			return 0;
-
-
-		
-
-
 	}
 	
 	if(message == m_uTaskbarRestart)

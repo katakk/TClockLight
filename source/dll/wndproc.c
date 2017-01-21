@@ -8,38 +8,19 @@
 
 #include "tcdll.h"
 
-/* Globals */
-BOOL  g_bDispSecond = FALSE; // draw clock every second
-int   g_nBlink = 0;          // 0: no blink
-							 // 1: blink (normal) 2: blink (invert color)
-
 /* Statics */
 static void OnTimerMain(HWND hwnd);
 static void OnRefreshClock(HWND hwnd);
-
-
-static LRESULT OnMouseDown(HWND hwnd, UINT message,
-	WPARAM wParam, LPARAM lParam);
-static LRESULT OnMouseUp(HWND hwnd, UINT message,
-	WPARAM wParam, LPARAM lParam);
 static void OnWindowPosChanging(HWND hwnd, LPWINDOWPOS pwp);
-
-
-int   m_nBlinkSec = 0;
-DWORD m_nBlinkTick = 0;
-
 
 /*------------------------------------------------
   subclass procedure of the clock
 --------------------------------------------------*/
 LRESULT CALLBACK SubclassProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam, UINT_PTR uIdSubclass, DWORD_PTR dwRefData)
 {
-
-
 	switch(message)
 	{
 		/* -------- drawing & sizing ------------- */
-		
 		case WM_PAINT:
 		{
 			PAINTSTRUCT ps;
@@ -95,18 +76,25 @@ LRESULT CALLBACK SubclassProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lPa
 			return 0;
 		
 		/* -------- Mouse messages ------------- */
-
-
-
+		case WM_LBUTTONDOWN:   // mouse button is down
+		case WM_RBUTTONDOWN:
+		case WM_MBUTTONDOWN:
+		//case WM_XBUTTONDOWN:
+		case WM_LBUTTONUP:    // mouse button is up
+		case WM_RBUTTONUP:
+		case WM_MBUTTONUP:
+		//case WM_XBUTTONUP:
 		case WM_NCHITTEST:     // not to pass to the original wndproc
 			return DefWindowProc(hwnd, message, wParam, lParam);
+
+		case WM_MOUSEMOVE:
+		case WM_NCRBUTTONUP:
+			return 0;
+
 		case WM_MOUSEACTIVATE:
 			return MA_ACTIVATE;
-
-		
 		
 		/* messages sent from other program */
-		
 		case CLOCKM_EXIT:   // clean up all
 			EndClock(hwnd);
 			return 0;
@@ -117,17 +105,11 @@ LRESULT CALLBACK SubclassProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lPa
 			InitUserStr();
 			return 0;
 
-
-
-
-
 		/* WM_DESTROY is sent only when Win95+IE4/98/Me is shut down */
-		
 		case WM_DESTROY:
 			OnDestroy(hwnd); // main2.c
 			break;
 	}
-	
 	return DefSubclassProc(hwnd, message, wParam, lParam);
 }
 
@@ -243,42 +225,23 @@ void OnTimerMain(HWND hwnd)
 
 	SYSTEMTIME t;
 	HDC hdc;
-	BOOL bRedraw;
 	
 	GetLocalTime(&t);
 
-
-
-bRedraw = TRUE;
-	
-	
-	
-	
 	// date changed
 	if(LastTime.wDay != t.wDay || LastTime.wMonth != t.wMonth ||
 		LastTime.wYear != t.wYear)
 	{
 		InitFormatTime(); // formattime.c
-
 	}
 	
-	hdc = NULL;
-	if(bRedraw) hdc = GetDC(hwnd);
-	
+	hdc = GetDC(hwnd);
 	if(hdc)
 	{
 		OnPaint(hwnd, hdc, &t); // draw.c: draw the clock
 		ReleaseDC(hwnd, hdc);
 	}
-	
-
-
 	memcpy(&LastTime, &t, sizeof(t));
-	
-
-
-	
-
 }
 
 /*------------------------------------------------
@@ -287,80 +250,14 @@ bRedraw = TRUE;
 void OnRefreshClock(HWND hwnd)
 {
 	LoadSetting(hwnd); // reload settings
-	
+
 	CreateClockDC(hwnd); // draw.c
-	
 
-
-
-
-	
 	PostMessage(GetParent(GetParent(hwnd)), WM_SIZE,
 		SIZE_RESTORED, 0);
-	//PostMessage(GetParent(hwnd), WM_SIZE,
-	//	SIZE_RESTORED, 0);
-	
+
 	InvalidateRect(hwnd, NULL, FALSE);
 	InvalidateRect(GetParent(hwnd), NULL, TRUE);
-}
-
-
-
-
-
-
-
-
-/*------------------------------------------------
-  WM_xxBUTTONDOWN message
---------------------------------------------------*/
-LRESULT OnMouseDown(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
-{
-	BOOL skipmsg = FALSE;
-	
-	//if(message == WM_LBUTTONDOWN)
-	//	SetFocus(hwnd);
-	
-	if(g_sdisp2[0] || g_scat2[0])
-	{
-		g_sdisp2[0] = g_scat2[0] = 0;
-		ClearClockDC();
-		InvalidateRect(hwnd, NULL, FALSE);
-	}
-	
-	if(g_nBlink)
-	{
-		g_nBlink = 0;
-		InvalidateRect(hwnd, NULL, FALSE);
-		skipmsg = TRUE;
-	}
-	
-
-	if(g_bLMousePassThru && message == WM_LBUTTONDOWN)
-	{
-		if(skipmsg)
-			// Skip this message. Only stop blinking.
-			return 0;
-		else
-			// Pass through this message to the original wndproc.
-			return DefSubclassProc(hwnd, message, wParam, lParam);
-	}
-	
-	PostMessage(g_hwndTClockMain, message, wParam, lParam);
-	return 0;
-}
-
-/*------------------------------------------------
-  WM_xxBUTTONUP message
---------------------------------------------------*/
-LRESULT OnMouseUp(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
-{
-	if(g_bLMousePassThru && message == WM_LBUTTONUP)
-		// Pass through this message to the original wndproc.
-		return DefSubclassProc(hwnd, message, wParam, lParam);
-	
-	PostMessage(g_hwndTClockMain, message, wParam, lParam);
-	return 0;
 }
 
 /*------------------------------------------------
