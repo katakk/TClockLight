@@ -279,37 +279,6 @@ HWND GetTClockMainWindow(void)
 }
 
 /*------------------------------------------------
-  send a string to other module
---------------------------------------------------*/
-void SendStringToOther(HWND hwnd, HWND hwndFrom,
-	const char *s, int type)
-{
-	COPYDATASTRUCT cds;
-	
-	cds.dwData = type;
-	cds.cbData = (DWORD)strlen(s) + 1;
-	cds.lpData = (LPVOID)s;
-	
-	if(hwnd && IsWindow(hwnd))
-		SendMessage(hwnd, WM_COPYDATA, (WPARAM)hwndFrom,
-			(LPARAM)&cds);
-}
-
-void SendStringToOtherW(HWND hwnd, HWND hwndFrom,
-	const wchar_t *s, int type)
-{
-	COPYDATASTRUCT cds;
-	
-	cds.dwData = type;
-	cds.cbData = ((int)wcslen(s) + 1) * sizeof(wchar_t);
-	cds.lpData = (LPVOID)s;
-	
-	if(hwnd && IsWindow(hwnd))
-		SendMessage(hwnd, WM_COPYDATA, (WPARAM)hwndFrom,
-			(LPARAM)&cds);
-}
-
-/*------------------------------------------------
   the file exists ?
 --------------------------------------------------*/
 BOOL IsFile(const char* fname)

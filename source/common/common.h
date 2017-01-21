@@ -221,8 +221,6 @@ const char* nextline(const char* p);
 HWND GetTaskbarWindow(void);
 HWND GetClockWindow(void);
 HWND GetTClockMainWindow(void);
-void SendStringToOther(HWND hwnd, HWND hwndFrom, const char *s, int type);
-void SendStringToOtherW(HWND hwnd, HWND hwndFrom, const wchar_t *s, int type);
 BOOL IsFile(const char* fname);
 BOOL IsDirectory(const char* fname);
 BOOL IsXPVisualStyle(void);
