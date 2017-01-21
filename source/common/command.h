@@ -29,28 +29,4 @@
 #define IDC_NETINIT                     132
 #define IDC_DELUS                       133
 
-#define IDC_VISTACALENDAR               134
-#define IDC_VISTATOOLTIP                135
 
-// taskbar menu commands
-#define IDC_RUNAPP                      401
-#define IDC_LOGOFF                      402
-#define IDC_CASCADE                     403
-#define IDC_TILEHORZ                    404
-#define IDC_TILEVERT                    405
-#define IDC_DATETIME                    408
-#define IDC_TASKBARPROP                 413
-#define IDC_MINALL                      415
-#define IDC_TASKMAN                     420
-#define IDC_EXITWIN                     506
-
-// mouse click only
-#define IDC_OPENFILE                    1
-#define IDC_MOUSECOPY                   2
-#define IDC_VOLSET                      3
-#define IDC_VOLUD                       4
-#define IDC_CDOPEN                      5
-#define IDC_CDCLOSE                     6
-#define IDC_FILELIST                    7
-#define IDC_COMMAND                     8
-#define IDC_MUTE                        9
