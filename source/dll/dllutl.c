@@ -43,19 +43,6 @@ BOOL CreateOffScreenDC(HDC hdc, HDC *phdcMem, HBITMAP *phbmp,
 }
 
 /*------------------------------------------------
-  width and height of HBITMAP
---------------------------------------------------*/
-BOOL GetBmpSize(HBITMAP hbmp, int* w, int* h)
-{
-	BITMAP bmp;
-	if(GetObject(hbmp, sizeof(BITMAP), (LPVOID)&bmp) == 0)
-		return FALSE;
-	*w = bmp.bmWidth;
-	*h = bmp.bmHeight;
-	return TRUE;
-}
-
-/*------------------------------------------------
   copy the parent window's surface to child
 --------------------------------------------------*/
 void CopyParentSurface(HWND hwnd, HDC hdcDest, int xdst, int ydst,

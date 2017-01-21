@@ -111,6 +111,5 @@ void EndNewAPI(void);
 BOOL IsSubclassed(HWND hwnd);
 BOOL CreateOffScreenDC(HDC hdc, HDC *phdcMem, HBITMAP *phbmp,
 	int width, int height);
-BOOL GetBmpSize(HBITMAP hbmp, int* w, int* h);
 void CopyParentSurface(HWND hwnd, HDC hdcDest, int xdst, int ydst,
 	int w, int h, int xsrc, int ysrc);
