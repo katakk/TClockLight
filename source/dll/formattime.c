@@ -395,13 +395,17 @@ void CharaHandler(FORMATHANDLERSTRUCT* pstruc)
 void AltYearHandler(FORMATHANDLERSTRUCT* pstruc)
 {
 	int n = 1;
+	int y;
 	while(*pstruc->sp == 'Y') { n *= 10; pstruc->sp++; }
 	if(m_AltYear < 0) return;
 	while(n <= m_AltYear) n *= 10;
 	while(1)
 	{
-		if(*pstruc->dp)
-			*pstruc->dp++ = (wchar_t)((m_AltYear % n) / (n / 10) + '0');
+		if(*pstruc->dp) {
+			y = 0;
+			if(n / 10) y = (m_AltYear % n) / (n / 10);
+			*pstruc->dp++ = (wchar_t)(y + '0');
+		}
 		if(n == 10) break;
 		n /= 10;
 	}
