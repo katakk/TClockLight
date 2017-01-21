@@ -6,9 +6,6 @@
 
 #define DLLFILENAME "tcdll.tclock"
 
-
-
-
 // ThemeChanged Message
 #ifndef WM_THEMECHANGED
 #define WM_THEMECHANGED                 0x031A
