@@ -59,7 +59,7 @@ HFONT CreateMyFont(const char *fontname, int size,
 		charset = (BYTE)GetTextCharset(hdc);
 	
 	lf.lfCharSet = charset;
-	strcpy(lf.lfFaceName, fontname);
+	memcpy(lf.lfFaceName, fontname, LF_FACESIZE);
 	if(EnumFontFamiliesEx(hdc, &lf, (FONTENUMPROC)EnumFontFamExProc,
 		(LPARAM)fontname, 0))
 	{

@@ -230,7 +230,7 @@ void InitFontSizeCombo(HWND hDlg, int idCombo,
 	
 	// enumerate font size
 	memset(&lf, 0, sizeof(LOGFONT));
-	strcpy(lf.lfFaceName, fontname);
+	memcpy(lf.lfFaceName, fontname, LF_FACESIZE);
 	lf.lfCharSet = (BYTE)charset;
 	EnumFontFamiliesEx(hdc, &lf, (FONTENUMPROC)EnumSizeProcEx,
 		(LPARAM)GetDlgItem(hDlg, idCombo), 0);
