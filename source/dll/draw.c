@@ -363,8 +363,6 @@ void DrawClock(HWND hwnd, HDC hdc, const SYSTEMTIME* pt)
 		return;
 	}
 	
-	if(g_nBlink > 0 && (g_nBlink % 2) == 0) dwRop = NOTSRCCOPY;
-	
 	aero = IsVistaAero();
 	if(!m_fillbackcolor && (dwRop == SRCCOPY) && aero)
 	{
@@ -424,8 +422,6 @@ void DrawClock(HWND hwnd, HDC hdc, const SYSTEMTIME* pt)
 					+ 2 + m_dlineheight;
 	}
 
-//	if(g_nBlink > 0 && (g_nBlink % 2) == 0) dwRop = NOTSRCCOPY;
-	
 	if(!m_fillbackcolor && (dwRop == SRCCOPY) && aero)
 	{
 		BLENDFUNCTION bf = {AC_SRC_OVER, 0, 0xff, AC_SRC_ALPHA};

@@ -68,7 +68,6 @@ void LoadFormatSetting(HWND hwnd)
 	wcscat(m_format, fmt_tmp);
 	wcscat(m_format, L"%>");
 	
-	g_bDispSecond = FALSE;
 	InitFormatTime();      // formattime.c
 	
 	// add your InitFormatXXX() here

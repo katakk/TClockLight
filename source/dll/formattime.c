@@ -32,8 +32,6 @@ void InitFormatTime(void)
 	int i, ilang, ioptcal, codepage;
 	int ilangcal, codepagecal;
 	
-//	g_bDispSecond = FALSE;
-	
 	GetLocalTime(&t);
 	
 	m_bHour12 = GetMyRegLong(NULL, "Hour12", 0);
@@ -339,8 +337,6 @@ void SecondHandler(FORMATHANDLERSTRUCT* pstruc)
 	}
 	if(*pstruc->dp)
 		*pstruc->dp++ = (wchar_t)(sec % 10 + '0');
-	
-	g_bDispSecond = TRUE;
 }
 
 /* tt */

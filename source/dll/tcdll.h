@@ -55,8 +55,6 @@ extern BOOL    g_bTaskbarPosChanging;
 LRESULT CALLBACK SubclassProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam, UINT_PTR uIdSubclass, DWORD_PTR dwRefData);
 LRESULT CALLBACK SubclassTrayProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam, UINT_PTR uIdSubclass, DWORD_PTR dwRefData);
 BOOL IsVertTaskbar(HWND hwndTaskbar);
-extern BOOL g_bDispSecond;
-extern int  g_nBlink;
 
 /* ---------- draw.c -------------- */
 void LoadDrawingSetting(HWND hwnd);
