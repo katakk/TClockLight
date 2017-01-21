@@ -422,20 +422,6 @@ BOOL IsVistaAero(void)
 }
 
 /*-------------------------------------------
-  using Taskbar Animations ?
----------------------------------------------*/
-BOOL IsTaskbarAnimation(void)
-{
-	if(GetRegLong(HKEY_CURRENT_USER,
-		"Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
-		"TaskbarAnimations", 0))
-	{
-		return TRUE;
-	}
-	return FALSE;
-}
-
-/*-------------------------------------------
   SetForegroundWindow for Windows98
 ---------------------------------------------*/
 void SetForegroundWindow98(HWND hwnd)

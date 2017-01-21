@@ -227,7 +227,6 @@ BOOL IsFile(const char* fname);
 BOOL IsDirectory(const char* fname);
 BOOL IsXPVisualStyle(void);
 BOOL IsVistaAero(void);
-BOOL IsTaskbarAnimation(void);
 void SetForegroundWindow98(HWND hwnd);
 void SetMyDialgPos(HWND hwnd, int xLen, int yLen);
 void GetScreenRect(HWND hwnd, RECT *prc);
