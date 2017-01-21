@@ -35,36 +35,6 @@ void *memset(void *d, int c, size_t l)
 }
 
 /*-------------------------------------------
-  strstr
----------------------------------------------*/
-char *r_strstr(const char *string, const char *strCharSet)
-{
-	const char *p = string;
-	while(*p)
-	{
-		if(strncmp(p, strCharSet, strlen(strCharSet)) == 0)
-			return (char*)p;
-		p++;
-	}
-	return NULL;
-}
-
-/*-------------------------------------------
-  strncmp
----------------------------------------------*/
-int r_strncmp(const char* d, const char* s, size_t n)
-{
-	unsigned int i;
-	for(i = 0; i < n; i++)
-	{
-		if(*s == 0 && *d == 0) break;
-		if(*s != *d) return ((int)*d - (int)*s);
-		d++; s++;
-	}
-	return 0;
-}
-
-/*-------------------------------------------
   atoi
 ---------------------------------------------*/
 int r_atoi(const char *p)
@@ -164,41 +134,4 @@ wchar_t *r_wcscat(wchar_t *dp, const wchar_t *sp)
 	while(*sp) *p++ = *sp++; *p = 0; return dp;
 }
 
-/*-------------------------------------------
-  wcsstr
----------------------------------------------*/
-wchar_t *r_wcsstr(const wchar_t *string, const wchar_t *strCharSet)
-{
-	const wchar_t *p = string;
-	while(*p)
-	{
-		if(wcsncmp(p, strCharSet, wcslen(strCharSet)) == 0)
-			return (wchar_t *)p;
-		p++;
-	}
-	return NULL;
-}
-
-/*-------------------------------------------
-  32bit x 32bit = 64bit
----------------------------------------------*/
-
-typedef LARGE_INTEGER TC_SINT64;
-typedef ULARGE_INTEGER TC_UINT64;
-
-DWORDLONG r_M32x32to64(DWORD a, DWORD b)
-{
-	TC_UINT64 r;
-	DWORD *p1, *p2, *p3;
-	memset(&r, 0, 8);
-	p1 = &r.u.LowPart;
-	p2 = (DWORD*)((BYTE*)p1 + 2);
-	p3 = (DWORD*)((BYTE*)p2 + 2);
-	*p1 = LOWORD(a) * LOWORD(b);
-	*p2 += LOWORD(a) * HIWORD(b) + HIWORD(a) * LOWORD(b);
-	*p3 += HIWORD(a) * HIWORD(b);
-	return *(DWORDLONG*)(&r);
-}
-
-#endif
 

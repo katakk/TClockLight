@@ -118,17 +118,12 @@ int MyGetTimeFormatW(int ilang, int codepage,
 
 void *r_memcpy(void *d, const void *s, size_t l);
 void *r_memset(void *d, int c, size_t l);
-char *r_strstr(const char *string, const char *strCharSet);
-int r_strncmp(const char* d, const char* s, size_t n);
-int r_strnicmp(const char* d, const char* s, size_t n);
 int r_atoi(const char *p);
 int r_atox(const char *p);
 int r__wtoi(const WCHAR *p);
 size_t r_wcslen(const wchar_t *p);
 wchar_t *r_wcscpy(wchar_t *dp, const wchar_t *sp);
-int r_wcsncmp(const wchar_t *p1, const wchar_t *p2, size_t count);
 wchar_t *r_wcscat(wchar_t *dp, const wchar_t *sp);
-wchar_t *r_wcsstr(const wchar_t *string, const wchar_t *strCharSet);
 
 __inline int r_toupper(int c)
 {
@@ -136,16 +131,8 @@ __inline int r_toupper(int c)
 	return c;
 }
 
-DWORDLONG r_M32x32to64(DWORD a, DWORD b);
-
 #undef toupper
 #define toupper(c) r_toupper(c)
-
-#undef strncmp
-#define strncmp(d, s, n) r_strncmp(d, s, n)
-
-#undef strstr
-#define strstr(a,b) r_strstr(a,b)
 
 #undef atoi
 #define atoi(p) r_atoi(p)
@@ -161,9 +148,6 @@ DWORDLONG r_M32x32to64(DWORD a, DWORD b);
 #undef wcscpy
 #define wcscpy(d,s) r_wcscpy(d,s)
 
-#undef wcsstr
-#define wcsstr(d,s) r_wcsstr(d,s)
-
 #undef wcscat
 #define wcscat(d,s) r_wcscat(d,s)
 
@@ -176,16 +160,11 @@ DWORDLONG r_M32x32to64(DWORD a, DWORD b);
 #undef free
 #define free(p) HeapFree(GetProcessHeap(), 0, p)
 
-#define M32x32to64(a,b) r_M32x32to64(a,b)
-
 #else   // #ifndef NODEFAULTLIB
 
 #define atox(p) strtol((p),NULL,16)
 
-#define M32x32to64(a,b) ((DWORDLONG)(a)*(DWORDLONG)(b))
-
 #endif  // end of #ifdef NODEFAULTLIB
-
 
 
 /* -- reg.c ---------------------------------------- */
