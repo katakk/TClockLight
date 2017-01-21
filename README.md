@@ -1,5 +1,7 @@
 # TClock Light kt [![Build status](https://ci.appveyor.com/api/projects/status/e2rljlqdk6gpql89/branch/master?svg=true)](https://ci.appveyor.com/project/katakk/tclocklight/branch/master) [![coverity](https://scan.coverity.com/projects/11483/badge.svg?flat=1)](https://scan.coverity.com/projects/tclocklight)
 
+https://gist.github.com/katakk/4a4eb914ae79511fb5d0fc4ab5223878
+
 This is a modified version of TClock Light.
 
 ## :rabbit: 手元のWindows 10 の時計で秒表示、あわよくばミリ秒表示させたいために変更しました。
