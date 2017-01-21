@@ -23,8 +23,6 @@ HWND  g_hwndClock = NULL;
 /* Statics */
 LRESULT CALLBACK CallWndProc(int nCode, WPARAM wParam, LPARAM lParam);
 
-static void Debug_ListChild(HWND hwndParent, int depth);
-
 /*------------------------------------------------
   entry point of this DLL
 --------------------------------------------------*/
@@ -68,8 +66,6 @@ BOOL WINAPI HookStart(HWND hwndMain)
 	g_hwndClock = FindWindowEx(hwndTray, NULL, "TrayClockWClass", NULL);
 	if(!g_hwndClock)
 	{
-		// WriteDebug("Your Taskbar:");
-		// Debug_ListChild(hwndTaskbar, 0);
 		SendMessage(hwndMain, TCM_CLOCKERROR, 0, 3);
 		return FALSE;
 	}
@@ -131,27 +127,5 @@ LRESULT CALLBACK CallWndProc(int nCode, WPARAM wParam, LPARAM lParam)
 		}
 	}
 	return CallNextHookEx(g_hhook, nCode, wParam, lParam);
-}
-
-/*---------------------------------------------------------
-  for Debug
-----------------------------------------------------------*/
-void Debug_ListChild(HWND hwndParent, int depth)
-{
-	HWND hwnd;
-	char classname[80];
-	int i;
-	
-	for(i = 0; i < depth && i < 79; i++) classname[i] = '+';
-	classname[i] = 0;
-	GetClassName(hwndParent, classname + i, 80 - i);
-	WriteDebug(classname);
-	
-	hwnd = GetWindow(hwndParent, GW_CHILD);
-	while(hwnd)
-	{
-		Debug_ListChild(hwnd, depth + 1);
-		hwnd = GetWindow(hwnd, GW_HWNDNEXT);
-	}
 }
 

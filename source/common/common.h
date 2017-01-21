@@ -231,8 +231,6 @@ BOOL IsTaskbarAnimation(void);
 void SetForegroundWindow98(HWND hwnd);
 void SetMyDialgPos(HWND hwnd, int xLen, int yLen);
 void GetScreenRect(HWND hwnd, RECT *prc);
-void WriteDebug(const char* s);
-void WriteDebugW(const wchar_t* s);
 
 /* -- Macros ---------------------------------------- */
 

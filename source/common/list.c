@@ -24,12 +24,6 @@ void *add_listitem(void *top, void *item)
 	if(last) last->next = item;
 	else top = item;
 	
-	/*{
-		char s[80];
-		wsprintf(s, "%s is added", ((struct list *)item)->name);
-		WriteDebug(s);
-	}*/
-	
 	return top;
 }
 
@@ -52,13 +46,6 @@ void *del_listitem(void *top, void *item)
 		{
 			if(before) before->next = current->next;
 			else top = current->next;
-			
-			/*{
-				char s[80];
-				wsprintf(s, "%s is free", current->name);
-				WriteDebug(s);
-			}*/
-			
 			free(current);
 			break;
 		}
@@ -76,13 +63,6 @@ void *clear_list(void *top)
 	{
 		struct list *temp = current;
 		current = current->next;
-		
-		/*{
-			char s[80];
-			wsprintf(s, "%s is free", temp->name);
-			WriteDebug(s);
-		}*/
-		
 		free(temp);
 	}
 	return NULL;
