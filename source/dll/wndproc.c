@@ -76,14 +76,6 @@ LRESULT CALLBACK SubclassProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lPa
 			return 0;
 		
 		/* -------- Mouse messages ------------- */
-		case WM_LBUTTONDOWN:   // mouse button is down
-		case WM_RBUTTONDOWN:
-		case WM_MBUTTONDOWN:
-		//case WM_XBUTTONDOWN:
-		case WM_LBUTTONUP:    // mouse button is up
-		case WM_RBUTTONUP:
-		case WM_MBUTTONUP:
-		//case WM_XBUTTONUP:
 		case WM_NCHITTEST:     // not to pass to the original wndproc
 			return DefWindowProc(hwnd, message, wParam, lParam);
 
