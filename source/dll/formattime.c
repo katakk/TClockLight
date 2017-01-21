@@ -512,7 +512,7 @@ void MSecondHandler(FORMATHANDLERSTRUCT* pstruc)
 }
 
 
-/* NNN  only for testing */
+/* KK only for testing */
 void M24KOMAHandler(FORMATHANDLERSTRUCT* pstruc)
 {
 	int msec = (int)pstruc->pt->wMilliseconds;
