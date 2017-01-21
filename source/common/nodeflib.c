@@ -134,4 +134,4 @@ wchar_t *r_wcscat(wchar_t *dp, const wchar_t *sp)
 	while(*sp) *p++ = *sp++; *p = 0; return dp;
 }
 
-
+#endif
