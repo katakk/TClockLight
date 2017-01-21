@@ -60,6 +60,19 @@ void *get_listitem(void *top, int index);
 
 /* -- autoformat.c ---------------------------------------- */
 
+#define NUM_FORMATPART 11
+#define PART_YEAR4     0
+#define PART_YEAR      1
+#define PART_MONTH     2
+#define PART_MONTHS    3
+#define PART_DAY       4
+#define PART_WEEKDAY   5
+#define PART_HOUR      6
+#define PART_MINUTE    7
+#define PART_SECOND    8
+#define PART_BREAK     9
+#define PART_AMPM      10
+
 void InitAutoFormat(int ilang);
 void AutoFormat(char* dst, BOOL* parts);
 
