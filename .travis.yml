@@ -1,0 +1,40 @@
+language: c
+compiler:
+  - gcc
+
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "PFRfHzDUgUkIF8OltxRsuGE7D981k2YopvtMHuH+Btv9OFtRp/d9ljw6yO1L0Ou6U8J+bT0zcyS8upVhwaVaU6KKBaYNx7IrRh6nBdDXfH9d2LIOK97FsjlKz+Y0b2uYboeicjRDDEem2kGi2OmuE7pI/5rtVUE/4yEF7zbCMxsFASQXsTjpNr4GeP5ugPUbQWp5SFTxxGuLRfqUhJmYL0mgjXNfOX+JH5JlFo1tc61mZN2dZtpQvzopd/kveKaTGjz7682uU2TY8gVWn96XPRPhv0Yc2iZKzXsbLovoX+AdACmS0EiK/uww69a0ZPkBcfvY13i+iJebULcwAr8FJOqCGlPosys1H+EV3j7JEw8Cz9/GwLEByMK/yO2GweVfeDS0svpxPT6XLWZrxbol0Gz2/3GRu6koWSx8l9KXupnlUQDbp0XBn/FqvzDgLgV5b+VuCBvLckPpcNjYOPYugxUIIP3Gr+pv8rYjs6h2PRXYfbxkiKBX9iMcpXsCxb213qfZ2L3I6nE9LRH4VMQdZbHnpcFG6EcO2iISRFppAxmv6Ap8L1Hq1hS8l4QkeJTZDnbXELeSmxvekiEqdFCO/AGGgFVKFGoKFkysx2N1/OpvCwXljhXTUU2KGas2SByecgUN6TTHAq3v5zOWzsqiYAamk1QYugX3NebeT0lkgMw="
+
+before_install:
+      - echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
+
+before_script:
+  - export CC=i686-w64-mingw32-gcc
+
+addons:
+  coverity_scan:
+    project:
+      name: "katakk/TClockLight"
+      description: "Build submitted via Travis CI"
+    build_command:   "make"
+    branch_pattern: master
+  apt:
+    packages:
+      - binutils-mingw-w64-i686
+      - gcc-mingw-w64-i686
+      - wine
+
+script:
+  - make
+
+deploy:
+  provider: releases
+  api_key:
+    - secure: "ktFMoFgg2B8X+eTT4U8vJroJIoD6S63eh3w/K1gC7f5rF1qb1WbFuiUPV7qv2+wi6HC9aCVPPLq7j7Glkr6qYqeDbc8dsNtz2xKVprEp+02Wn3F2Qf0IZXp6twOteE6bWxGvcbjmWbFz6v4OpkFQ0xzhPiG8R+nrhEZ9d6jhzgsLX0DFByhlXqtgFVHSSzbsjHjQcY/ATaj70gnvb6TJh8PaOy2oLP5K7I3tOgOtrhqBi8aU/rA4ox7vTptPVaHHkv/i8lzCSZYt0bQw6KvjWe4Vq78A4IOMuN+SAqquwTnjJNEIKvWT3hBpSJN9DSmmQ65mwuBoDUia0Yyp/hGBjHdnch2b081/Jv5TUNAGILCMCIvtbwb7/khtt5GhDOaKo282UG4wmhcn9HqrMJOicb8BaSkdHnpyeVR2waFIkpfzbh8RWTWauYACV1lBNJ6LSjao/LQrTJ7RTw7Ad+co4foG1BmwaOjKln+HBRHMFA2igNCcvH3znrJBSEvDiuOCDyAyvok1pPGpdmguCVQiVnH69nU9EU6g14rAg0dO9lVi6x6mrHHB4J1Xmep+8U2oAjrfemgHbNo7g6pu7fUJPdXOcfswYK8bIr4/KkNyFt+PIP7Pq18ZUo++BDt6m2OSU7ID/wnYB4iysmVT2yGNrrz6dsAAA7pZ00QpMzpjCus="
+  file:
+  skip_cleanup: true
+  all_branches: true  # https://github.com/travis-ci/travis-ci/issues/1675
+  
