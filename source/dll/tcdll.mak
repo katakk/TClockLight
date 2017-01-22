@@ -90,7 +90,6 @@ formattime.obj: $(SRCDIR)\formattime.c $(TCDLLH)
 
 userstr.obj: $(SRCDIR)\userstr.c $(TCDLLH)
 draw.obj: $(SRCDIR)\draw.c $(TCDLLH)
-bmp.obj: $(SRCDIR)\bmp.c $(TCDLLH)
 dllutl.obj: $(SRCDIR)\dllutl.c $(TCDLLH)
 newapi.obj: $(SRCDIR)\newapi.c $(TCDLLH)
 
